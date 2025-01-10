@@ -1,0 +1,39 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0f172a"/>
+  
+  <!-- Sidebar -->
+  <rect width="60" height="450" fill="#1e293b"/>
+  <rect x="15" y="20" width="30" height="30" rx="4" fill="#3b82f6"/>
+  <rect x="15" y="80" width="30" height="30" rx="4" fill="#334155"/>
+  <rect x="15" y="130" width="30" height="30" rx="4" fill="#334155"/>
+  <rect x="15" y="180" width="30" height="30" rx="4" fill="#334155"/>
+
+  <!-- Top KPI Cards -->
+  <rect x="90" y="30" width="210" height="80" rx="8" fill="#1e293b"/>
+  <rect x="110" y="50" width="100" height="10" rx="2" fill="#475569"/>
+  <rect x="110" y="70" width="60" height="20" rx="2" fill="#22c55e"/>
+
+  <rect x="320" y="30" width="210" height="80" rx="8" fill="#1e293b"/>
+  <rect x="340" y="50" width="100" height="10" rx="2" fill="#475569"/>
+  <rect x="340" y="70" width="60" height="20" rx="2" fill="#3b82f6"/>
+
+  <rect x="550" y="30" width="210" height="80" rx="8" fill="#1e293b"/>
+  <rect x="570" y="50" width="100" height="10" rx="2" fill="#475569"/>
+  <rect x="570" y="70" width="60" height="20" rx="2" fill="#f59e0b"/>
+
+  <!-- Main Chart Area (Bar Chart) -->
+  <rect x="90" y="140" width="440" height="280" rx="8" fill="#1e293b"/>
+  <path d="M120 380 L120 250" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M180 380 L180 200" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M240 380 L240 280" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M300 380 L300 180" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M360 380 L360 300" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M420 380 L420 220" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+  <path d="M480 380 L480 260" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Secondary Chart Area (Pie Chart) -->
+  <rect x="550" y="140" width="210" height="280" rx="8" fill="#1e293b"/>
+  <circle cx="655" cy="280" r="70" fill="#3b82f6"/>
+  <path d="M655 280 L655 210 A70 70 0 0 1 715 315 Z" fill="#22c55e"/>
+  <path d="M655 280 L715 315 A70 70 0 0 1 600 300 Z" fill="#f59e0b"/>
+</svg>

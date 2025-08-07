@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface EducationItemProps {
   degree: string;
@@ -42,12 +43,17 @@ const Education: React.FC = () => {
 
   return (
     <section id="education" className="py-20 px-4 bg-white text-gray-800">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-black text-center mb-12 text-gray-900">Education</h2>
-        <div className="space-y-8">
-          {education.map((edu, index) => (
-            <EducationItem key={index} {...edu} />
-          ))}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-4xl font-black mb-12 text-gray-900">Education</h2>
+          <div className="space-y-8">
+            {education.map((edu, index) => (
+              <EducationItem key={index} {...edu} />
+            ))}
+          </div>
+        </div>
+        <div>
+          <Image src="https://i.ibb.co/yYgKA0H/professional.png" alt="Professional Headshot" className="rounded-lg shadow-lg" width={500} height={500} />
         </div>
       </div>
     </section>

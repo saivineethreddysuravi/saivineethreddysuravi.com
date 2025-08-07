@@ -5,9 +5,9 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-gray-50 text-gray-800">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-black mb-6 text-gray-900">Let's Connect</h2>
+        <h2 className="text-4xl font-black mb-6 text-gray-900">Let&apos;s Connect</h2>
         <p className="text-xl mb-8 font-light">
-          I'm excited to connect with you! Whether you have a question or just want to say hi, feel free to reach out.
+          I&apos;m excited to connect with you! Whether you have a question or just want to say hi, feel free to reach out.
         </p>
         <div className="flex flex-col items-center space-y-6">
           <div className="flex items-center text-xl">

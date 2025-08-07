@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           href="#contact"
           className="bg-black text-white font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
         >
-          Let's Connect
+          Let&apos;s Connect
         </a>
       </div>
     </section>

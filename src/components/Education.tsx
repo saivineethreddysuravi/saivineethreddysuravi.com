@@ -8,10 +8,10 @@ interface EducationItemProps {
 
 const EducationItem: React.FC<EducationItemProps> = ({ degree, institution, duration }) => {
   return (
-    <div className="mb-8 p-6 bg-gray-700 rounded-lg shadow-lg">
-      <h3 className="text-2xl font-semibold text-blue-400 mb-1">{degree}</h3>
-      <p className="text-xl text-gray-200 mb-1">{institution}</p>
-      <p className="text-md text-gray-400">{duration}</p>
+    <div className="mb-8 p-8 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 className="text-2xl font-bold text-gray-900 mb-1">{degree}</h3>
+      <p className="text-xl text-gray-700 mb-1">{institution}</p>
+      <p className="text-md text-gray-500">{duration}</p>
     </div>
   );
 };
@@ -41,9 +41,9 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 bg-gray-900 text-white">
+    <section id="education" className="py-20 px-4 bg-white text-gray-800">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Education</h2>
+        <h2 className="text-4xl font-black text-center mb-12 text-gray-900">Education</h2>
         <div className="space-y-8">
           {education.map((edu, index) => (
             <EducationItem key={index} {...edu} />

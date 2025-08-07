@@ -16,14 +16,14 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gray-800 text-white">
+    <section id="skills" className="py-20 px-4 bg-gray-50 text-gray-800">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Skills</h2>
+        <h2 className="text-4xl font-black mb-12 text-gray-900">Technical Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+              className="bg-white text-gray-800 px-6 py-3 rounded-full text-lg font-semibold shadow-md transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
             >
               {skill}
             </span>

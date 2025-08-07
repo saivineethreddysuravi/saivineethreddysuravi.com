@@ -10,11 +10,11 @@ interface ExperienceItemProps {
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ title, company, duration, location, description }) => {
   return (
-    <div className="mb-12 p-6 bg-gray-700 rounded-lg shadow-lg">
-      <h3 className="text-2xl font-semibold text-blue-400 mb-1">{title}</h3>
-      <p className="text-xl text-gray-200 mb-1">{company}</p>
-      <p className="text-md text-gray-400 mb-2">{duration} | {location}</p>
-      <ul className="list-disc list-inside text-gray-300 space-y-2">
+    <div className="mb-12 p-8 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 className="text-2xl font-bold text-gray-900 mb-1">{title}</h3>
+      <p className="text-xl text-gray-700 mb-1">{company}</p>
+      <p className="text-md text-gray-500 mb-4">{duration} | {location}</p>
+      <ul className="list-disc list-inside text-gray-600 space-y-2">
         {description.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
@@ -53,9 +53,9 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 bg-gray-900 text-white">
+    <section id="experience" className="py-20 px-4 bg-white text-gray-800">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Experience</h2>
+        <h2 className="text-4xl font-black text-center mb-12 text-gray-900">Professional Experience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <ExperienceItem key={index} {...exp} />

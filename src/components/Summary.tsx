@@ -2,14 +2,11 @@ import React from 'react';
 
 const Summary: React.FC = () => {
   return (
-    <section id="summary" className="py-20 px-4 bg-gray-800 text-white">
+    <section id="summary" className="py-20 px-4 bg-gray-50 text-gray-800">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8">Summary</h2>
-        <p className="text-lg leading-relaxed">
-          Highly motivated Data Analyst with expertise in SQL, Python, and Business Intelligence tools. 
-          Proven experience in financial and payroll data analysis, automation, and dashboard creation. 
-          Passionate about transforming raw data into actionable insights to drive business success. 
-          Seeking opportunities to apply my analytical skills in a data-driven environment.
+        <h2 className="text-4xl font-black mb-6 text-gray-900">About Me</h2>
+        <p className="text-xl leading-relaxed text-gray-700">
+          I'm a Data Analyst who thrives in a collaborative environment. I believe that the best insights are born from teamwork, and I'm passionate about using my skills in SQL, Python, and Power BI to help teams achieve their goals. I'm not just about numbers; I'm about building relationships and driving success together.
         </p>
       </div>
     </section>

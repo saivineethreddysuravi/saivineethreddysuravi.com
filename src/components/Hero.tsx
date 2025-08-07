@@ -2,19 +2,21 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center text-white bg-gray-900">
+    <section 
+      className="relative h-screen flex items-center justify-center text-gray-800 bg-white"
+    >
       <div className="text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-4">
+        <h1 className="text-6xl md:text-8xl font-black leading-tight mb-4 tracking-tighter">
           Sai Vineeth Reddy Suravi
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-8">
-          Data Analyst | SQL | Python | Power BI | Business Intelligence | Data Visualization
+        <p className="text-2xl md:text-3xl text-gray-600 mb-8 font-light">
+          A Team Player, Driven by Data and Fueled by a Passion for Excellence.
         </p>
         <a
           href="#contact"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
+          className="bg-black text-white font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
         >
-          Get in Touch
+          Let's Connect
         </a>
       </div>
     </section>

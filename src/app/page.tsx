@@ -1,21 +1,9 @@
-import Hero from "@/components/Hero";
-import Showcase from "@/components/Showcase";
-import Summary from "@/components/Summary";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
-import Contact from "@/components/Contact";
+import Story from "@/components/Story";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Hero />
-      <Showcase />
-      <Summary />
-      <Experience />
-      <Skills />
-      <Education />
-      <Contact />
+    <main>
+      <Story />
     </main>
   );
 }

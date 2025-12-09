@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sai Vineeth Reddy Suravi - Portfolio",
   description: "Sai Vineeth Reddy Suravi's personal portfolio website, showcasing skills, experience, and projects in Data Analysis, SQL, Python, Power BI, Business Intelligence, and Data Visualization.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

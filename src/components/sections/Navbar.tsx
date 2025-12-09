@@ -42,7 +42,7 @@ export default function Navbar() {
             duration={800}
             className="text-xl font-bold text-white tracking-tighter cursor-pointer z-50"
           >
-            SV<span className="text-blue-500">.</span>
+            SV
           </ScrollLink>
 
           {/* Desktop Menu */}

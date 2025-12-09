@@ -106,63 +106,48 @@ export const projects = [
     description: "Strategic USA market analysis of credit card trends, risk factors, and revenue streams using advanced Power BI visualizations.",
     technologies: ["Power BI", "SQL", "DAX", "Market Analysis"],
     githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
-    image: "/projects/credit-card-dashboard.svg"
   },
   {
     title: "Cycling Equipment Market Analysis",
     description: "Special strategic project analyzing global cycling market trends for 2023, featuring inventory optimization and regional performance KPIs.",
     technologies: ["Power BI", "Python", "Predictive Analytics", "Excel"],
     githubUrl: "https://github.com/saivineethreddysuravi/cycling-equipment-dashboard",
-    image: "/projects/cycling-dashboard.svg"
   },
   {
     title: "Sales Performance Dashboard",
     description: "Interactive Power BI dashboard for tracking sales KPIs, regional performance, and product profitability.",
     technologies: ["Power BI", "DAX", "Data Analytics"],
     githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
-    image: "/projects/sales-dashboard.svg"
   },
   {
     title: "Student Dropout Prediction",
     description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
     technologies: ["Python", "Machine Learning", "Django", "Jupyter"],
-    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
-    image: "/projects/student-dropout.svg"
   },
   {
     title: "Financial Loan Analytics",
     description: "Comprehensive analysis of loan data to identify risk factors, default trends, and financial performance.",
     technologies: ["SQL", "Excel", "Data Analysis"],
-    githubUrl: "https://github.com/saivineethreddysuravi/financial-loan-analytics",
-    image: "/projects/financial-loan.jpg"
   },
   {
     title: "Workforce Retention Dashboard",
     description: "HR analytics dashboard focused on employee retention, turnover rates, and workforce demographics.",
     technologies: ["Tableau", "HR Analytics", "Data Visualization"],
-    githubUrl: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard",
-    image: "/projects/workforce-dashboard.png"
   },
   {
     title: "Restaurant Market Insights",
     description: "Market analysis of restaurant trends and consumer preferences to drive business strategy.",
     technologies: ["Python", "Pandas", "Market Research"],
-    githubUrl: "https://github.com/saivineethreddysuravi/restaurant-market-insights",
-    image: "/projects/restaurant-insights.jpg"
   },
   {
     title: "Mexican Restaurant Analysis",
     description: "Deep dive data analysis into Mexican restaurant performance, location trends, and customer reviews.",
     technologies: ["Python", "Data Analysis", "Sentiment Analysis"],
-    githubUrl: "https://github.com/saivineethreddysuravi/Mexican-Restaurant-Analysis",
-    image: "/projects/mexican-restaurant.png"
   },
   {
     title: "Snake Game",
     description: "Classic Snake game implementation using Python and Pygame.",
     technologies: ["Python", "Pygame", "Game Development"],
-    githubUrl: "https://github.com/saivineethreddysuravi/snake-game-py",
-    image: "/projects/snake-game.svg"
   },
   {
     title: "Portfolio Website",
@@ -170,6 +155,5 @@ export const projects = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/saivineethreddysuravi/saivineethreddysuravi.com",
     liveUrl: "https://saivineethreddysuravi.com",
-    image: "/projects/portfolio-website.svg"
   }
 ];

@@ -8,12 +8,28 @@ import Image from "next/image";
 // Import new animated project icons
 import SalesDashboardIcon from "@/components/project-icons/SalesDashboardIcon";
 import SnakeGameIcon from "@/components/project-icons/SnakeGameIcon";
+import CreditCardDashboardIcon from "@/components/project-icons/CreditCardDashboardIcon";
+import CyclingDashboardIcon from "@/components/project-icons/CyclingDashboardIcon";
+import StudentDropoutIcon from "@/components/project-icons/StudentDropoutIcon";
+import FinancialLoanIcon from "@/components/project-icons/FinancialLoanIcon";
+import WorkforceRetentionIcon from "@/components/project-icons/WorkforceRetentionIcon";
+import RestaurantInsightsIcon from "@/components/project-icons/RestaurantInsightsIcon";
+import MexicanRestaurantIcon from "@/components/project-icons/MexicanRestaurantIcon";
+import PortfolioWebsiteIcon from "@/components/project-icons/PortfolioWebsiteIcon";
+
 
 // Map project titles to their animated components
 const AnimatedProjectIcons = {
+  "Credit Card Financial Dashboard": CreditCardDashboardIcon,
+  "Cycling Equipment Market Analysis": CyclingDashboardIcon,
   "Sales Performance Dashboard": SalesDashboardIcon,
+  "Student Dropout Prediction": StudentDropoutIcon,
+  "Financial Loan Analytics": FinancialLoanIcon,
+  "Workforce Retention Dashboard": WorkforceRetentionIcon,
+  "Restaurant Market Insights": RestaurantInsightsIcon,
+  "Mexican Restaurant Analysis": MexicanRestaurantIcon,
   "Snake Game": SnakeGameIcon,
-  // Add other animated components here as they are created
+  "Portfolio Website": PortfolioWebsiteIcon,
 };
 
 export default function Projects() {
@@ -48,13 +64,6 @@ export default function Projects() {
                     <div className="relative aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-gray-800 to-black border border-white/10 shadow-2xl group-hover:shadow-blue-900/20 transition-all duration-700">
                       {AnimatedIconComponent ? (
                         <AnimatedIconComponent width={800} height={450} /> // Pass appropriate size props
-                      ) : project.image ? (
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center text-gray-700 text-6xl font-black opacity-30 select-none">
                           {project.title[0]}

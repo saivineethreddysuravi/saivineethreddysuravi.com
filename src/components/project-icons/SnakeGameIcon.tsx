@@ -8,48 +8,48 @@ interface SnakeGameIconProps {
 }
 
 export default function SnakeGameIcon({ width = 800, height = 450 }: SnakeGameIconProps) {
-  const snakeSegments = [
-    { x: 200, y: 200 },
-    { x: 240, y: 200 },
-    { x: 280, y: 200 },
-    { x: 320, y: 200 },
-  ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-  const foodPosition = { x: 520, y: 120 };
-
-  const segmentVariants = {
+  const segmentPop = {
     hidden: { scale: 0, opacity: 0 },
     visible: (i: number) => ({
       scale: 1,
       opacity: 1,
       transition: {
         delay: i * 0.1,
-        duration: 0.3,
+        duration: 0.2,
       },
     }),
   };
 
-  const headVariants = {
+  const headPop = {
     hidden: { scale: 0, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: snakeSegments.length * 0.1,
+        delay: 0.5,
         duration: 0.3,
       },
     },
   };
 
-  const foodVariants = {
+  const foodPulse = {
     hidden: { scale: 0, opacity: 0 },
     visible: {
-      scale: 1,
+      scale: [0, 1.2, 1],
       opacity: 1,
-      rotate: [0, 10, -10, 0],
       transition: {
-        delay: (snakeSegments.length + 1) * 0.1,
-        duration: 0.5,
+        delay: 0.8,
+        duration: 0.6,
       },
     },
   };
@@ -64,58 +64,86 @@ export default function SnakeGameIcon({ width = 800, height = 450 }: SnakeGameIc
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
+      variants={containerVariants}
     >
-      <rect width="800" height="450" fill="#09090b" />
+      <rect width="800" height="450" fill="#0A0A0E" /> {/* Deep dark background */}
 
-      {/* Grid */}
+      {/* Futuristic Grid Overlay */}
+      <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} transition={{ duration: 2 }}>
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" stroke-width="0.5" />
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)" />
+            <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </motion.g>
+
+      {/* Main Screen Frame */}
+      <motion.rect
+        x="50" y="30" width="700" height="390" rx="15"
+        fill="url(#frameGradient)"
+        stroke="#4A4A6A"
+        stroke-width="2"
+        initial={{ scale: 0.9, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1, transition: { duration: 1, ease: "easeOut" } }}
+      />
       <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272a" stroke-width="1" />
+        <linearGradient id="frameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#1A1A2A" />
+          <stop offset="1" stop-color="#0A0A1A" />
+        </linearGradient>
+      </defs>
+
+      {/* Game Grid */}
+      <rect x="100" y="80" width="600" height="300" fill="#1A1A2A" rx="5" />
+      <defs>
+        <pattern id="gameGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect width="20" height="20" fill="none" stroke="#3A3A4C" stroke-width="0.5" />
         </pattern>
       </defs>
-      <rect width="800" height="450" fill="url(#grid)" />
+      <rect x="100" y="80" width="600" height="300" fill="url(#gameGrid)" />
 
-      {/* Snake Body */}
-      {snakeSegments.map((segment, i) => (
+
+      {/* Snake Body Segments */}
+      {[0, 1, 2, 3].map((i) => (
         <motion.rect
           key={i}
-          x={segment.x}
-          y={segment.y}
-          width="38"
-          height="38"
-          rx="4"
-          fill="#22c55e"
-          variants={segmentVariants}
+          x={200 + i * 20}
+          y="200"
+          width="18"
+          height="18"
+          rx="2"
+          fill="#00FF00"
+          variants={segmentPop}
           custom={i}
         />
       ))}
 
       {/* Snake Head */}
       <motion.rect
-        x="360"
+        x="280"
         y="200"
-        width="38"
-        height="38"
-        rx="8"
-        fill="#4ade80"
-        variants={headVariants}
-      >
-        <circle cx="372" cy="212" r="3" fill="#000" />
-        <circle cx="372" cy="228" r="3" fill="#000" />
-      </motion.rect>
+        width="18"
+        height="18"
+        rx="4"
+        fill="#00FFFF"
+        variants={headPop}
+      />
 
       {/* Food */}
       <motion.rect
-        x={foodPosition.x}
-        y={foodPosition.y}
-        width="38"
-        height="38"
-        rx="8"
-        fill="#ef4444"
-        variants={foodVariants}
-      >
-        <motion.path d="M539 116V120M539 120H542" stroke="#166534" stroke-width="2" stroke-linecap="round" />
-      </motion.rect>
+        x="500"
+        y="150"
+        width="18"
+        height="18"
+        rx="4"
+        fill="#FF0000"
+        variants={foodPulse}
+      />
     </motion.svg>
   );
 }

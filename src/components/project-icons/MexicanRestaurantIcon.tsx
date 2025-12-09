@@ -8,6 +8,16 @@ interface MexicanRestaurantIconProps {
 }
 
 export default function MexicanRestaurantIcon({ width = 800, height = 450 }: MexicanRestaurantIconProps) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   const mapDotAnimation = {
     hidden: { scale: 0, opacity: 0 },
     visible: (i: number) => ({
@@ -27,7 +37,7 @@ export default function MexicanRestaurantIcon({ width = 800, height = 450 }: Mex
     }),
   };
 
-  const barAnimation = {
+  const barGrow = {
     hidden: { width: 0, opacity: 0 },
     visible: (i: number) => ({
       width: [180, 150, 120][i % 3], // Varying widths
@@ -46,18 +56,46 @@ export default function MexicanRestaurantIcon({ width = 800, height = 450 }: Mex
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
+      variants={containerVariants}
     >
-      <rect width="800" height="450" fill="#2d3748" />
+      <rect width="800" height="450" fill="#0A0A0E" /> {/* Deep dark background */}
 
-      {/* Main content area */}
-      <rect x="50" y="50" width="700" height="350" rx="10" fill="#1a202c" />
+      {/* Futuristic Grid Overlay */}
+      <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} transition={{ duration: 2 }}>
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" stroke-width="0.5" />
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)" />
+            <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </motion.g>
+
+      {/* Main Screen Frame */}
+      <motion.rect
+        x="50" y="30" width="700" height="390" rx="15"
+        fill="url(#frameGradient)"
+        stroke="#4A4A6A"
+        stroke-width="2"
+        initial={{ scale: 0.9, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1, transition: { duration: 1, ease: "easeOut" } }}
+      />
+      <defs>
+        <linearGradient id="frameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#1A1A2A" />
+          <stop offset="1" stop-color="#0A0A1A" />
+        </linearGradient>
+      </defs>
 
       {/* Map (simplified) */}
-      <rect x="80" y="80" width="300" height="200" fill="#38a169" rx="5" />
+      <motion.rect x="80" y="80" width="300" height="200" fill="#38a169" rx="5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }} />
       <motion.circle cx="150" cy="150" r="8" fill="#e53e3e" variants={mapDotAnimation} custom={0} />
       <motion.circle cx="250" cy="120" r="8" fill="#e53e3e" variants={mapDotAnimation} custom={1} />
       <motion.circle cx="300" cy="200" r="8" fill="#e53e3e" variants={mapDotAnimation} custom={2} />
-      <text x="100" y="70" font-family="sans-serif" font-size="16" fill="white">Locations</text>
+      <motion.text x="100" y="70" font-family="sans-serif" font-size="16" fill="white" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 0.8 } }}>Locations</motion.text>
 
       {/* Review Stars */}
       <g transform="translate(450, 100)">
@@ -71,12 +109,12 @@ export default function MexicanRestaurantIcon({ width = 800, height = 450 }: Mex
             custom={i}
           />
         ))}
-        <text x="140" y="5" font-family="sans-serif" font-size="20" fill="white">4.5 Stars</text>
+        <motion.text x="140" y="5" font-family="sans-serif" font-size="20" fill="white" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 2 } }}>4.5 Stars</motion.text>
       </g>
 
       {/* Top Dishes Bar Chart */}
-      <rect x="80" y="300" width="600" height="100" fill="#2d3748" rx="8" />
-      <text x="100" y="290" font-family="sans-serif" font-size="16" fill="white">Top Dishes</text>
+      <motion.rect x="80" y="300" width="600" height="100" fill="#1A1A2A" rx="8" initial={{ scaleX: 0, transformOrigin: "left" }} whileInView={{ scaleX: 1, opacity: 1, transition: { duration: 0.8, delay: 2.5 } }} />
+      <motion.text x="100" y="290" font-family="sans-serif" font-size="16" fill="white" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 2.7 } }}>Top Dishes</motion.text>
       {[0, 1, 2].map((i) => (
         <motion.rect
           key={i}
@@ -84,13 +122,13 @@ export default function MexicanRestaurantIcon({ width = 800, height = 450 }: Mex
           y={310 + i * 25}
           height="15"
           fill="#ecc94b"
-          variants={barAnimation}
+          variants={barGrow}
           custom={i}
         />
       ))}
-      <text x="300" y="325" font-family="sans-serif" font-size="14" fill="#cbd5e0">Tacos</text>
-      <text x="270" y="350" font-family="sans-serif" font-size="14" fill="#cbd5e0">Burritos</text>
-      <text x="240" y="375" font-family="sans-serif" font-size="14" fill="#cbd5e0">Enchiladas</text>
+      <motion.text x="300" y="325" font-family="sans-serif" font-size="14" fill="#cbd5e0" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 3.2 } }}>Tacos</motion.text>
+      <motion.text x="270" y="350" font-family="sans-serif" font-size="14" fill="#cbd5e0" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 3.4 } }}>Burritos</motion.text>
+      <motion.text x="240" y="375" font-family="sans-serif" font-size="14" fill="#cbd5e0" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 3.6 } }}>Enchiladas</motion.text>
 
     </motion.svg>
   );

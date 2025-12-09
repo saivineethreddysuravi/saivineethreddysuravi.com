@@ -8,28 +8,33 @@ interface FinancialLoanIconProps {
 }
 
 export default function FinancialLoanIcon({ width = 800, height = 450 }: FinancialLoanIconProps) {
-  const dollarAnimation = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.8, delay: 0.2 } },
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
   };
 
-  const graphAnimation = {
-    hidden: { scaleY: 0, transformOrigin: "bottom" },
+  const lineDraw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: { pathLength: 1, opacity: 1, transition: { duration: 1.5 } },
+  };
+
+  const moneyDrop = {
+    hidden: { y: -50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.8, delay: 0.5 } },
+  };
+
+  const barGrow = {
+    hidden: { scaleY: 0, transformOrigin: "bottom", opacity: 0 },
     visible: (i: number) => ({
       scaleY: 1,
       opacity: 1,
-      transition: { delay: 0.5 + i * 0.1, duration: 0.7 },
+      transition: { duration: 0.7, delay: 1.0 + i * 0.1 },
     }),
-  };
-  
-  const lineAnimation = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: { pathLength: 1, opacity: 1, transition: { duration: 1, delay: 1.2 } },
-  };
-
-  const valueAnimation = {
-    hidden: { y: -10, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.8 } },
   };
 
   return (
@@ -42,36 +47,70 @@ export default function FinancialLoanIcon({ width = 800, height = 450 }: Financi
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
+      variants={containerVariants}
     >
-      <rect width="800" height="450" fill="#1f2937" />
+      <rect width="800" height="450" fill="#0A0A0E" /> {/* Deep dark background */}
 
-      {/* Main dashboard area */}
-      <rect x="50" y="50" width="700" height="350" rx="10" fill="#0f172a" />
+      {/* Futuristic Grid Overlay */}
+      <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} transition={{ duration: 2 }}>
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" stroke-width="0.5" />
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)" />
+            <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </motion.g>
 
-      {/* Dollar signs / currency focus */}
-      <motion.text x="100" y="120" font-family="sans-serif" font-size="60" fill="#22c55e" variants={dollarAnimation}>$</motion.text>
-      <motion.text x="140" y="120" font-family="sans-serif" font-size="40" fill="#f59e0b" variants={dollarAnimation} custom={0.1}>£</motion.text>
-      <motion.text x="180" y="120" font-family="sans-serif" font-size="30" fill="#3b82f6" variants={dollarAnimation} custom={0.2}>€</motion.text>
+      {/* Main Screen Frame */}
+      <motion.rect
+        x="50" y="30" width="700" height="390" rx="15"
+        fill="url(#frameGradient)"
+        stroke="#4A4A6A"
+        stroke-width="2"
+        initial={{ scale: 0.9, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1, transition: { duration: 1, ease: "easeOut" } }}
+      />
+      <defs>
+        <linearGradient id="frameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#1A1A2A" />
+          <stop offset="1" stop-color="#0A0A1A" />
+        </linearGradient>
+      </defs>
 
-      {/* Loan risk graph (bar chart) */}
-      <rect x="80" y="180" width="640" height="200" fill="#1f2937" rx="8" />
-      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-        <motion.rect
-          key={i}
-          x={100 + i * 90}
-          y={360}
-          width="40"
-          height={50 + i * 20} // Varying heights
-          fill={i % 2 === 0 ? "#ef4444" : "#f59e0b"} // Red for high risk, orange for medium
-          variants={graphAnimation}
-          custom={i}
-        />
-      ))}
-      <motion.text x="100" y="170" font-family="sans-serif" font-size="18" fill="white" variants={valueAnimation} custom={0.5}>Risk Factors</motion.text>
-
-      {/* Approval/Rejection trend line */}
-      <motion.path d="M50 300 L150 250 L250 280 L350 200 L450 230 L550 180 L650 210 L750 150" stroke="#3b82f6" stroke-width="4" fill="none" variants={lineAnimation} />
-      <motion.text x="600" y="100" font-family="sans-serif" font-size="18" fill="white" variants={valueAnimation} custom={0.8}>Approval Trend</motion.text>
+      {/* Financial Icons - Money Flow */}
+      <motion.text x="100" y="150" font-family="sans-serif" font-size="60" fill="#00FF00" variants={moneyDrop}>$</motion.text>
+      <motion.text x="180" y="150" font-family="sans-serif" font-size="45" fill="#FFD700" variants={moneyDrop} custom={0.1}>£</motion.text>
+      <motion.text x="250" y="150" font-family="sans-serif" font-size="30" fill="#00BFFF" variants={moneyDrop} custom={0.2}>€</motion.text>
+      
+      {/* Risk Assessment Chart */}
+      <g transform="translate(100, 200)">
+        <rect x="0" y="0" width="600" height="180" rx="8" fill="#1A1A2A" />
+        {[1, 2, 3, 4, 5].map((i) => (
+          <motion.rect
+            key={i}
+            x={20 + (i - 1) * 110}
+            y="170" width="40"
+            height="0"
+            fill={i < 3 ? "#00FF00" : (i === 3 ? "#FFD700" : "#FF0000")} // Green, Yellow, Red
+            initial={{ height: 0, y: 170 }}
+            whileInView={{ height: (i * 25) + 30, y: 170 - ((i * 25) + 30), transition: { duration: 0.7, delay: 1.2 + i * 0.1 } }}
+            viewport={{ once: true, amount: 0.5 }}
+          />
+        ))}
+        <motion.text x="20" y="20" font-family="sans-serif" font-size="16" fill="#E0E0E0" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 1.5 }}>Risk Levels</motion.text>
+      </g>
+      
+      {/* Dynamic Data Stream */}
+      <motion.path
+        d="M 50 400 L 750 400"
+        stroke="#00FFFF" stroke-width="2" fill="none"
+        variants={lineDraw} custom={0.8}
+      />
+      <motion.circle cx="750" cy="400" r="5" fill="#00FFFF" initial={{ scale: 0 }} whileInView={{ scale: 1, transition: { duration: 0.5, delay: 2.3 } }} />
 
     </motion.svg>
   );

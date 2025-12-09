@@ -8,24 +8,42 @@ interface CreditCardDashboardIconProps {
 }
 
 export default function CreditCardDashboardIcon({ width = 800, height = 450 }: CreditCardDashboardIconProps) {
-  const cardAnimation = {
-    hidden: { y: 20, opacity: 0, scale: 0.8 },
-    visible: { y: 0, opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
   };
 
-  const chartAnimation = {
-    hidden: { height: 0, opacity: 0 },
-    visible: (i: number) => ({
-      height: [0, 50, 80, 60, 90][i % 5],
-      opacity: 1,
-      y: [380 - 50, 380 - 80, 380 - 60, 380 - 90][i % 5], // Adjusted y-position
-      transition: { delay: 0.5 + i * 0.1, duration: 0.6 },
-    }),
+  const lineDraw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: { pathLength: 1, opacity: 1, transition: { duration: 1.5 } },
+  };
+
+  const glowPulse = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: [0.5, 1, 0.5],
+      transition: { duration: 2, repeat: Infinity },
+    },
+  };
+
+  const cardSlide = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.3 } },
+  };
+
+  const textReveal = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6, delay: 0.8 } },
   };
   
-  const valueAnimation = {
-    hidden: { y: -10, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { delay: 0.8, duration: 0.5 } },
+  const barGrow = {
+    hidden: { scaleY: 0, transformOrigin: "bottom" },
+    visible: { scaleY: 1, transition: { duration: 0.8, delay: 0.5 } },
   };
 
   return (
@@ -38,40 +56,84 @@ export default function CreditCardDashboardIcon({ width = 800, height = 450 }: C
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
+      variants={containerVariants}
     >
-      <rect width="800" height="450" fill="#0f172a" />
-      
-      {/* Header */}
-      <rect x="0" y="0" width="800" height="60" fill="#1e293b"/>
-      <motion.circle cx="40" cy="30" r="15" fill="#f59e0b" variants={valueAnimation} />
-      <motion.rect x="70" y="20" width="200" height="20" rx="4" fill="#64748b" variants={valueAnimation} />
+      <rect width="800" height="450" fill="#0A0A0E" /> {/* Deep dark background */}
 
-      {/* Cards */}
-      <motion.rect x="50" y="100" width="200" height="120" rx="10" fill="#3b82f6" variants={cardAnimation} />
-      <motion.rect x="280" y="100" width="200" height="120" rx="10" fill="#334155" variants={cardAnimation} custom={0.1} />
-      <motion.rect x="510" y="100" width="240" height="120" rx="10" fill="#334155" variants={cardAnimation} custom={0.2} />
+      {/* Futuristic Grid Overlay */}
+      <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} transition={{ duration: 2 }}>
+        <defs>
+          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" stroke-width="0.5" />
+          </pattern>
+          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="url(#smallGrid)" />
+            <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </motion.g>
 
-      {/* Bar Chart */}
-      <rect x="50" y="260" width="430" height="160" rx="10" fill="#1e293b"/>
-      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-        <motion.rect
-          key={i}
-          x={80 + i * 50}
-          y={380} // Start from bottom
-          width="30"
-          initial="hidden"
-          whileInView={{ height: [0, 50, 80, 60, 90][i % 5], y: 380 - [50, 80, 60, 90][i % 5] }}
-          transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: "easeOut" }}
-          fill="#3b82f6"
-          viewport={{ once: true, amount: 0.5 }}
-        />
-      ))}
+      {/* Main Screen Frame */}
+      <motion.rect
+        x="50" y="30" width="700" height="390" rx="15"
+        fill="url(#frameGradient)"
+        stroke="#4A4A6A"
+        stroke-width="2"
+        initial={{ scale: 0.9, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1, transition: { duration: 1, ease: "easeOut" } }}
+      />
+      <defs>
+        <linearGradient id="frameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#1A1A2A" />
+          <stop offset="1" stop-color="#0A0A1A" />
+        </linearGradient>
+      </defs>
 
-      {/* Pie Chart */}
-      <rect x="510" y="260" width="240" height="160" rx="10" fill="#1e293b"/>
-      <motion.circle cx="630" cy="340" r="60" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }} fill="#f59e0b" viewport={{ once: true, amount: 0.5 }} />
-      <motion.path d="M630 340 L630 280 A60 60 0 0 1 680 370 Z" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ delay: 1, duration: 1.2 }} fill="#3b82f6" stroke="#0f172a" stroke-width="2" viewport={{ once: true, amount: 0.5 }} />
-      <motion.path d="M630 340 L680 370 A60 60 0 0 1 580 350 Z" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ delay: 1.5, duration: 1.2 }} fill="#22c55e" stroke="#0f172a" stroke-width="2" viewport={{ once: true, amount: 0.5 }} />
+      {/* Animated Glowing Circuit Lines */}
+      <motion.path
+        d="M 50 100 Q 150 50 250 100 L 350 150 Q 450 200 550 150 L 650 100 Q 750 50 750 150"
+        stroke="#8AFF8A" stroke-width="2" fill="none"
+        variants={lineDraw}
+      />
+      <motion.circle cx="750" cy="150" r="4" fill="#8AFF8A" variants={glowPulse} />
+
+      {/* Credit Card Hologram */}
+      <motion.rect
+        x="100" y="80" width="250" height="150" rx="10"
+        fill="url(#cardHoloGradient)"
+        stroke="#7B68EE" stroke-width="1"
+        variants={cardSlide}
+      >
+        <defs>
+          <linearGradient id="cardHoloGradient" x1="100" y1="80" x2="350" y2="230" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#7B68EE" stop-opacity="0.3" />
+            <stop offset="1" stop-color="#4169E1" stop-opacity="0.8" />
+          </linearGradient>
+        </defs>
+        <motion.text x="120" y="130" font-family="monospace" font-size="20" fill="white" variants={textReveal}>**** **** **** 4242</motion.text>
+        <motion.text x="120" y="160" font-family="monospace" font-size="12" fill="white" variants={textReveal} custom={0.1}>VALID THRU 12/28</motion.text>
+        <motion.text x="250" y="190" font-family="monospace" font-size="24" fill="white" variants={textReveal} custom={0.2}>SV REDDY</motion.text>
+        <motion.rect x="110" y="180" width="40" height="25" rx="3" fill="#A9A9A9" variants={textReveal} custom={0.3}/> {/* Chip */}
+      </motion.rect>
+
+      {/* Data Visualization Grid - Bar Chart */}
+      <g transform="translate(400, 200)">
+        <motion.rect x="0" y="0" width="350" height="180" rx="8" fill="#1A1A2A" variants={containerVariants} custom={0.5}/>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <motion.rect
+            key={i}
+            x={20 + (i - 1) * 60}
+            y="170" width="30"
+            height="0"
+            fill="#00BFFF"
+            initial={{ height: 0, y: 170 }}
+            whileInView={{ height: (i * 25) + 30, y: 170 - ((i * 25) + 30), transition: { duration: 0.8, delay: 1 + i * 0.1 } }}
+            viewport={{ once: true, amount: 0.5 }}
+          />
+        ))}
+      </g>
+      <motion.text x="430" y="220" font-family="sans-serif" font-size="18" fill="#E0E0E0" variants={textReveal} custom={0.4}>Risk Metrics</motion.text>
 
     </motion.svg>
   );

@@ -60,9 +60,9 @@ export const experience = [
   },
   {
     company: "TEK Leaders Pvt Ltd",
-    role: "Business Data Analyst",
+    role: "Senior Data Analyst",
     location: "Hyderabad, India",
-    period: "Jun 2020 - Oct 2022",
+    period: "Jun 2020 - Oct 2023",
     description: [
       "Analyzed payroll and HR data using SQL and advanced Excel to perform forecasting and deliver actionable insights.",
       "Created Power BI dashboards using R visualizations and custom visuals for team and management.",

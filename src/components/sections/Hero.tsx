@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { personalInfo } from "@/data/portfolio";
 
+const MotionScrollLink = motion(ScrollLink);
+
 export default function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
@@ -45,22 +47,27 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-6"
         >
-          <ScrollLink
+          <MotionScrollLink
             to="projects"
             smooth={true}
             duration={800}
             className="px-8 py-4 rounded-full bg-white text-black font-medium text-lg hover:bg-gray-200 transition-colors cursor-pointer"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 8px rgba(41, 151, 255, 0.6), 0 0 16px rgba(41, 151, 255, 0.4)" }}
+            whileTap={{ scale: 1.05, rotate: [0, -1, 1, -1, 0], boxShadow: "0 0 8px rgba(41, 151, 255, 0.8), 0 0 20px rgba(41, 151, 255, 0.6)" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             View Projects
-          </ScrollLink>
-          <a
+          </MotionScrollLink>
+          <motion.a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 rounded-full glass text-white font-medium text-lg hover:bg-white/10 transition-colors"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 8px rgba(41, 151, 255, 0.6), 0 0 16px rgba(41, 151, 255, 0.4)" }}
+            whileTap={{ scale: 1.05, rotate: [0, -1, 1, -1, 0], boxShadow: "0 0 8px rgba(41, 151, 255, 0.8), 0 0 20px rgba(41, 151, 255, 0.6)" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             Download Resume
-          </a>
+          </motion.a>
         </motion.div>
       </motion.div>
     </section>

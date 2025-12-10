@@ -123,31 +123,37 @@ export const projects = [
     title: "Student Dropout Prediction",
     description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
     technologies: ["Python", "Machine Learning", "Django", "Jupyter"],
+    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
   },
   {
     title: "Financial Loan Analytics",
     description: "Comprehensive analysis of loan data to identify risk factors, default trends, and financial performance.",
     technologies: ["SQL", "Excel", "Data Analysis"],
+    githubUrl: "https://github.com/saivineethreddysuravi/financial-loan-analytics",
   },
   {
     title: "Workforce Retention Dashboard",
     description: "HR analytics dashboard focused on employee retention, turnover rates, and workforce demographics.",
     technologies: ["Tableau", "HR Analytics", "Data Visualization"],
+    githubUrl: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard",
   },
   {
     title: "Restaurant Market Insights",
     description: "Market analysis of restaurant trends and consumer preferences to drive business strategy.",
     technologies: ["Python", "Pandas", "Market Research"],
+    githubUrl: "https://github.com/saivineethreddysuravi/restaurant-market-insights",
   },
   {
     title: "Mexican Restaurant Analysis",
     description: "Deep dive data analysis into Mexican restaurant performance, location trends, and customer reviews.",
     technologies: ["Python", "Data Analysis", "Sentiment Analysis"],
+    githubUrl: "https://github.com/saivineethreddysuravi/mexican-restaurant-analysis",
   },
   {
     title: "Snake Game",
     description: "Classic Snake game implementation using Python and Pygame.",
     technologies: ["Python", "Pygame", "Game Development"],
+    githubUrl: "https://github.com/saivineethreddysuravi/snake-game",
   },
   {
     title: "Portfolio Website",

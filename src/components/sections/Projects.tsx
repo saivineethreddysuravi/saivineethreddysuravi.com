@@ -39,7 +39,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="mb-20"
         >
@@ -55,15 +55,15 @@ export default function Projects() {
                 key={index}
                 initial={{ opacity: 0, y: 80, filter: "blur(20px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 className="group"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                   <div className="lg:col-span-7 order-2 lg:order-1">
-                    <div className="relative aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-gray-800 to-black border border-white/10 shadow-2xl group-hover:shadow-blue-900/20 transition-all duration-700">
+                    <div className="relative w-full h-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-gray-800 to-black border border-white/10 shadow-2xl group-hover:shadow-blue-900/20 transition-all duration-700">
                       {AnimatedIconComponent ? (
-                        <AnimatedIconComponent width={800} height={450} /> // Pass appropriate size props
+                        <AnimatedIconComponent /> // Pass appropriate size props
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center text-gray-700 text-6xl font-black opacity-30 select-none">
                           {project.title[0]}
@@ -92,26 +92,32 @@ export default function Projects() {
 
                     <div className="flex items-center gap-6">
                       {project.githubUrl && (
-                        <a 
-                          href={project.githubUrl} 
-                          target="_blank" 
+                        <motion.a
+                          href={project.githubUrl}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 text-white font-medium hover:text-blue-400 transition-colors"
+                          whileHover={{ scale: 1.05, boxShadow: "0 0 8px rgba(41, 151, 255, 0.6), 0 0 16px rgba(41, 151, 255, 0.4)" }}
+                          whileTap={{ scale: 1.05, rotate: [0, -1, 1, -1, 0], boxShadow: "0 0 8px rgba(41, 151, 255, 0.8), 0 0 20px rgba(41, 151, 255, 0.6)" }}
+                          transition={{ duration: 0.3, ease: "easeOut" }}
                         >
-                          <FaGithub size={20} />
-                          Code
-                        </a>
+                          <FaGithub size={18} />
+                          View Code
+                        </motion.a>
                       )}
                       {project.liveUrl && (
-                        <a 
-                          href={project.liveUrl} 
-                          target="_blank" 
+                        <motion.a
+                          href={project.liveUrl}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 text-white font-medium hover:text-blue-400 transition-colors"
+                          whileHover={{ scale: 1.05, boxShadow: "0 0 8px rgba(41, 151, 255, 0.6), 0 0 16px rgba(41, 151, 255, 0.4)" }}
+                          whileTap={{ scale: 1.05, rotate: [0, -1, 1, -1, 0], boxShadow: "0 0 8px rgba(41, 151, 255, 0.8), 0 0 20px rgba(41, 151, 255, 0.6)" }}
+                          transition={{ duration: 0.3, ease: "easeOut" }}
                         >
                           <FaExternalLinkAlt size={18} />
                           Live Demo
-                        </a>
+                        </motion.a>
                       )}
                     </div>
                   </div>

@@ -56,56 +56,53 @@ export default function SnakeGameIcon({ width = 800, height = 450 }: SnakeGameIc
 
   return (
     <motion.svg
-      width={width}
-      height={height}
+      width="100%"
+      height="100%"
       viewBox="0 0 800 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
+      <defs>
+        <pattern id="sgSmallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" strokeWidth="0.5" />
+        </pattern>
+        <pattern id="sgGrid" width="100" height="100" patternUnits="userSpaceOnUse">
+          <rect width="100" height="100" fill="url(#sgSmallGrid)" />
+          <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" strokeWidth="1" />
+        </pattern>
+        <linearGradient id="sgFrameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1A1A2A" />
+          <stop offset="1" stopColor="#0A0A1A" />
+        </linearGradient>
+        <pattern id="sgGameGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect width="20" height="20" fill="none" stroke="#3A3A4C" strokeWidth="0.5" />
+        </pattern>
+      </defs>
+
       <rect width="800" height="450" fill="#0A0A0E" /> {/* Deep dark background */}
 
       {/* Futuristic Grid Overlay */}
       <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} transition={{ duration: 2 }}>
-        <defs>
-          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-            <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" stroke-width="0.5" />
-          </pattern>
-          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-            <rect width="100" height="100" fill="url(#smallGrid)" />
-            <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" stroke-width="1" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
+        <rect width="100%" height="100%" fill="url(#sgGrid)" />
       </motion.g>
 
       {/* Main Screen Frame */}
       <motion.rect
         x="50" y="30" width="700" height="390" rx="15"
-        fill="url(#frameGradient)"
+        fill="url(#sgFrameGradient)"
         stroke="#4A4A6A"
-        stroke-width="2"
+        strokeWidth="2"
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1, transition: { duration: 1, ease: "easeOut" } }}
       />
-      <defs>
-        <linearGradient id="frameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#1A1A2A" />
-          <stop offset="1" stop-color="#0A0A1A" />
-        </linearGradient>
-      </defs>
 
       {/* Game Grid */}
       <rect x="100" y="80" width="600" height="300" fill="#1A1A2A" rx="5" />
-      <defs>
-        <pattern id="gameGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <rect width="20" height="20" fill="none" stroke="#3A3A4C" stroke-width="0.5" />
-        </pattern>
-      </defs>
-      <rect x="100" y="80" width="600" height="300" fill="url(#gameGrid)" />
+      <rect x="100" y="80" width="600" height="300" fill="url(#sgGameGrid)" />
 
 
       {/* Snake Body Segments */}

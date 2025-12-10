@@ -48,52 +48,55 @@ export default function CreditCardDashboardIcon({ width = 800, height = 450 }: C
 
   return (
     <motion.svg
-      width={width}
-      height={height}
+      width="100%"
+      height="100%"
       viewBox="0 0 800 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
+      <defs>
+        <pattern id="ccSmallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" strokeWidth="0.5" />
+        </pattern>
+        <pattern id="ccGrid" width="100" height="100" patternUnits="userSpaceOnUse">
+          <rect width="100" height="100" fill="url(#ccSmallGrid)" />
+          <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" strokeWidth="1" />
+        </pattern>
+        <linearGradient id="ccFrameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1A1A2A" />
+          <stop offset="1" stopColor="#0A0A1A" />
+        </linearGradient>
+        <linearGradient id="ccCardHoloGradient" x1="100" y1="80" x2="350" y2="230" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#7B68EE" stopOpacity="0.3" />
+          <stop offset="1" stopColor="#4169E1" stopOpacity="0.8" />
+        </linearGradient>
+      </defs>
+
       <rect width="800" height="450" fill="#0A0A0E" /> {/* Deep dark background */}
 
       {/* Futuristic Grid Overlay */}
       <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 0.1 }} transition={{ duration: 2 }}>
-        <defs>
-          <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-            <path d="M 10 0 L 0 0 L 0 10" fill="none" stroke="#2C2C3A" stroke-width="0.5" />
-          </pattern>
-          <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-            <rect width="100" height="100" fill="url(#smallGrid)" />
-            <path d="M 100 0 L 0 0 L 0 100" fill="none" stroke="#3A3A4C" stroke-width="1" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
+        <rect width="100%" height="100%" fill="url(#ccGrid)" />
       </motion.g>
 
       {/* Main Screen Frame */}
       <motion.rect
         x="50" y="30" width="700" height="390" rx="15"
-        fill="url(#frameGradient)"
+        fill="url(#ccFrameGradient)"
         stroke="#4A4A6A"
-        stroke-width="2"
+        strokeWidth="2"
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1, transition: { duration: 1, ease: "easeOut" } }}
       />
-      <defs>
-        <linearGradient id="frameGradient" x1="50" y1="30" x2="750" y2="420" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#1A1A2A" />
-          <stop offset="1" stop-color="#0A0A1A" />
-        </linearGradient>
-      </defs>
 
       {/* Animated Glowing Circuit Lines */}
       <motion.path
         d="M 50 100 Q 150 50 250 100 L 350 150 Q 450 200 550 150 L 650 100 Q 750 50 750 150"
-        stroke="#8AFF8A" stroke-width="2" fill="none"
+        stroke="#8AFF8A" strokeWidth="2" fill="none"
         variants={lineDraw}
       />
       <motion.circle cx="750" cy="150" r="4" fill="#8AFF8A" variants={glowPulse} />
@@ -101,19 +104,13 @@ export default function CreditCardDashboardIcon({ width = 800, height = 450 }: C
       {/* Credit Card Hologram */}
       <motion.rect
         x="100" y="80" width="250" height="150" rx="10"
-        fill="url(#cardHoloGradient)"
-        stroke="#7B68EE" stroke-width="1"
+        fill="url(#ccCardHoloGradient)"
+        stroke="#7B68EE" strokeWidth="1"
         variants={cardSlide}
       >
-        <defs>
-          <linearGradient id="cardHoloGradient" x1="100" y1="80" x2="350" y2="230" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#7B68EE" stop-opacity="0.3" />
-            <stop offset="1" stop-color="#4169E1" stop-opacity="0.8" />
-          </linearGradient>
-        </defs>
-        <motion.text x="120" y="130" font-family="monospace" font-size="20" fill="white" variants={textReveal}>**** **** **** 4242</motion.text>
-        <motion.text x="120" y="160" font-family="monospace" font-size="12" fill="white" variants={textReveal} custom={0.1}>VALID THRU 12/28</motion.text>
-        <motion.text x="250" y="190" font-family="monospace" font-size="24" fill="white" variants={textReveal} custom={0.2}>SV REDDY</motion.text>
+        <motion.text x="120" y="130" fontFamily="monospace" fontSize="20" fill="white" variants={textReveal}>**** **** **** 4242</motion.text>
+        <motion.text x="120" y="160" fontFamily="monospace" fontSize="12" fill="white" variants={textReveal} custom={0.1}>VALID THRU 12/28</motion.text>
+        <motion.text x="250" y="190" fontFamily="monospace" fontSize="24" fill="white" variants={textReveal} custom={0.2}>SV REDDY</motion.text>
         <motion.rect x="110" y="180" width="40" height="25" rx="3" fill="#A9A9A9" variants={textReveal} custom={0.3}/> {/* Chip */}
       </motion.rect>
 
@@ -133,7 +130,7 @@ export default function CreditCardDashboardIcon({ width = 800, height = 450 }: C
           />
         ))}
       </g>
-      <motion.text x="430" y="220" font-family="sans-serif" font-size="18" fill="#E0E0E0" variants={textReveal} custom={0.4}>Risk Metrics</motion.text>
+      <motion.text x="430" y="220" fontFamily="sans-serif" fontSize="18" fill="#E0E0E0" variants={textReveal} custom={0.4}>Risk Metrics</motion.text>
 
     </motion.svg>
   );

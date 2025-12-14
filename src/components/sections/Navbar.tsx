@@ -72,15 +72,24 @@ export default function Navbar() {
                 {link.name}
               </ScrollLink>
             ))}
-             <ScrollLink
-                to="contact"
-                smooth={true}
-                duration={800}
-                offset={-100}
-                className="ml-4 px-6 py-2.5 text-sm font-bold text-white bg-[#1273eb] hover:bg-[#0e61c7] rounded-lg transition-colors cursor-pointer shadow-sm hover:shadow-md"
-              >
-                Contact Me
-              </ScrollLink>
+        <div className="flex items-center gap-4">
+             <a
+                href="/resume/Sai_Vineeth_Reddy_Suravi_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex px-5 py-2.5 bg-slate-800 hover:bg-slate-900 text-white text-sm font-bold rounded-lg transition-all shadow-lg hover:shadow-slate-800/30"
+             >
+                Resume
+             </a>
+             <a
+                href={personalInfo.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex px-5 py-2.5 bg-[#1273eb] hover:bg-[#0e61c7] text-white text-sm font-bold rounded-lg transition-all shadow-lg hover:shadow-blue-500/30"
+             >
+                Hire Me
+             </a>
+        </div>
           </div>
 
           {/* Mobile Menu Button */}

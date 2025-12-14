@@ -109,13 +109,13 @@ export const projects = [
   {
     title: "Credit Card Financial Dashboard",
     description: "Strategic USA market analysis of credit card trends, risk factors, and revenue streams using advanced Power BI visualizations.",
-    technologies: ["Power BI", "SQL", "DAX", "Market Analysis"],
+    technologies: ["Power BI", "PostgreSQL", "SQL ETL", "DAX"],
     githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
   },
   {
     title: "Student Dropout Prediction",
     description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
-    technologies: ["Python", "Machine Learning", "Django", "Jupyter"],
+    technologies: ["Python", "Scikit-Learn", "Django", "Machine Learning"],
     githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
   },
   {
@@ -157,7 +157,7 @@ export const projects = [
   {
     title: "Snake Game",
     description: "Classic Snake game implementation using Python and Pygame.",
-    technologies: ["Python", "Pygame", "Game Development"],
+    technologies: ["Python", "Tkinter", "Game Logic"],
     githubUrl: "https://github.com/saivineethreddysuravi/snake-game",
   },
   {

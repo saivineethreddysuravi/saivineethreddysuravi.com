@@ -128,11 +128,18 @@ export default function Projects() {
                         )}
                     </div>
 
-                    {/* Top Right "Premium/Free" badge mock */}
-                    <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10">
-                        PREMIUM
-                    </div>
+                    {/* Badge logic */}
+                    {index < 3 ? (
+                        <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10 flex items-center gap-1">
+                             <FaHeart className="text-[9px]" /> FEATURED
+                        </div>
+                    ) : (
+                        <div className="absolute top-3 left-3 bg-slate-200/80 backdrop-blur-sm text-slate-600 text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10 border border-slate-300">
+                            PROJECT
+                        </div>
+                    )}
                     
+                    {/* Like button (Visual only) */}
                     <button className="absolute top-3 right-3 p-2 text-white/70 hover:text-red-500 transition-all hover:scale-110 active:scale-95 z-10 bg-black/10 hover:bg-white rounded-lg">
                         <FaHeart size={18} />
                     </button>

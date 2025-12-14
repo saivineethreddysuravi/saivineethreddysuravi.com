@@ -5,36 +5,34 @@ import { skills } from "@/data/portfolio";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 bg-black">
+    <section id="skills" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-20 max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Expertise.</h2>
-          <p className="text-xl text-gray-400">
-            A comprehensive toolkit for data-driven decision making.
-          </p>
+          <h2 className="text-3xl font-bold text-slate-800 mb-2">Technical Skills</h2>
+          <p className="text-slate-500">Tools and technologies I use to build solutions.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((category, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-card rounded-3xl p-8 flex flex-col h-full"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
             >
-              <h3 className="text-2xl font-semibold text-white mb-8 border-b border-white/10 pb-4">
-                {category.category}
+              <h3 className="text-xl font-bold text-slate-800 mb-6 pb-4 border-b border-slate-100 flex items-center gap-2">
+                 <span className="w-2 h-6 bg-[#1273eb] rounded-full"></span>
+                 {category.category}
               </h3>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 {category.items.map((skill, i) => (
                   skill.link ? (
                     <a
@@ -42,17 +40,17 @@ export default function Skills() {
                       href={skill.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer group"
+                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-slate-50 hover:bg-blue-50 hover:text-[#1273eb] transition-all cursor-pointer group border border-slate-100 hover:border-blue-100"
                     >
-                      <skill.icon className="text-3xl text-gray-300 mb-3 group-hover:text-white transition-colors" />
-                      <span className="text-sm font-medium text-gray-400 text-center group-hover:text-white transition-colors">
+                      <skill.icon className="text-3xl text-slate-400 mb-2 group-hover:text-[#1273eb] transition-colors" />
+                      <span className="text-sm font-medium text-slate-600 text-center group-hover:text-[#1273eb] transition-colors">
                         {skill.name}
                       </span>
                     </a>
                   ) : (
-                    <div key={i} className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
-                      <skill.icon className="text-3xl text-gray-300 mb-3" />
-                      <span className="text-sm font-medium text-gray-400 text-center">
+                    <div key={i} className="flex flex-col items-center justify-center p-4 rounded-xl bg-slate-50 border border-slate-100">
+                      <skill.icon className="text-3xl text-slate-400 mb-2" />
+                      <span className="text-sm font-medium text-slate-600 text-center">
                         {skill.name}
                       </span>
                     </div>

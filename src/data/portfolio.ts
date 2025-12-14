@@ -1,4 +1,3 @@
-
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable } from 'react-icons/fa';
 import { SiTableau, SiPandas, SiNumpy, SiMysql } from 'react-icons/si';
 
@@ -102,10 +101,22 @@ export const education = [
 
 export const projects = [
   {
+    title: "Hotel Booking Data Analysis",
+    description: "Exploratory Data Analysis (EDA) of hotel booking cancellations, customer segments, and seasonal trends to optimize revenue strategies.",
+    technologies: ["Python", "Pandas", "Seaborn", "EDA"],
+    githubUrl: "https://github.com/saivineethreddysuravi/hotel-booking-analysis",
+  },
+  {
     title: "Credit Card Financial Dashboard",
     description: "Strategic USA market analysis of credit card trends, risk factors, and revenue streams using advanced Power BI visualizations.",
     technologies: ["Power BI", "SQL", "DAX", "Market Analysis"],
     githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
+  },
+  {
+    title: "Student Dropout Prediction",
+    description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
+    technologies: ["Python", "Machine Learning", "Django", "Jupyter"],
+    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
   },
   {
     title: "Cycling Equipment Market Analysis",
@@ -118,12 +129,6 @@ export const projects = [
     description: "Interactive Power BI dashboard for tracking sales KPIs, regional performance, and product profitability.",
     technologies: ["Power BI", "DAX", "Data Analytics"],
     githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
-  },
-  {
-    title: "Student Dropout Prediction",
-    description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
-    technologies: ["Python", "Machine Learning", "Django", "Jupyter"],
-    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
   },
   {
     title: "Financial Loan Analytics",

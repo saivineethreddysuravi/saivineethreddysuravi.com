@@ -9,7 +9,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900 text-slate-100 selection:bg-cyan-500/30">
+    <main className="min-h-screen bg-slate-50 text-slate-800 selection:bg-blue-200">
       <Navbar />
       <Hero />
       <About />

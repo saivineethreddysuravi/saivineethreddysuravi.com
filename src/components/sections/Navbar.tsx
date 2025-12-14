@@ -3,14 +3,13 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 
 const navLinks = [
   { name: "About", to: "about" },
   { name: "Experience", to: "experience" },
   { name: "Skills", to: "skills" },
   { name: "Projects", to: "projects" },
-  { name: "Contact", to: "contact" },
 ];
 
 export default function Navbar() {
@@ -32,21 +31,35 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || isOpen ? "bg-black/80 backdrop-blur-md border-b border-white/5" : "bg-transparent py-6"
+          scrolled || isOpen ? "bg-white shadow-md py-3" : "bg-white/90 backdrop-blur-md py-4 shadow-sm"
         }`}
       >
-        <div className="container mx-auto px-6 h-16 flex justify-between items-center">
-          <ScrollLink
-            to="hero"
-            smooth={true}
-            duration={800}
-            className="text-xl font-bold text-white tracking-tighter cursor-pointer z-50"
-          >
-            SV
-          </ScrollLink>
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center gap-8">
+             <ScrollLink
+              to="hero"
+              smooth={true}
+              duration={800}
+              className="text-2xl font-bold text-[#1273eb] tracking-tight cursor-pointer z-50 flex items-center gap-2"
+            >
+              <span className="font-extrabold text-3xl">fp</span>
+              <span className="text-slate-700 hidden sm:block">portfolio</span>
+            </ScrollLink>
+            
+            {/* Search Bar - Visual Only (Freepik style) */}
+            <div className="hidden lg:flex items-center bg-slate-100 rounded-lg px-4 py-2 w-96 border border-slate-200 focus-within:border-blue-400 focus-within:ring-2 focus-within:ring-blue-100 transition-all">
+                <FaSearch className="text-slate-400 mr-3" />
+                <input 
+                    type="text" 
+                    placeholder="Search for projects, skills..." 
+                    className="bg-transparent border-none outline-none text-slate-700 w-full placeholder:text-slate-400"
+                    disabled
+                />
+            </div>
+          </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden md:flex items-center space-x-2">
             {navLinks.map((link) => (
               <ScrollLink
                 key={link.name}
@@ -54,19 +67,28 @@ export default function Navbar() {
                 smooth={true}
                 duration={800}
                 offset={-100}
-                className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors cursor-pointer rounded-full hover:bg-white/10"
+                className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-[#1273eb] transition-colors cursor-pointer"
               >
                 {link.name}
               </ScrollLink>
             ))}
+             <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={800}
+                offset={-100}
+                className="ml-4 px-6 py-2.5 text-sm font-bold text-white bg-[#1273eb] hover:bg-[#0e61c7] rounded-lg transition-colors cursor-pointer shadow-sm hover:shadow-md"
+              >
+                Contact Me
+              </ScrollLink>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white focus:outline-none z-50"
+            className="md:hidden text-slate-700 focus:outline-none z-50"
           >
-            {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
       </motion.nav>
@@ -78,7 +100,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex items-center justify-center md:hidden"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex items-center justify-center md:hidden"
           >
             <div className="flex flex-col items-center space-y-8">
               {navLinks.map((link) => (
@@ -89,11 +111,21 @@ export default function Navbar() {
                   duration={800}
                   offset={-100}
                   onClick={() => setIsOpen(false)}
-                  className="text-3xl font-bold text-gray-300 hover:text-white cursor-pointer"
+                  className="text-2xl font-bold text-slate-700 hover:text-[#1273eb] cursor-pointer"
                 >
                   {link.name}
                 </ScrollLink>
               ))}
+              <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={800}
+                  offset={-100}
+                  onClick={() => setIsOpen(false)}
+                  className="px-8 py-3 text-lg font-bold text-white bg-[#1273eb] rounded-lg shadow-md"
+                >
+                  Contact Me
+              </ScrollLink>
             </div>
           </motion.div>
         )}

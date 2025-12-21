@@ -6,8 +6,8 @@ export const personalInfo = {
   title: "Data Analyst | Business Intelligence Specialist",
   email: "saivineethreddysuravi@gmail.com",
   phone: "+1 (901) 930-8006",
-  location: "Memphis, TN",
-  summary: "Data Analyst with 5+ years of experience designing and implementing interactive dashboards and analytics solutions. Proven ability in Power BI, SQL, Python, and Excel to extract and visualize large datasets. Recognized for streamlining reporting workflows and delivering insights across finance, payroll, and operations.",
+  location: "8331 Curtis Landing Dr, Memphis, TN",
+  summary: "Senior Data Analyst with 5+ years delivering financial and payroll reporting solutions. Experienced in SQL, Python, Excel, and Power BI to design and enhance reporting systems and streamline workflows. Strong collaborator with cross-functional teams to ensure data integrity and provide actionable financial insights. Committed to optimizing reporting processes for compliance and decision support.",
   social: {
     github: "https://github.com/saivineethreddysuravi",
     linkedin: "https://www.linkedin.com/in/saivineethreddysuravi",
@@ -40,6 +40,15 @@ export const skills = [
       { name: "MySQL", icon: SiMysql, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
       { name: "SQL Server", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
     ]
+  },
+  {
+    category: "Professional & Analytical",
+    items: [
+      { name: "Financial Analysis", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
+      { name: "Forecasting & Budgeting", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
+      { name: "SEC Reporting", icon: FaFileExcel, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
+      { name: "Analytical Skills", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi" },
+    ]
   }
 ];
 
@@ -50,23 +59,23 @@ export const experience = [
     location: "Memphis, TN",
     period: "May 2025 - Present",
     description: [
-      "Built Power BI dashboards with custom visuals and DAX for operational and workforce KPIs.",
-      "Developed SQL queries for data extraction and reporting.",
-      "Automated Excel/Python workflows to reduce manual work.",
-      "Collaborated with teams to provide actionable insights.",
-      "Led analysis initiatives for cross-team projects, including data cleansing processes that improved workflow visibility and scheduling efficiency."
+      "Built Power BI dashboards for operational and workforce KPIs that enhanced reporting efficiency and facilitated timely business decisions.",
+      "Developed and optimized SQL queries for data extraction and reporting, reducing report generation time by 40% and enabling teams to make quicker, data-driven decisions.",
+      "Automated Excel and Python workflows using pandas to reduce manual work.",
+      "Collaborated with teams to provide actionable insights using strong analytical skills, fostering improved business strategies and informed decision-making.",
+      "Led analysis initiatives for cross-team projects improving workflow visibility and scheduling efficiency."
     ]
   },
   {
     company: "TEK Leaders Pvt Ltd",
     role: "Senior Data Analyst",
     location: "Hyderabad, India",
-    period: "Jun 2020 - Oct 2023",
+    period: "Jun 2020 - [Month] 2023",
     description: [
-      "Analyzed payroll and HR data using SQL and advanced Excel to perform forecasting and deliver actionable insights.",
-      "Created Power BI dashboards using R visualizations and custom visuals for team and management.",
-      "Streamlined reports and automated workflows.",
-      "Worked closely with HR and Finance stakeholders to clarify reporting requirements and deliver weekly insights that informed operational and payroll decisions."
+      "Analyzed payroll and HR data for 500+ employees using SQL and Excel to perform forecasting and deliver actionable insights.",
+      "Created Power BI dashboards for team and management.",
+      "Streamlined financial reporting processes and automated workflows.",
+      "Worked closely with HR and Finance teams to improve processes, partnered with managers to deliver weekly insights that informed operational and payroll decisions."
     ]
   },
   {
@@ -75,9 +84,9 @@ export const experience = [
     location: "Hyderabad, India",
     period: "Jan 2018 - Feb 2020",
     description: [
-      "Managed payroll and financial data for large teams.",
-      "Developed Tableau dashboards tracking large-scale workforce and operational metrics.",
-      "Collaborated with cross-functional teams and performed code reviews to support business decisions.",
+      "Managed payroll and financial data for 1000+ employees, performing budget analysis and financial forecasting.",
+      "Developed Tableau dashboards for data visualization, tracking workforce and operational metrics.",
+      "Collaborated with cross-functional teams to support business decisions and contributed to SEC reporting deliverables.",
       "Streamlined payroll reporting processes, improving accuracy and efficiency across departments.",
       "Provided actionable insights to leadership for workforce planning and cost management."
     ]
@@ -95,11 +104,17 @@ export const education = [
     institution: "Narasimha Reddy Engineering College",
     location: "Hyderabad, India",
     degree: "B.Tech, Computer Science Engineering",
-    period: "2014 - 2017"
+    period: "2014 - 2018"
   }
 ];
 
 export const projects = [
+  {
+    title: "Streamflow Data Analysis",
+    description: "Automated USGS streamflow monitoring system that fetches real-time hydrological data, performs statistical trend analysis, and generates automated daily visualizations.",
+    technologies: ["Python", "Pandas", "Scipy", "GitHub Actions", "USGS API"],
+    githubUrl: "https://github.com/saivineethreddysuravi/USGS_Streamflow-analysis",
+  },
   {
     title: "Hotel Booking Data Analysis",
     description: "Exploratory Data Analysis (EDA) of hotel booking cancellations, customer segments, and seasonal trends to optimize revenue strategies.",

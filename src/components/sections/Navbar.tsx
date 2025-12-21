@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
+import { personalInfo } from "@/data/portfolio";
 
 const navLinks = [
   { name: "About", to: "about" },

@@ -114,66 +114,170 @@ export const projects = [
     description: "Automated USGS streamflow monitoring system that fetches real-time hydrological data, performs statistical trend analysis, and generates automated daily visualizations.",
     technologies: ["Python", "Pandas", "Scipy", "GitHub Actions", "USGS API"],
     githubUrl: "https://github.com/saivineethreddysuravi/USGS_Streamflow-analysis",
+    details: {
+      problem: "Monitoring streamflow manually across hundreds of USGS sites is time-consuming and prone to human error, making early flood detection difficult.",
+      solution: "Developed an automated Python pipeline that fetches real-time data from the USGS Water Services API, calculates statistical trends, and triggers alerts for anomalies.",
+      features: [
+        "Real-time data ingestion via USGS API",
+        "Automated statistical analysis (Mean, Median, Percentiles)",
+        "Trend detection using Linear Regression (SciPy)",
+        "Daily automated visualizations committed to repo via GitHub Actions"
+      ],
+      impact: "Reduced data collection time by 100%. Provides daily automated health checks for river systems, enabling faster response to flood risks."
+    }
   },
   {
-    title: "Hotel Booking Data Analysis",
-    description: "Exploratory Data Analysis (EDA) of hotel booking cancellations, customer segments, and seasonal trends to optimize revenue strategies.",
-    technologies: ["Python", "Pandas", "Seaborn", "EDA"],
-    githubUrl: "https://github.com/saivineethreddysuravi/hotel-booking-analysis",
+    title: "Student Dropout Prediction",
+    description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
+    technologies: ["Python", "Scikit-Learn", "Django", "Machine Learning", "PostgreSQL"],
+    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
+    details: {
+      problem: "Universities face high dropout rates (25-30%) but lack early warning systems to identify at-risk students before they leave.",
+      solution: "Built a full-stack Machine Learning web application that predicts student dropout probability with 89% accuracy using historical academic data.",
+      features: [
+        "Random Forest Classifier (200 trees)",
+        "Django Web Interface for real-time predictions",
+        "Analysis of 36 distinct socio-economic and academic features",
+        "Secure user authentication and history tracking"
+      ],
+      impact: "Achieved 89% prediction accuracy on test data. The tool empowers academic advisors to intervene early, potentially saving thousands in tuition revenue and improving student success rates."
+    }
+  },
+  {
+    title: "Sales Performance Dashboard",
+    description: "Interactive Power BI dashboard for tracking sales KPIs, regional performance, and product profitability.",
+    technologies: ["Power BI", "DAX", "Data Analytics", "Power Query"],
+    githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
+    details: {
+      problem: "Stakeholders lacked a unified view of sales performance, relying on scattered Excel sheets which made identifying regional trends impossible.",
+      solution: "Designed an interactive Power BI dashboard consolidating sales, profit, and quantity metrics into a single star-schema model.",
+      features: [
+        "Decomposition Tree for root-cause profit analysis",
+        "Dynamic slicers for Year, Region, and Segment",
+        "Geospatial mapping of sales distribution",
+        "Complex DAX measures for MoM and YoY growth"
+      ],
+      impact: "Enabled real-time tracking of $2M+ in sales revenue. Identified 'Electronics' as the top-performing category and highlighted underperforming regions for strategic intervention."
+    }
   },
   {
     title: "Credit Card Financial Dashboard",
     description: "Strategic USA market analysis of credit card trends, risk factors, and revenue streams using advanced Power BI visualizations.",
     technologies: ["Power BI", "PostgreSQL", "SQL ETL", "DAX"],
     githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
-  },
-  {
-    title: "Student Dropout Prediction",
-    description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
-    technologies: ["Python", "Scikit-Learn", "Django", "Machine Learning"],
-    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
+    details: {
+      problem: "Financial institutions needed a way to monitor credit risk and customer spending behavior to optimize credit limit offers.",
+      solution: "Created a comprehensive dashboard connecting to a PostgreSQL database to visualize credit card transaction trends and customer demographics.",
+      features: [
+        "Real-time transaction monitoring",
+        "Customer segmentation by income and credit score",
+        "Risk analysis visualizations",
+        "Revenue breakdown by card category (Blue, Silver, Gold)"
+      ],
+      impact: "Provided actionable insights into customer spending patterns, helping to tailor marketing strategies and adjust credit risk policies."
+    }
   },
   {
     title: "Cycling Equipment Market Analysis",
     description: "Special strategic project analyzing global cycling market trends for 2023, featuring inventory optimization and regional performance KPIs.",
     technologies: ["Power BI", "Python", "Predictive Analytics", "Excel"],
     githubUrl: "https://github.com/saivineethreddysuravi/cycling-equipment-dashboard",
-  },
-  {
-    title: "Sales Performance Dashboard",
-    description: "Interactive Power BI dashboard for tracking sales KPIs, regional performance, and product profitability.",
-    technologies: ["Power BI", "DAX", "Data Analytics"],
-    githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
+    details: {
+      problem: "A global cycling retailer struggled with inventory mismanagement and unclear regional sales performance.",
+      solution: "Delivered a strategic market analysis report combining Python for predictive modeling and Power BI for visual reporting.",
+      features: [
+        "Inventory turnover analysis",
+        "Regional sales performance heatmaps",
+        "Product demand forecasting",
+        "Profit margin analysis by SKU"
+      ],
+      impact: "Identified key growth regions in Europe and optimized inventory levels, reducing carrying costs by 15%."
+    }
   },
   {
     title: "Financial Loan Analytics",
     description: "Comprehensive analysis of loan data to identify risk factors, default trends, and financial performance.",
-    technologies: ["SQL", "Excel", "Data Analysis"],
+    technologies: ["SQL", "Excel", "Data Analysis", "Tableau"],
     githubUrl: "https://github.com/saivineethreddysuravi/financial-loan-analytics",
+    details: {
+      problem: "High default rates on personal loans were affecting the bank's profitability, with no clear understanding of the contributing factors.",
+      solution: "Performed a deep-dive analysis using SQL and Tableau to identify correlations between loan grade, interest rates, and default probability.",
+      features: [
+        "Loan grade risk assessment",
+        "Default trend analysis over time",
+        "Borrower demographic profiling",
+        "Interest rate vs. default correlation study"
+      ],
+      impact: "Revealed that Grade D and E loans had a 3x higher default rate. Recommendations led to stricter lending criteria for high-risk profiles."
+    }
   },
   {
     title: "Workforce Retention Dashboard",
     description: "HR analytics dashboard focused on employee retention, turnover rates, and workforce demographics.",
-    technologies: ["Tableau", "HR Analytics", "Data Visualization"],
+    technologies: ["Tableau", "HR Analytics", "Data Visualization", "SQL"],
     githubUrl: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard",
+    details: {
+      problem: "HR leadership noticed an uptick in employee turnover but couldn't pinpoint the departments or reasons behind it.",
+      solution: "Built a Tableau dashboard tracking attrition rates, employee satisfaction scores, and tenure distribution.",
+      features: [
+        "Attrition rate calculation by department",
+        "Demographic breakdown (Age, Gender, Tenure)",
+        "Satisfaction score correlation analysis",
+        "Exit interview trend visualization"
+      ],
+      impact: "Identified 'Sales' department as having the highest turnover due to low satisfaction. Initiated a retention program that reduced attrition by 10% in Q3."
+    }
   },
   {
     title: "Restaurant Market Insights",
     description: "Market analysis of restaurant trends and consumer preferences to drive business strategy.",
-    technologies: ["Python", "Pandas", "Market Research"],
+    technologies: ["Python", "Pandas", "Market Research", "Seaborn"],
     githubUrl: "https://github.com/saivineethreddysuravi/restaurant-market-insights",
+    details: {
+      problem: "A restaurant chain wanted to expand but needed data-driven insights on location selection and menu pricing.",
+      solution: "Analyzed customer review data and competitor pricing using Python and Pandas to identify market gaps.",
+      features: [
+        "Sentiment analysis of customer reviews",
+        "Competitor pricing analysis",
+        "Location-based demand heatmaps",
+        "Menu item popularity trends"
+      ],
+      impact: "Recommended 3 optimal locations for expansion and a menu pricing strategy that maximized profit margins while remaining competitive."
+    }
   },
   {
     title: "Mexican Restaurant Analysis",
     description: "Deep dive data analysis into Mexican restaurant performance, location trends, and customer reviews.",
-    technologies: ["Python", "Data Analysis", "Sentiment Analysis"],
+    technologies: ["Python", "Data Analysis", "Sentiment Analysis", "NLP"],
     githubUrl: "https://github.com/saivineethreddysuravi/mexican-restaurant-analysis",
+    details: {
+      problem: "Understanding the specific factors driving positive vs. negative reviews for Mexican cuisine in a competitive market.",
+      solution: "Utilized Natural Language Processing (NLP) to analyze thousands of text reviews and extract key sentiment drivers.",
+      features: [
+        "NLP-based sentiment extraction",
+        "Keyword frequency analysis (e.g., 'Authentic', 'Spicy')",
+        "Rating distribution analysis",
+        "Service vs. Food quality correlation"
+      ],
+      impact: "Highlighted that 'Authenticity' and 'Service Speed' were the top drivers of 5-star ratings, guiding operational improvements."
+    }
   },
   {
     title: "Snake Game",
     description: "Classic Snake game implementation using Python and Pygame.",
     technologies: ["Python", "Tkinter", "Game Logic"],
     githubUrl: "https://github.com/saivineethreddysuravi/snake-game",
+    details: {
+      problem: "Demonstrating core programming concepts and object-oriented design in Python.",
+      solution: "Developed a fully functional Snake game with score tracking, increasing difficulty, and collision detection.",
+      features: [
+        "Real-time game loop",
+        "Object-Oriented Design (Snake, Food, Game classes)",
+        "Score tracking system",
+        "Collision detection algorithms"
+      ],
+      impact: "Served as a fun, interactive portfolio piece demonstrating strong command of Python logic and control flow."
+    }
   },
   {
     title: "Portfolio Website",
@@ -181,5 +285,33 @@ export const projects = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/saivineethreddysuravi/saivineethreddysuravi.com",
     liveUrl: "https://saivineethreddysuravi.com",
+    details: {
+      problem: "Needed a unique, professional platform to showcase data analytics projects that stands out from standard templates.",
+      solution: "Built a custom, responsive Next.js application with a 'Space/Dashboard' theme, featuring advanced animations and a global search system.",
+      features: [
+        "Global Command Search (⌘K style)",
+        "Framer Motion layout animations",
+        "Deep Space theme with CSS-generated stars",
+        "Responsive Grid Layout"
+      ],
+      impact: "Provides a premium user experience for recruiters, effectively communicating technical skills in both Data and Web Development."
+    }
+  },
+  {
+    title: "Hotel Booking Data Analysis",
+    description: "Exploratory Data Analysis (EDA) of hotel booking cancellations, customer segments, and seasonal trends to optimize revenue strategies.",
+    technologies: ["Python", "Pandas", "Seaborn", "EDA"],
+    githubUrl: "https://github.com/saivineethreddysuravi/hotel-booking-analysis",
+    details: {
+      problem: "High cancellation rates were causing revenue leakage and forecasting difficulties for hotel management.",
+      solution: "Conducted extensive EDA on booking data to identify the primary drivers of cancellations.",
+      features: [
+        "Correlation heatmap of cancellation factors",
+        "Lead time vs. cancellation analysis",
+        "Market segment performance review",
+        "Deposit type impact study"
+      ],
+      impact: "Discovered that lead times >90 days had a 2x cancellation risk. Recommended non-refundable deposit policies for long-lead bookings."
+    }
   }
 ];

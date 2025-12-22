@@ -1,52 +1,20 @@
-"use client";
+import { useState } from "react";
+import ProjectModal from "@/components/ui/ProjectModal";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { projects } from "@/data/portfolio";
-import { FaGithub, FaExternalLinkAlt, FaHeart, FaDownload, FaEye, FaCode } from "react-icons/fa";
-import Image from "next/image";
-import { useSearch } from "@/context/SearchContext";
-
-// Import new animated project icons
-import SalesDashboardIcon from "@/components/project-icons/SalesDashboardIcon";
-import SnakeGameIcon from "@/components/project-icons/SnakeGameIcon";
-import CreditCardDashboardIcon from "@/components/project-icons/CreditCardDashboardIcon";
-import CyclingDashboardIcon from "@/components/project-icons/CyclingDashboardIcon";
-import StudentDropoutIcon from "@/components/project-icons/StudentDropoutIcon";
-import FinancialLoanIcon from "@/components/project-icons/FinancialLoanIcon";
-import WorkforceRetentionIcon from "@/components/project-icons/WorkforceRetentionIcon";
-import RestaurantInsightsIcon from "@/components/project-icons/RestaurantInsightsIcon";
-import MexicanRestaurantIcon from "@/components/project-icons/MexicanRestaurantIcon";
-import PortfolioWebsiteIcon from "@/components/project-icons/PortfolioWebsiteIcon";
-
-
-// Map project titles to their animated components
-const AnimatedProjectIcons = {
-  "Credit Card Financial Dashboard": CreditCardDashboardIcon,
-  "Cycling Equipment Market Analysis": CyclingDashboardIcon,
-  "Sales Performance Dashboard": SalesDashboardIcon,
-  "Student Dropout Prediction": StudentDropoutIcon,
-  "Financial Loan Analytics": FinancialLoanIcon,
-  "Workforce Retention Dashboard": WorkforceRetentionIcon,
-  "Restaurant Market Insights": RestaurantInsightsIcon,
-  "Mexican Restaurant Analysis": MexicanRestaurantIcon,
-  "Snake Game": SnakeGameIcon,
-  "Portfolio Website": PortfolioWebsiteIcon,
-};
-
-// Pastel colors for card backgrounds to look like asset thumbnails
-const cardBackgrounds = [
-    "bg-blue-50",
-    "bg-purple-50",
-    "bg-emerald-50",
-    "bg-orange-50",
-    "bg-cyan-50",
-    "bg-rose-50",
-];
+// ... existing imports
 
 export default function Projects() {
   const { searchQuery, setSearchQuery } = useSearch();
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openProject = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   const filteredProjects = projects.filter((project) => {
+     // ... existing filter logic
     const query = searchQuery.toLowerCase();
     return (
       project.title.toLowerCase().includes(query) ||
@@ -58,6 +26,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-black min-h-screen">
       <div className="container mx-auto px-6">
+        {/* ... Header and Filter Buttons remain the same ... */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +54,6 @@ export default function Projects() {
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project, index) => {
                 const AnimatedIconComponent = AnimatedProjectIcons[project.title as keyof typeof AnimatedProjectIcons];
-                // Use darker pastel/muted backgrounds for the thumbnail area to fit dark mode
                 const bgClass = cardBackgrounds[index % cardBackgrounds.length];
 
                 return (
@@ -97,12 +65,12 @@ export default function Projects() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                    className="group relative bg-slate-900/40 backdrop-blur-md rounded-xl overflow-hidden border border-white/5 flex flex-col hover:border-white/20 transition-all duration-300"
+                    onClick={() => openProject(project)}
+                    className="group relative bg-slate-900/40 backdrop-blur-md rounded-xl overflow-hidden border border-white/5 flex flex-col hover:border-cyan-500/30 transition-all duration-300 cursor-pointer"
                   >
-                    {/* Thumbnail Area - kept slightly lighter for contrast but still muted */}
+                    {/* Thumbnail Area */}
                     <div className={`relative w-full aspect-[4/3] ${bgClass} flex items-center justify-center p-8 overflow-hidden opacity-90 group-hover:opacity-100 transition-opacity`}>
                         
-                        {/* The Icon/Asset */}
                         <div className="w-full h-full transform group-hover:scale-110 transition-transform duration-700 cubic-bezier(0.4, 0, 0.2, 1) flex items-center justify-center">
                             {AnimatedIconComponent ? (
                                 <AnimatedIconComponent /> 
@@ -114,37 +82,10 @@ export default function Projects() {
                         </div>
 
                         {/* Overlay on Hover */}
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8 gap-3 backdrop-blur-[2px]">
-                            {project.githubUrl && (
-                                <motion.a 
-                                    href={project.githubUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="p-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black shadow-lg" 
-                                    title="View Code"
-                                    initial={{ scale: 0.8, opacity: 0, y: 10 }}
-                                    whileInView={{ scale: 1, opacity: 1, y: 0 }}
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <FaCode size={18} />
-                                </motion.a>
-                            )}
-                            {project.liveUrl && (
-                                <motion.a 
-                                    href={project.liveUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="p-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black shadow-lg" 
-                                    title="Live Demo"
-                                    initial={{ scale: 0.8, opacity: 0, y: 10 }}
-                                    whileInView={{ scale: 1, opacity: 1, y: 0 }}
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                >
-                                    <FaExternalLinkAlt size={18} />
-                                </motion.a>
-                            )}
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pb-8 gap-3 backdrop-blur-[2px]">
+                             <span className="px-4 py-2 bg-cyan-600/20 border border-cyan-500 text-cyan-400 rounded-full font-bold text-sm shadow-[0_0_15px_rgba(0,240,255,0.3)]">
+                                View Analysis
+                             </span>
                         </div>
 
                         {/* Badge logic */}
@@ -160,24 +101,29 @@ export default function Projects() {
                     </div>
 
                     {/* Content Area */}
-                    <div className="p-5 flex flex-col flex-grow border-t border-white/5">
-                        <h3 className="font-bold text-slate-200 text-lg leading-tight mb-2 hover:text-blue-400 cursor-pointer transition-colors">
+                    <div className="p-5 flex flex-col flex-grow border-t border-white/5 bg-[#0a0a20]/50">
+                        <h3 className="font-bold text-slate-200 text-lg leading-tight mb-2 group-hover:text-cyan-400 transition-colors">
                             {project.title}
                         </h3>
                         
-                        <p className="text-slate-400 text-sm mb-5 leading-relaxed flex-grow font-light">
+                        <p className="text-slate-400 text-sm mb-5 leading-relaxed flex-grow font-light line-clamp-3">
                             {project.description}
                         </p>
                         
-                        {/* Technologies / Uses Section */}
+                        {/* Technologies */}
                         <div className="mb-4">
                             <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-2">Built With</span>
                             <div className="flex flex-wrap gap-2">
-                                {project.technologies.map((tech, i) => (
-                                    <span key={i} className="px-2 py-1 bg-white/5 text-slate-400 text-[11px] font-medium rounded border border-white/5 hover:border-blue-500/50 hover:text-blue-400 transition-colors">
+                                {project.technologies.slice(0, 3).map((tech, i) => (
+                                    <span key={i} className="px-2 py-1 bg-white/5 text-slate-400 text-[11px] font-medium rounded border border-white/5">
                                         {tech}
                                     </span>
                                 ))}
+                                {project.technologies.length > 3 && (
+                                    <span className="px-2 py-1 bg-white/5 text-slate-500 text-[11px] font-medium rounded border border-white/5">
+                                        +{project.technologies.length - 3}
+                                    </span>
+                                )}
                             </div>
                         </div>
 
@@ -187,10 +133,6 @@ export default function Projects() {
                                     SV
                                 </div>
                                 <span className="text-xs text-slate-500 font-medium">Sai Vineeth</span>
-                            </div>
-                            <div className="flex text-slate-600 gap-1 text-[10px]">
-                                <FaEye />
-                                <span>1.2k</span>
                             </div>
                         </div>
                     </div>
@@ -204,13 +146,19 @@ export default function Projects() {
                     className="col-span-full text-center py-20"
                 >
                     <p className="text-slate-500 text-lg">No projects found matching "{searchQuery}"</p>
-                    <button onClick={() => setSearchQuery("")} className="mt-4 text-blue-400 hover:underline">Clear search</button>
+                    <button onClick={() => setSearchQuery("")} className="mt-4 text-cyan-400 hover:underline">Clear search</button>
                 </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
         
-        {/* Pagination / View All */}
+        {/* Modal Integration */}
+        <ProjectModal 
+            project={selectedProject} 
+            isOpen={isModalOpen} 
+            onClose={() => setIsModalOpen(false)} 
+        />
+        
         {!searchQuery && (
             <div className="mt-16 flex justify-center">
                 <button className="px-8 py-3 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white hover:text-black transition-all shadow-sm backdrop-blur-sm">

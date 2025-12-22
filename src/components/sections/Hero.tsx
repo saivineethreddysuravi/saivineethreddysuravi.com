@@ -69,37 +69,26 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
-      {/* Freepik-like Background Pattern */}
-      <div className="absolute inset-0 z-0 opacity-20" 
-           style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }}>
+    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-transparent">
+      
+      {/* Solar System / Earth Effect */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-500/10 blur-[100px] z-0 animate-pulse" />
+      <div className="absolute bottom-[-400px] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full bg-gradient-to-t from-blue-900 via-[#000000] to-transparent opacity-50 blur-3xl z-0" />
+      
+      {/* Orbiting Icons */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5 animate-[spin_60s_linear_infinite] pointer-events-none z-0">
+         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#030014] p-2 rounded-full border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.5)]">
+            <FaDatabase className="text-cyan-400 text-2xl" />
+         </div>
+         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-[#030014] p-2 rounded-full border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+            <FaPython className="text-purple-400 text-2xl" />
+         </div>
       </div>
-
-      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px]" />
-        <div className="absolute top-[40%] -left-[10%] w-[500px] h-[500px] rounded-full bg-purple-500/10 blur-[120px]" />
-        
-        {/* Floating Icons Animation - Keeping colors as they pop against black */}
-        {floatingIcons.map((item, index) => (
-            <motion.div
-                key={index}
-                className={`absolute ${item.color} text-4xl md:text-6xl opacity-30`}
-                style={{ top: item.top, left: item.left, right: item.right, bottom: item.bottom }}
-                animate={{ 
-                    y: [0, -20, 0],
-                    rotate: [0, 10, -10, 0],
-                    scale: [1, 1.1, 1]
-                }}
-                transition={{ 
-                    duration: 5, 
-                    repeat: Infinity, 
-                    ease: "easeInOut",
-                    delay: item.delay 
-                }}
-            >
-                <item.Icon />
-            </motion.div>
-        ))}
+      
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-white/5 animate-[spin_90s_linear_infinite_reverse] pointer-events-none z-0">
+         <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#030014] p-2 rounded-full border border-yellow-500/30 shadow-[0_0_15px_rgba(234,179,8,0.5)]">
+            <FaChartPie className="text-yellow-400 text-2xl" />
+         </div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center mt-20">
@@ -108,48 +97,46 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/5 text-slate-300 font-medium text-sm tracking-wide border border-white/10 backdrop-blur-sm">
-             Available for Freelance & Full-time
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-cyan-950/30 text-cyan-300 font-medium text-sm tracking-wide border border-cyan-500/30 backdrop-blur-md shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+             🚀 Mission Ready: Available for Hire
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-white leading-tight">
-            High-quality <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">data solutions</span> <br className="hidden md:block"/> for your business.
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-white leading-tight drop-shadow-lg">
+            Navigating the <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">Data Universe</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-slate-400 text-lg md:text-xl leading-relaxed mb-10 font-light">
-            {personalInfo.name} — Transforming raw data into clear, actionable strategies. 
-            <span className="hidden md:inline"> Explore a library of dashboards, analysis reports, and engineering projects.</span>
+          <p className="max-w-2xl mx-auto text-blue-200/80 text-lg md:text-xl leading-relaxed mb-10 font-light">
+            {personalInfo.name} — Exploring vast datasets to discover actionable insights. 
+            <span className="hidden md:inline"> Your co-pilot for data analysis, visualization, and engineering missions.</span>
           </p>
         </motion.div>
 
-        {/* Big Search Bar Area */}
+        {/* HUD Search Bar */}
         <motion.div 
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6, ease: "backOut" }}
-            className="w-full max-w-4xl bg-white/5 backdrop-blur-xl p-2.5 rounded-2xl shadow-2xl shadow-blue-900/10 border border-white/10 flex flex-col md:flex-row items-center gap-2 relative z-20 group hover:border-white/20 transition-all"
+            className="w-full max-w-4xl bg-[#0a0a20]/80 backdrop-blur-xl p-1.5 rounded-2xl shadow-[0_0_30px_rgba(0,240,255,0.15)] border border-cyan-500/30 flex flex-col md:flex-row items-center gap-2 relative z-20 group hover:border-cyan-500/60 transition-all"
         >
-            <div className="hidden md:flex items-center px-5 border-r border-white/10 text-slate-400 gap-2 cursor-pointer hover:text-white transition-colors font-medium h-12">
-                <span>Assets</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+            <div className="hidden md:flex items-center px-5 border-r border-cyan-500/20 text-cyan-500/70 gap-2 cursor-pointer hover:text-cyan-400 transition-colors font-mono text-sm h-12 tracking-widest uppercase">
+                <span>Scan</span>
             </div>
             
             <div className="flex-1 flex items-center w-full px-4 h-14">
-                 <FaSearch className="text-slate-500 text-xl mr-4 group-hover:text-white/50 transition-colors" />
+                 <FaSearch className="text-cyan-500/50 text-xl mr-4 group-hover:text-cyan-400 transition-colors" />
                  <input 
                     type="text" 
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                    placeholder={`Search for ${placeholderText}`} 
-                    className="w-full h-full text-lg text-white placeholder:text-slate-600 outline-none bg-transparent font-light"
+                    placeholder={`Locate ${placeholderText}`} 
+                    className="w-full h-full text-lg text-cyan-50 placeholder:text-cyan-900/50 outline-none bg-transparent font-light tracking-wide"
                  />
             </div>
 
             <button
                 onClick={handleSearch}
-                className="w-full md:w-auto px-10 py-4 bg-[#2997ff] hover:bg-[#0077ed] text-white font-semibold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full md:w-auto px-10 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] uppercase tracking-wider"
             >
-                <FaSearch />
-                Search
+                Launch
             </button>
         </motion.div>
 
@@ -158,15 +145,15 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="mt-10 flex flex-wrap justify-center gap-3 text-sm text-slate-500 font-medium"
+            className="mt-10 flex flex-wrap justify-center gap-3 text-sm text-cyan-200/60 font-medium"
         >
-            <span className="opacity-60 py-1">Popular keywords:</span>
+            <span className="opacity-60 py-1">Quick Coordinates:</span>
             <div className="flex flex-wrap gap-2 justify-center">
                 {["Data Analysis", "Engineering", "Python", "Visualization", "Power BI"].map((tag, i) => (
                     <button 
                         key={i} 
                         onClick={() => { setSearchQuery(tag); handleSearch(); }}
-                        className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 hover:bg-white/10 hover:border-white/20 hover:text-white cursor-pointer transition-all shadow-sm"
+                        className="px-4 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-950/20 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-400 hover:text-cyan-200 cursor-pointer transition-all shadow-sm hover:shadow-[0_0_10px_rgba(0,240,255,0.3)]"
                     >
                         {tag}
                     </button>

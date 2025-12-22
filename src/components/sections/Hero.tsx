@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, scroller } from "react-scroll";
 import { personalInfo } from "@/data/portfolio";
 import { FaSearch, FaImage, FaCode, FaChartBar, FaDatabase, FaPython, FaChartPie, FaFileExcel } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { useSearch } from "@/context/SearchContext";
 
 const floatingIcons = [
     { Icon: FaDatabase, color: "text-blue-400", top: "15%", left: "10%", delay: 0 },
@@ -51,11 +52,21 @@ const useTypewriter = (words: string[], speed = 100, pause = 2000) => {
 };
 
 export default function Hero() {
+  const { searchQuery, setSearchQuery } = useSearch();
   const placeholderText = useTypewriter(
     ["Power BI Dashboards", "Python Automation", "SQL Analysis", "Data Visualization", "Machine Learning Models"],
     100,
     2000
   );
+
+  const handleSearch = () => {
+    scroller.scrollTo("projects", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -50,
+    });
+  };
 
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
@@ -125,21 +136,21 @@ export default function Hero() {
                  <FaSearch className="text-slate-500 text-xl mr-4 group-hover:text-white/50 transition-colors" />
                  <input 
                     type="text" 
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                     placeholder={`Search for ${placeholderText}`} 
                     className="w-full h-full text-lg text-white placeholder:text-slate-600 outline-none bg-transparent font-light"
-                    disabled
                  />
             </div>
 
-            <ScrollLink
-                to="projects"
-                smooth={true}
-                duration={800}
+            <button
+                onClick={handleSearch}
                 className="w-full md:w-auto px-10 py-4 bg-[#2997ff] hover:bg-[#0077ed] text-white font-semibold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 active:translate-y-0"
             >
                 <FaSearch />
                 Search
-            </ScrollLink>
+            </button>
         </motion.div>
 
         {/* Quick Categories */}
@@ -152,9 +163,13 @@ export default function Hero() {
             <span className="opacity-60 py-1">Popular keywords:</span>
             <div className="flex flex-wrap gap-2 justify-center">
                 {["Data Analysis", "Engineering", "Python", "Visualization", "Power BI"].map((tag, i) => (
-                    <span key={i} className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 hover:bg-white/10 hover:border-white/20 hover:text-white cursor-pointer transition-all shadow-sm">
+                    <button 
+                        key={i} 
+                        onClick={() => { setSearchQuery(tag); handleSearch(); }}
+                        className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 hover:bg-white/10 hover:border-white/20 hover:text-white cursor-pointer transition-all shadow-sm"
+                    >
                         {tag}
-                    </span>
+                    </button>
                 ))}
             </div>
         </motion.div>

@@ -1,65 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #1e293b;
-  --color-accent: #1273eb;
+  --color-background: #000000;
+  --color-foreground: #f8fafc;
+  --color-accent: #2997ff; /* Apple Blue */
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #1e293b;
-  --accent: #1273eb;
+  --background: #000000;
+  --foreground: #f8fafc;
+  --accent: #2997ff;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #f8fafc;
+    background-color: #000000;
   }
   
   body {
-    @apply bg-slate-50 text-slate-800 antialiased;
-    background-color: #f8fafc;
-    color: #1e293b;
+    @apply bg-black text-slate-50 antialiased;
+    background-color: #000000;
+    color: #f8fafc;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/80 backdrop-blur-xl border border-slate-200/50 shadow-sm;
+    @apply bg-black/70 backdrop-blur-2xl border-b border-white/10 shadow-lg;
   }
   
   .glass-card {
-    @apply bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-slate-900/40 backdrop-blur-md border border-white/5 shadow-sm hover:shadow-xl hover:bg-slate-800/50 transition-all duration-300;
   }
 
   .text-gradient {
-    @apply text-slate-900;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400;
   }
   
-  /* Freepik-like button style */
   .btn-primary {
-    @apply bg-[#1273eb] text-white font-medium rounded hover:bg-[#0e61c7] transition-colors;
+    @apply bg-[#2997ff] text-white font-medium rounded-full hover:bg-[#0077ed] transition-colors px-6 py-2 shadow-lg shadow-blue-500/20;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar for Dark Mode */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #333;
   border-radius: 5px;
-  border: 2px solid #f1f5f9;
+  border: 2px solid #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #555;
 }

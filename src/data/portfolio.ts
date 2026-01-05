@@ -59,11 +59,13 @@ export const experience = [
     location: "Memphis, TN, USA",
     period: "May 2025 - Dec 2025",
     description: [
-      "Owned end-to-end BI delivery including data extraction from Snowflake, SQL-based ELT workflows, Power BI data modeling, DAX development, and dashboard deployment.",
-      "**Impact:** Reduced report generation time by approximately 40% through optimized SQL and Snowflake data warehouse management.",
-      "**Action:** Developed standardized DAX measures and Power BI data models to improve reporting consistency and enable deep-dive trend analysis across departments.",
+      "**Ownership:** Owned end-to-end BI delivery including data extraction from Snowflake, SQL-based ELT workflows, Power BI data modeling, DAX development, dashboard deployment, and stakeholder feedback cycles.",
+      "**Visualization:** Designed and delivered interactive Power BI dashboards to track operational, workforce, and productivity KPIs, improving reporting visibility for managers and leadership teams.",
+      "**Optimization:** Extracted, transformed, and validated data from Snowflake enterprise data warehouses using advanced SQL (joins, CTEs, window functions), reducing report generation time by approximately 40%.",
+      "**Modeling:** Developed DAX measures and Power BI data models to standardize KPIs, enable trend analysis, and improve reporting consistency across departments.",
       "**Automation:** Automated recurring Excel and Python (pandas) workflows to reduce manual reporting effort and minimize data quality issues.",
-      "Collaborated with operations and management teams to define reporting requirements and deliver scalable BI solutions that improved company performance."
+      "**Strategy:** Collaborated closely with operations and management teams to identify and define reporting requirements, then developed scalable BI solutions that improved data accuracy, reduced reporting time, and empowered leadership to make faster, more informed business decisions that positively impacted overall company performance.",
+      "**Cross-functional:** Supported cross-team initiatives by delivering actionable insights that improved scheduling efficiency, workforce visibility, and operational decision-making."
     ]
   },
   {
@@ -72,11 +74,13 @@ export const experience = [
     location: "Hyderabad, India",
     period: "Jun 2020 - Jun 2022",
     description: [
-      "Analyzed payroll, HR, and financial datasets using SQL, Snowflake, and Python to support accurate workforce and compensation reporting.",
-      "**Action:** Designed and maintained Power BI dashboards for leadership, providing visibility into payroll trends, utilization metrics, and operational KPIs.",
-      "**Impact:** Streamlined financial reporting processes through automation and optimized SQL queries, significantly reducing manual turnaround time.",
-      "**Strategy:** Conducted trend and cohort-based analysis to identify workforce patterns and cost drivers, directly informing weekly payroll decisions.",
-      "Documented data sources and business logic to support audit readiness and long-term maintainability."
+      "**Analysis:** Analyzed payroll, HR, and financial datasets using SQL, Snowflake, Python, and Excel to support accurate workforce and compensation reporting.",
+      "**Reporting:** Designed and maintained Power BI dashboards for leadership, providing visibility into payroll trends, utilization metrics, and operational KPIs.",
+      "**Consistency:** Built reusable DAX calculations and standardized data models to improve KPI consistency and reporting performance across business units.",
+      "**Efficiency:** Led payroll, HR, and financial analytics initiatives through automation and optimized SQL queries, reducing manual effort and turnaround time.",
+      "**Insights:** Conducted trend analysis and cohort-based reporting to identify workforce patterns, cost drivers, and operational improvement opportunities.",
+      "**Planning:** Collaborated closely with HR and Finance teams to deliver weekly insights that informed payroll decisions, budgeting, and workforce planning.",
+      "**Documentation:** Documented data sources, business logic, and reporting definitions to support transparency, audit readiness, and long-term maintainability."
     ]
   },
   {
@@ -85,13 +89,22 @@ export const experience = [
     location: "Hyderabad, India",
     period: "Jan 2018 - Feb 2020",
     description: [
-      "Managed and analyzed large-scale payroll and financial datasets to identify inefficiencies and optimize workforce planning models.",
-      "**Impact:** Developed Tableau dashboards that enabled leaders to quickly understand financial performance, leading to more effective decisions.",
-      "**Action:** Redesigned payroll reporting workflows by automating error checks, achieving a 20% increase in accuracy and 30% reduction in processing time.",
-      "**Compliance:** Ensured 100% accuracy of SEC and internal compliance reporting through meticulous data reconciliation during audits.",
-      "Delivered actionable insights that directly increased budgeting accuracy and enabled more effective workforce planning for executives."
+      "**Management:** Managed and analyzed large payroll and financial datasets to identify inefficiencies and cost-saving opportunities, optimize workforce planning accuracy, and deliver timely, compliant reports that directly informed high-impact business decisions.",
+      "**Dashboards:** Designed Tableau dashboards that enabled leaders to quickly understand financial performance, headcount metrics, and operational trends, leading to more effective decisions and improved business results.",
+      "**Compliance:** Ensured the accuracy and completeness of SEC and internal compliance reports by carefully reconciling financial data and maintaining thorough documentation, which strengthened financial controls, reduced the risk of reporting errors, and supported consistent success during audits.",
+      "**Process Improvement:** Partnered with Finance, HR, and Operations teams to redesign payroll reporting by streamlining data workflows, automating error checks, and introducing best practices, achieving a 20% increase in accuracy and a 30% reduction in processing time.",
+      "**Strategy:** Delivered actionable insights that directly increased budgeting accuracy, lowered operational costs, and enabled more effective workforce planning for executives."
     ]
   }
+];
+
+export const achievements = [
+  "Reduced report generation time by approximately **40%** at StarTech Networks through optimized SQL and Snowflake data management.",
+  "Achieved a **20% increase in accuracy** and **30% reduction in processing time** for payroll reporting at Qualcomm.",
+  "Reduced data collection time by **100%** for streamflow monitoring using an automated Python pipeline.",
+  "Achieved **89% prediction accuracy** in student dropout prediction using Random Forest models.",
+  "Identified 'Sales' department turnover issues leading to a **10% reduction in attrition** via a retention program.",
+  "Maintained a **3.88 GPA** during Master of Science in Management Information Systems."
 ];
 
 export const education = [

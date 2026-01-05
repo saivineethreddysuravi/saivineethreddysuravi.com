@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { personalInfo } from "@/data/portfolio";
 
 const navLinks = [
   { name: "About", to: "about" },
   { name: "Experience", to: "experience" },
+  { name: "Achievements", to: "achievements" },
   { name: "Skills", to: "skills" },
   { name: "Projects", to: "projects" },
 ];
@@ -43,23 +44,8 @@ export default function Navbar() {
               duration={800}
               className="text-2xl font-bold text-white tracking-tight cursor-pointer z-50 flex items-center gap-2"
             >
-              <span className="font-semibold text-lg">Sai Vineeth</span>
+              <span className="font-semibold text-lg">{personalInfo.name}</span>
             </ScrollLink>
-            
-            {/* Search Bar - Apple Style Command Trigger */}
-            <div className="hidden lg:flex items-center bg-white/10 rounded-lg px-4 py-1.5 w-64 border border-white/10 focus-within:border-white/20 hover:bg-white/15 transition-all cursor-pointer group">
-                <FaSearch className="text-white/40 group-hover:text-white/60 mr-3 text-xs" />
-                <input 
-                    type="text" 
-                    placeholder="Search..." 
-                    className="bg-transparent border-none outline-none text-white/80 w-full placeholder:text-white/40 text-sm font-medium"
-                    disabled
-                />
-                <div className="flex gap-1">
-                    <span className="text-[10px] text-white/30 border border-white/20 rounded px-1.5 py-0.5">⌘</span>
-                    <span className="text-[10px] text-white/30 border border-white/20 rounded px-1.5 py-0.5">K</span>
-                </div>
-            </div>
           </div>
 
           {/* Desktop Menu */}

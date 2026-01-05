@@ -123,6 +123,29 @@ export const education = [
 
 export const projects = [
   {
+    title: "Auto-Email Reachout Tool",
+    description: "A productivity automation tool that streamlines job applications by generating personalized emails and managing bulk outreach using Python and AppleScript.",
+    technologies: ["Python", "AppleScript", "macOS Mail API", "Automation"],
+    githubUrl: "https://github.com/saivineethreddysuravi/auto-email-tool",
+    details: {
+      problem: "Applying for jobs manually is a time-consuming process. Copying recruiter emails, attaching resumes, and drafting repetitive messages for hundreds of roles leads to application fatigue and decreased efficiency.",
+      solution: "Developed a background automation tool that monitors the clipboard for email addresses and interfaces directly with the macOS Mail app to instantly draft or send personalized emails with the resume already attached.",
+      features: [
+        "Clipboard Listener: Automatically detects when a recruiter's email is copied.",
+        "Smart Greetings: Dynamically parses email addresses to generate personalized greetings (e.g., 'Hi John' vs. 'Hi Team').",
+        "Bulk Sender: Automates outreach to large CSV lists with safety delays to prevent spam flagging.",
+        "macOS Mail Integration: Uses AppleScript to control the system mail client, supporting attachments without complex SMTP setup.",
+        "Duplicate Detection: Maintains a 'sent tracker' to ensure no recruiter is messaged twice."
+      ],
+      impact: "Reduced the time per manual application by 70%. Successfully automated 95+ targeted outreach emails in a single session, significantly increasing job search velocity.",
+      future: [
+        "LinkedIn Scraper: Integrate automated lead generation directly from LinkedIn job posts.",
+        "Template Management: Support multiple email templates for different job roles (e.g., Data Analyst vs. Business Analyst).",
+        "Cross-Platform Support: Implement support for Outlook and Gmail web via browser extensions."
+      ]
+    }
+  },
+  {
     title: "Sales Performance Dashboard",
     description: "Interactive Power BI dashboard for tracking sales KPIs, regional performance, and product profitability.",
     technologies: ["Power BI", "DAX", "Data Analytics", "Power Query"],

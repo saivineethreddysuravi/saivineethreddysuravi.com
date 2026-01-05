@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable } from 'react-icons/fa';
-import { SiTableau, SiPandas, SiNumpy, SiMysql, SiPowerbi, SiSnowflake } from 'react-icons/si';
+import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake } from 'react-icons/si';
 
 export const personalInfo = {
   name: "Sai Vineeth Reddy Suravi",
@@ -27,7 +27,7 @@ export const skills = [
   {
     category: "Business Intelligence",
     items: [
-      { name: "Power BI (DAX, RLS)", icon: SiPowerbi, link: "https://github.com/saivineethreddysuravi/sales-performance-dashboard" },
+      { name: "Power BI (DAX, RLS)", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/sales-performance-dashboard" },
       { name: "Tableau", icon: SiTableau, link: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard" },
       { name: "Data Storytelling", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
       { name: "KPI Reporting", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/sales-performance-dashboard" },
@@ -52,6 +52,7 @@ export const skills = [
   }
 ];
 
+export const experience = [
   {
     company: "StarTech Networks Inc.",
     role: "Data Analyst Intern",

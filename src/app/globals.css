@@ -1,71 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #030014;
-  --color-foreground: #f8fafc;
-  --color-accent: #00f0ff; /* Space Cyan */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-accent: #2997ff; /* Apple Electric Blue */
+  --font-sans: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 :root {
-  --background: #030014;
-  --foreground: #f8fafc;
-  --accent: #00f0ff;
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #2997ff;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #030014;
-    background-image: 
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
-    background-size: 550px 550px, 350px 350px, 250px 250px;
-    background-position: 0 0, 40px 60px, 130px 270px;
+    background-color: #000000;
   }
   
   body {
-    @apply bg-transparent text-slate-50 antialiased;
-    color: #f8fafc;
+    @apply bg-black text-white antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-[#030014]/70 backdrop-blur-md border-b border-cyan-500/20 shadow-lg shadow-cyan-500/5;
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
   }
   
-  .glass-card {
-    @apply bg-[#0a0a20]/60 backdrop-blur-md border border-cyan-500/10 shadow-sm hover:shadow-[0_0_15px_rgba(0,240,255,0.1)] hover:border-cyan-500/30 transition-all duration-300;
+  /* Cinematic Glow Effects */
+  .glow-blue {
+    background: radial-gradient(circle at center, rgba(41, 151, 255, 0.15) 0%, transparent 70%);
+  }
+  
+  .glow-purple {
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
   }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400;
+  /* Text Gradients */
+  .text-gradient-hero {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/50;
   }
   
-  .btn-primary {
-    @apply bg-cyan-500 text-black font-bold rounded-full hover:bg-cyan-400 transition-colors px-6 py-2 shadow-[0_0_15px_rgba(0,240,255,0.4)];
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#2997ff] to-[#9d00ff];
   }
 }
 
-/* Custom Scrollbar for Space Theme */
+/* Hide scrollbar for cleaner look */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #030014;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1a1a3a;
-  border-radius: 5px;
-  border: 1px solid #030014;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #2a2a5a;
+  width: 0px;
+  background: transparent;
 }

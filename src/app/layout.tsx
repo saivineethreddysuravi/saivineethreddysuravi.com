@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const interTight = Inter_Tight({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-inter-tight",
   display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "Sai Vineeth Reddy Suravi - Portfolio",
-  description: "Sai Vineeth Reddy Suravi's personal portfolio website, showcasing skills, experience, and projects in Data Analysis, SQL, Python, Power BI, Business Intelligence, and Data Visualization.",
+  title: "Sai Vineeth Reddy Suravi | Data Analyst",
+  description: "Senior Data Analyst & BI Specialist. Bridging the gap between data engineering and business strategy.",
   icons: {
     icon: "/icon.svg",
   },
@@ -29,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${interTight.variable} font-sans antialiased bg-black text-white`}>
         {children}
       </body>
     </html>

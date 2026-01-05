@@ -137,7 +137,12 @@ export const projects = [
         "Geospatial mapping of sales distribution",
         "Complex DAX measures for MoM and YoY growth"
       ],
-      impact: "Enabled real-time tracking of $2M+ in sales revenue. Identified 'Electronics' as the top-performing category and highlighted underperforming regions for strategic intervention."
+      impact: "Enabled real-time tracking of $2M+ in sales revenue. Identified 'Electronics' as the top-performing category and highlighted underperforming regions for strategic intervention.",
+      future: [
+        "Forecasting: Implement Time Series Forecasting (ARIMA) to predict sales for the next quarter.",
+        "Customer Segmentation: Use clustering techniques (K-Means) to identify high-value customer groups (RFM Analysis).",
+        "Row-Level Security (RLS): Add role-based access for regional managers to view only their specific region's data."
+      ]
     }
   },
   {

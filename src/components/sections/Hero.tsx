@@ -104,8 +104,8 @@ export default function Hero() {
             Navigating the <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">Data Universe</span>
           </h1>
           <p className="max-w-2xl mx-auto text-blue-200/80 text-lg md:text-xl leading-relaxed mb-10 font-light">
-            {personalInfo.name} — Exploring vast datasets to discover actionable insights. 
-            <span className="hidden md:inline"> Your co-pilot for data analysis, visualization, and engineering missions.</span>
+            {personalInfo.name} — {personalInfo.title}. 
+            <span className="hidden md:inline"> Exploring vast datasets to discover actionable insights and drive strategic decisions.</span>
           </p>
         </motion.div>
 

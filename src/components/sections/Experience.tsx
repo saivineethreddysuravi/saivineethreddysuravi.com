@@ -41,12 +41,20 @@ export default function Experience() {
                   <h3 className="text-xl font-semibold text-[#2997ff] mb-4">{job.role}</h3>
                   <div className="bg-slate-900/40 backdrop-blur-md p-6 rounded-xl shadow-sm border border-white/5 hover:border-white/10 transition-colors">
                       <ul className="space-y-3">
-                        {job.description.map((desc, i) => (
-                          <li key={i} className="text-slate-300 leading-relaxed text-sm relative pl-4 font-light">
-                            <span className="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-slate-600"></span>
-                            {desc}
-                          </li>
-                        ))}
+                        {job.description.map((desc, i) => {
+                          const parts = desc.split(/(\*\*Problem:\*\*|\*\*Action:\*\*|\*\*Impact:\*\*|Problem:|Action:|Impact:)/g);
+                          return (
+                            <li key={i} className="text-slate-300 leading-relaxed text-sm relative pl-4 font-light">
+                              <span className="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+                              {parts.map((part, index) => {
+                                if (part.toLowerCase().includes('problem:')) return <span key={index} className="text-red-400 font-bold">{part}</span>;
+                                if (part.toLowerCase().includes('action:')) return <span key={index} className="text-cyan-400 font-bold">{part}</span>;
+                                if (part.toLowerCase().includes('impact:')) return <span key={index} className="text-green-400 font-bold">{part}</span>;
+                                return part;
+                              })}
+                            </li>
+                          );
+                        })}
                       </ul>
                   </div>
                 </div>

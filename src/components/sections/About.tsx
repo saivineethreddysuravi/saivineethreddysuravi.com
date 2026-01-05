@@ -1,54 +1,104 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { personalInfo } from "@/data/portfolio";
+import { FaDatabase, FaChartLine, FaCogs, FaGraduationCap } from "react-icons/fa";
 
 export default function About() {
+  const principles = [
+    {
+      icon: FaDatabase,
+      title: "Data Engineering",
+      desc: "Architecting robust ETL pipelines and Snowflake warehouses that ensure data integrity and accessibility."
+    },
+    {
+      icon: FaChartLine,
+      title: "Strategic Analytics",
+      desc: "Translating complex datasets into intuitive Power BI dashboards that drive high-level executive decision-making."
+    },
+    {
+      icon: FaCogs,
+      title: "Process Automation",
+      desc: "Replacing manual Excel workflows with automated Python & SQL scripts to reduce error and save hundreds of hours."
+    }
+  ];
+
   return (
-    <section id="about" className="py-32 bg-black relative">
-      <div className="container mx-auto px-6 max-w-4xl text-center">
+    <section id="about" className="py-32 bg-black relative overflow-hidden">
+      
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 pointer-events-none" />
+
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
         
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="mb-16 md:mb-24"
         >
-          <h2 className="text-sm font-mono text-[#2997ff] tracking-widest uppercase mb-8">
-            The Narrative
+          <h2 className="text-5xl font-bold text-white mb-6 tracking-tight">
+            About <span className="text-[#2997ff]">Me.</span>
           </h2>
-          
-          <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-10">
-            "I specialize in turning <span className="text-white/40">messy operational data</span> into <span className="text-[#2997ff]">clear, actionable reporting</span> that leadership can actually use."
-          </h3>
-
-          <div className="text-lg md:text-xl text-white/60 font-light leading-relaxed space-y-8">
-            <p>
-              With experience across finance, payroll, and workforce analytics in both India and the U.S., 
-              I bridge the gap between technical data engineering and business decision-making.
-            </p>
-            <p>
-              Currently, I am focused on building end-to-end BI solutions that automate compliance, 
-              drive strategic cost management, and eliminate manual reporting workflows.
-            </p>
-          </div>
-
-          <div className="mt-16 pt-16 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-12 text-center">
-             <div>
-                <span className="block text-4xl font-bold text-white mb-2">4+</span>
-                <span className="text-sm text-white/40 uppercase tracking-widest">Years Experience</span>
-             </div>
-             <div>
-                <span className="block text-4xl font-bold text-white mb-2">40%</span>
-                <span className="text-sm text-white/40 uppercase tracking-widest">Efficiency Gain</span>
-             </div>
-             <div>
-                <span className="block text-4xl font-bold text-white mb-2">$2M+</span>
-                <span className="text-sm text-white/40 uppercase tracking-widest">Revenue Tracked</span>
-             </div>
-          </div>
-
+          <div className="h-1 w-20 bg-[#2997ff] rounded-full" />
         </motion.div>
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          
+          {/* Left Column: Narrative */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <h3 className="text-2xl font-light text-white leading-relaxed">
+              I am a <span className="font-bold text-white">Data Analyst</span> with over 4 years of experience bridging the gap between technical engineering and business strategy.
+            </h3>
+            
+            <p className="text-white/60 text-lg leading-relaxed font-light">
+              My career is built on a foundation of discipline and precision. Whether optimizing payroll operations for global enterprises or architecting financial dashboards for banking institutions, my goal remains the same: <b>to deliver absolute clarity through data.</b>
+            </p>
+
+            <p className="text-white/60 text-lg leading-relaxed font-light">
+              I don't just query data; I build the infrastructure that makes data reliable, scalable, and actionable. My background spans finance, workforce analytics, and risk management, where I have consistently automated complex workflows to drive operational excellence.
+            </p>
+
+            {/* Education Micro-Card */}
+            <div className="mt-8 p-6 bg-[#111] border border-white/5 rounded-2xl flex items-center gap-4 group hover:border-[#2997ff]/30 transition-colors">
+                <div className="p-3 bg-[#2997ff]/10 rounded-full text-[#2997ff]">
+                    <FaGraduationCap size={24} />
+                </div>
+                <div>
+                    <h4 className="text-white font-bold">Master of Science, MIS</h4>
+                    <p className="text-white/50 text-sm">Christian Brothers University • <span className="text-[#2997ff]">GPA: 3.88</span></p>
+                </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column: Principles Grid */}
+          <div className="grid grid-cols-1 gap-6">
+            {principles.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-8 bg-[#0f0f11] border border-white/5 rounded-2xl hover:border-[#2997ff]/40 hover:bg-[#15151a] transition-all duration-300 group"
+                >
+                    <div className="mb-4 text-white/20 group-hover:text-[#2997ff] transition-colors">
+                        <item.icon size={32} />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                    <p className="text-white/60 font-light leading-relaxed text-sm">
+                        {item.desc}
+                    </p>
+                </motion.div>
+            ))}
+          </div>
+
+        </div>
       </div>
     </section>
   );

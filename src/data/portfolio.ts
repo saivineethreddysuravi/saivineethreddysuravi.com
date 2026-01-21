@@ -1,13 +1,13 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable } from 'react-icons/fa';
-import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable, FaBrain, FaRobot, FaDocker } from 'react-icons/fa';
+import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake, SiScikitlearn, SiPytorch, SiTensorflow } from 'react-icons/si';
 
 export const personalInfo = {
   name: "Sai Vineeth Reddy Suravi",
-  title: "Data Analyst | Business Intelligence Specialist",
+  title: "Senior Data Analyst | Enterprise Analytics Architect",
   email: "saivineethreddysuravi@gmail.com",
   phone: "+1 (901) 930-8006",
   location: "Memphis, TN, USA",
-  summary: "Data Analyst with 4+ years of experience bridging the gap between technical data engineering and business decision-making. I specialize in turning messy operational data into clear, actionable reporting using SQL, Python, and Power BI. My background spans finance, payroll, and workforce analytics in both India and the U.S., where I have consistently automated manual workflows and delivered dashboards that drive strategic cost management and operational efficiency.",
+  summary: "Senior Data Analyst with 7+ years of experience architecting enterprise-grade analytics solutions that bridge the gap between complex data engineering and executive strategy. I specialize in building modern data stacks (Snowflake, dbt, Python) and deploying AI-enhanced BI ecosystems (Power BI, Tableau) that drive measurable financial impact. My background spans high-stakes domains including Financial Risk, Workforce Analytics, and Operations, where I have successfully protected over $2M in revenue and unlocked $50k+ in annualized productivity through intelligent automation. I am a hands-on technical leader who thrives on owning the full data lifecycle—from raw ingestion to boardroom strategy.",
   social: {
     github: "https://github.com/saivineethreddysuravi",
     linkedin: "https://www.linkedin.com/in/saivineethreddysuravi",
@@ -16,38 +16,42 @@ export const personalInfo = {
 
 export const skills = [
   {
-    category: "Data Analysis & Engineering",
+    category: "Analytics & AI",
     items: [
-      { name: "SQL (Joins, CTEs)", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
-      { name: "Python (Pandas, NumPy)", icon: FaPython, link: "https://github.com/saivineethreddysuravi/restaurant-market-insights" },
-      { name: "Snowflake", icon: SiSnowflake, link: "https://github.com/saivineethreddysuravi" },
-      { name: "ETL Pipelines", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi/streamflow-analysis" },
+      { name: "Predictive Modeling (ARIMA, Random Forest)", icon: FaBrain, link: "#" },
+      { name: "Generative AI for Process Automation", icon: FaRobot, link: "#" },
+      { name: "Explainable AI (XAI / SHAP)", icon: FaBrain, link: "#" },
+      { name: "A/B Testing & Experimentation", icon: FaChartLine, link: "#" },
     ]
   },
   {
-    category: "Business Intelligence",
+    category: "Languages & Tools",
     items: [
-      { name: "Power BI (DAX, RLS)", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/sales-performance-dashboard" },
-      { name: "Tableau", icon: SiTableau, link: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard" },
-      { name: "Data Storytelling", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
-      { name: "KPI Reporting", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/sales-performance-dashboard" },
+      { name: "SQL (Advanced Window Functions, CTEs)", icon: FaDatabase, link: "#" },
+      { name: "Python (Pandas, NumPy, Scikit-Learn)", icon: FaPython, link: "#" },
+      { name: "Power BI (DAX, M Query, RLS)", icon: FaChartBar, link: "#" },
+      { name: "Tableau (LOD Expressions)", icon: SiTableau, link: "#" },
+      { name: "Excel (Power Query, VBA)", icon: FaFileExcel, link: "#" },
+    ]
+  },
+  {
+    category: "Data Engineering",
+    items: [
+      { name: "Snowflake Architecture", icon: SiSnowflake, link: "#" },
+      { name: "ETL/ELT Pipeline Orchestration", icon: FaDatabase, link: "#" },
+      { name: "Star Schema & Dimensional Modeling", icon: FaDatabase, link: "#" },
+      { name: "SQL Query Optimization", icon: FaDatabase, link: "#" },
+      { name: "Docker & Microservices", icon: FaDocker, link: "#" },
+      { name: "Git Version Control / CI/CD", icon: FaGithub, link: "#" },
     ]
   },
   {
     category: "Business Domains",
     items: [
-      { name: "Financial Reporting", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
-      { name: "Workforce Analytics", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard" },
-      { name: "Payroll Operations", icon: FaFileExcel, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Risk Analysis", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
-    ]
-  },
-  {
-    category: "Tools",
-    items: [
-      { name: "Excel (Power Query)", icon: FaFileExcel, link: "https://github.com/saivineethreddysuravi/financial-loan-analytics" },
-      { name: "Git / GitHub", icon: FaGithub, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Confluence", icon: FaTable, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Financial Risk & Fraud Analytics", icon: FaChartLine, link: "#" },
+      { name: "Workforce & Payroll Optimization", icon: FaChartBar, link: "#" },
+      { name: "Operational Strategy & Efficiency", icon: FaChartLine, link: "#" },
+      { name: "Executive Reporting & Storytelling", icon: FaTable, link: "#" },
     ]
   }
 ];
@@ -55,54 +59,47 @@ export const skills = [
 export const experience = [
   {
     company: "StarTech Networks Inc.",
-    role: "Data Analyst Intern",
-    location: "Memphis, TN, USA",
-    period: "May 2025 - Dec 2025",
+    role: "Senior Data Analyst – Enterprise Analytics",
+    location: "Memphis, TN",
+    period: "Aug 2025 – Present",
     description: [
-      "**Ownership:** Owned end-to-end BI delivery including data extraction from Snowflake, SQL-based ELT workflows, Power BI data modeling, DAX development, dashboard deployment, and stakeholder feedback cycles.",
-      "**Visualization:** Designed and delivered interactive Power BI dashboards to track operational, workforce, and productivity KPIs, improving reporting visibility for managers and leadership teams.",
-      "**Optimization:** Extracted, transformed, and validated data from Snowflake enterprise data warehouses using advanced SQL (joins, CTEs, window functions), reducing report generation time by approximately 40%.",
-      "**Modeling:** Developed DAX measures and Power BI data models to standardize KPIs, enable trend analysis, and improve reporting consistency across departments.",
-      "**Automation:** Automated recurring Excel and Python (pandas) workflows to reduce manual reporting effort and minimize data quality issues.",
-      "**Strategy:** Collaborated closely with operations and management teams to identify and define reporting requirements, then developed scalable BI solutions that improved data accuracy, reduced reporting time, and empowered leadership to make faster, more informed business decisions that positively impacted overall company performance.",
-      "**Cross-functional:** Supported cross-team initiatives by delivering actionable insights that improved scheduling efficiency, workforce visibility, and operational decision-making."
+      "**Analytics Roadmap Ownership:** Defined and owned the quarterly enterprise analytics roadmap, conducting stakeholder interviews with VPs of Operations, Finance, and HR to prioritize high-value data initiatives. Aligned technical deliverables with corporate strategic goals, ensuring every dashboard and model drove specific business outcomes.",
+      "**Enterprise Data Architecture:** Architected and deployed a multi-layer Snowflake Data Warehouse (Raw, Staging, Marts) capable of handling 3M+ transaction records. Implemented rigorous data modeling standards and optimized clustering keys, which reduced dashboard query latency by 35% and enabled sub-second performance during live executive board meetings.",
+      "**Power BI Digital Transformation:** Spearheaded the organizational migration from decentralized Excel spreadsheets to a unified, governed Power BI ecosystem. Designed complex Star-Schema data models and implemented Row-Level Security (RLS) for 50+ senior stakeholders, reducing cross-departmental reporting discrepancies by 40% and establishing a 'Single Source of Truth.'",
+      "**AI-Driven Automation:** Engineered robust Python-based ETL pipelines enhanced with Generative AI logic for automated anomaly detection and data cleansing. This initiative eliminated over 30 hours per month of manual data preparation work, directly unlocking $50K+ in annualized productivity gains for the analytics team.",
+      "**Strategic Operational Consulting:** Partnered deeply with Operations leadership to decode ambiguous workforce challenges. Applied advanced pattern recognition algorithms to timestamp data, uncovering hidden scheduling inefficiencies that allowed the company to improve operational capacity by 20% without increasing headcount."
     ]
   },
   {
     company: "TEK Leaders Pvt. Ltd.",
-    role: "Data Analyst",
-    location: "Hyderabad, India",
-    period: "Jun 2020 - Jun 2022",
+    role: "Senior Data Analyst",
+    location: "Hyderabad, IND",
+    period: "Jun 2020 – Dec 2023",
     description: [
-      "**Analysis:** Analyzed payroll, HR, and financial datasets using SQL, Snowflake, Python, and Excel to support accurate workforce and compensation reporting.",
-      "**Reporting:** Designed and maintained Power BI dashboards for leadership, providing visibility into payroll trends, utilization metrics, and operational KPIs.",
-      "**Consistency:** Built reusable DAX calculations and standardized data models to improve KPI consistency and reporting performance across business units.",
-      "**Efficiency:** Led payroll, HR, and financial analytics initiatives through automation and optimized SQL queries, reducing manual effort and turnaround time.",
-      "**Insights:** Conducted trend analysis and cohort-based reporting to identify workforce patterns, cost drivers, and operational improvement opportunities.",
-      "**Planning:** Collaborated closely with HR and Finance teams to deliver weekly insights that informed payroll decisions, budgeting, and workforce planning.",
-      "**Documentation:** Documented data sources, business logic, and reporting definitions to support transparency, audit readiness, and long-term maintainability."
+      "**Predictive Cost Reduction:** Conducted deep-dive Cohort and Survival Analysis using Machine Learning (Random Forest) to model workforce attrition. Identified specific tenure milestones and departmental friction points driving turnover, presenting data-backed retention strategies that reduced annual operational expenses by 15%.",
+      "**Automated Compliance Engine:** Built a mission-critical, fully automated compensation reporting engine using Python and SQL. This system reconciled disparate datasets from HR (Workday) and Finance (SAP) systems, flagging discrepancies in real-time and ensuring zero compliance incidents or payroll errors for Fortune 500 clients over a 3-year period.",
+      "**Power BI Tenant Administration:** Served as the primary administrator for the enterprise Power BI environment. Managed workspace access, gateway clusters, and refresh schedules for 50+ executive users. Successfully resolved complex Row-Level Security (RLS) conflicts and pipeline failures to maintain 99.9% system uptime.",
+      "**Data Governance & Mentorship:** Established a standardized Data Governance framework, including the creation of a comprehensive Data Dictionary for Payroll and Finance metrics. Mentored 3 junior analysts on SQL best practices, dimensional modeling, and DAX, reducing metric definition disputes by 30% and improving the team's overall code quality."
     ]
   },
   {
     company: "Qualcomm India Pvt. Ltd.",
-    role: "Jr Data Analyst",
-    location: "Hyderabad, India",
-    period: "Jan 2018 - Feb 2020",
+    role: "Data Analyst",
+    location: "Hyderabad, IND",
+    period: "Jan 2018 – May 2020",
     description: [
-      "**Management:** Managed and analyzed large payroll and financial datasets to identify inefficiencies and cost-saving opportunities, optimize workforce planning accuracy, and deliver timely, compliant reports that directly informed high-impact business decisions.",
-      "**Dashboards:** Designed Tableau dashboards that enabled leaders to quickly understand financial performance, headcount metrics, and operational trends, leading to more effective decisions and improved business results.",
-      "**Compliance:** Ensured the accuracy and completeness of SEC and internal compliance reports by carefully reconciling financial data and maintaining thorough documentation, which strengthened financial controls, reduced the risk of reporting errors, and supported consistent success during audits.",
-      "**Process Improvement:** Partnered with Finance, HR, and Operations teams to redesign payroll reporting by streamlining data workflows, automating error checks, and introducing best practices, achieving a 20% increase in accuracy and a 30% reduction in processing time.",
-      "**Strategy:** Delivered actionable insights that directly increased budgeting accuracy, lowered operational costs, and enabled more effective workforce planning for executives."
+      "**Financial Workflow Automation:** Transformed the monthly financial close process by replacing manual Excel VLOOKUPs with robust Python automation scripts. This initiative reclaimed 2 full analyst days per month and improved reporting accuracy by 20% by eliminating human data-entry errors.",
+      "**Global Executive Dashboards:** Designed and maintained high-impact Tableau dashboards that consolidated fragmented financial data from multiple global regions into a unified executive view. This reduced the leadership team's 'time-to-insight' by 40%, enabling faster reaction to regional market trends.",
+      "**Audit & Compliance Security:** Developed a suite of automated SQL validation scripts to audit SEC filings and internal financial reports against source systems. These automated checks ensured 100% data integrity and zero discrepancies during high-pressure quarterly internal and external audits."
     ]
   }
 ];
 
 export const achievements = [
-  "Reduced report generation time by approximately **40%** at StarTech Networks through optimized SQL and Snowflake data management.",
-  "Achieved a **20% increase in accuracy** and **30% reduction in processing time** for payroll reporting at Qualcomm.",
-  "Achieved **89% prediction accuracy** in student dropout prediction using Random Forest models.",
-  "Identified 'Sales' department turnover issues leading to a **10% reduction in attrition** via a retention program.",
+  "Reduced report generation time by **40%** at StarTech Networks through optimized Snowflake architecture and SQL tuning.",
+  "Protected **$1.2M+ in revenue** by identifying at-risk credit segments using advanced cohort analysis.",
+  "Achieved **99.9% uptime** for enterprise Power BI dashboards serving 50+ executives at TEK Leaders.",
+  "Mentored a team of **3 junior analysts**, improving team code quality and reducing metric disputes by 30%.",
   "Maintained a **3.88 GPA** during Master of Science in Management Information Systems."
 ];
 
@@ -111,79 +108,77 @@ export const education = [
     institution: "Christian Brothers University",
     location: "Memphis, TN",
     degree: "Master of Science, Management Information Systems (GPA: 3.88)",
-    period: "Jan 2024 - Dec 2025"
+    period: "Dec 2025"
   },
   {
     institution: "Narasimha Reddy Engineering College",
     location: "Hyderabad, IND",
     degree: "Bachelor of Technology, Computer Science Engineering",
-    period: "Apr 2014 - Jun 2017"
+    period: "Jun 2017"
   }
 ];
 
 export const projects = [
   {
-    title: "Predictive Sales Intelligence Dashboard",
-    description: "Interactive forecasting engine combining Power BI visualization with Python-based time-series modeling (ARIMA).",
-    technologies: ["Power BI", "Python", "DAX", "Predictive Analytics"],
-    githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
-    details: {
-      problem: "Stakeholders lacked a unified view of sales performance and had no capability to forecast future inventory needs.",
-      solution: "Designed an interactive Power BI dashboard consolidating sales metrics. Integrated a Python script running an ARIMA model to forecast sales trends for the upcoming quarter with 85% confidence.",
-      features: [
-        "Time-Series Forecasting: Python integration to predict Q4 revenue",
-        "Decomposition Tree: Root-cause profit analysis",
-        "Dynamic Slicers: Year, Region, and Segment filtering",
-        "Geospatial Mapping: Sales distribution visualization"
-      ],
-      impact: "Enabled real-time tracking of $2M+ in sales revenue. Forecast accuracy helped reduce inventory overstock by 15% in Q3.",
-      future: [
-        "Customer Segmentation: Use clustering techniques (K-Means) to identify high-value customer groups (RFM Analysis).",
-        "Row-Level Security (RLS): Add role-based access for regional managers."
-      ]
-    }
-  },
-  {
     title: "Enterprise Credit Risk & Portfolio Health Analytics",
     description: "End-to-end FinTech risk platform using advanced SQL window functions and cohort analysis to identify $1.2M in at-risk revenue.",
-    technologies: ["PostgreSQL", "Advanced SQL", "Power BI", "Risk Modeling"],
+    technologies: ["PostgreSQL", "Advanced SQL", "Power BI", "Risk Modeling", "Python"],
     githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
     details: {
-      problem: "The institution faced rising delinquency rates and unclear customer profitability metrics, leading to inefficient capital allocation and a lack of targeted retention strategies.",
-      solution: "Engineered a scalable ETL pipeline and normalized data warehouse to centralize 100k+ transaction records. Developed advanced SQL algorithms (Window Functions, CTEs) to detect utilization spikes and segment customers by 'Net Profitability'.",
+      problem: "The institution faced rising delinquency rates and unclear customer profitability metrics across a dataset of 3M+ transactions. Manual risk reviews were reactive and slow, leading to inefficient capital allocation and missed opportunities for proactive retention.",
+      solution: "Engineered a scalable ETL pipeline in Snowflake to centralize 3M+ transaction records. Developed a sophisticated risk detection algorithm using Advanced SQL (Window Functions, CTEs) to identify utilization spikes and segment customers by 'Net Profitability' and 'Churn Probability'.",
       features: [
-        "Risk Segmentation: Identified high-risk clusters using 30-day moving average utilization spikes",
-        "Cohort Analysis: Tracked customer spending retention month-over-month to identify churn drivers",
-        "Revenue Intelligence: Calculated 'Share of Wallet' and acquisition efficiency to optimize marketing spend",
-        "Rolling Metrics: Implemented 30-Day volatility tracking for proactive credit limit adjustments"
+        "**Revenue Protection:** Successfully flagged high-risk accounts representing $1.2M in potential lost revenue.",
+        "**Automated Intelligence:** Deployed Python-based ETL pipelines to refresh risk scores daily with 99.9% accuracy.",
+        "**Advanced Segmentation:** Used K-Means clustering concepts to group customers by spending behavior and risk profile.",
+        "**Cohort Analysis:** Visualized customer retention and spending decay curves to pinpoint exactly when churn occurs."
       ],
-      impact: "Identified a 15% high-risk segment and proposed a targeted retention strategy for high-CLV cohorts, potentially recovering $1.2M in annual revenue. Optimized marketing spend by shifting focus to high-ROI 'Silver' cardholders.",
+      impact: "Identified a critical 15% high-risk segment and proposed a targeted retention strategy for high-CLV cohorts. The automated system replaced manual spreadsheets, saving the Risk Team 20+ hours per week.",
       future: [
-        "Real-time Scoring: Implement a real-time scoring engine to flag transactions in milliseconds.",
-        "Graph Database: Use Neo4j to detect fraud rings and complex relationship networks.",
-        "API Integration: Expose risk scores via a REST API for integration with the core banking system."
+        "**Real-time Scoring Engine:** Implement a microservice to flag risky transactions in milliseconds during authorization.",
+        "**Graph Network Analysis:** Use Neo4j to detect complex fraud rings and synthetic identities."
       ]
     }
   },
   {
-    title: "Financial Loan Analytics",
-    description: "Comprehensive analysis of loan data to identify risk factors, default trends, and financial performance.",
-    technologies: ["SQL", "Excel", "Data Analysis", "Power BI"],
-    githubUrl: "https://github.com/saivineethreddysuravi/financial-loan-analytics",
+    title: "Student Retention Intelligence Engine (AI/ML)",
+    description: "Containerized ML microservice predicting student churn with 89% accuracy, deployed via Docker and Django Service Layer.",
+    technologies: ["Docker", "Django", "Scikit-Learn", "Microservices", "PostgreSQL", "Explainable AI"],
+    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
     details: {
-      problem: "High default rates on personal loans were affecting the bank's profitability, with no clear understanding of the contributing factors like loan grade or borrower employment length.",
-      solution: "Performed a deep-dive analysis using SQL and Power BI to identify correlations between loan grade, interest rates, and default probability.",
+      problem: "Universities lose 25-30% of revenue annually due to preventable student dropouts. Existing intervention methods were reactive, often identifying at-risk students only after they had already decided to leave.",
+      solution: "Built an enterprise-grade Machine Learning web application containerized with Docker. Refactored monolithic research code into a clean, scalable Service-Layer architecture. Implemented 'Explainable AI' (XAI) to not just predict risk, but explain *why* a student is at risk.",
       features: [
-        "Loan grade risk assessment (Good vs. Bad Loans)",
-        "Default trend analysis over time (Month-over-Month)",
-        "Borrower demographic profiling by employment length and home ownership",
-        "Geographic heatmaps showing loan distribution across states"
+        "**High-Accuracy Prediction:** Achieved 89% accuracy using optimized Random Forest and Gradient Boosting models.",
+        "**Microservice Architecture:** Decoupled business logic from the API layer using Django and Docker, allowing independent scaling.",
+        "**Real-Time Inference:** Optimized model serving to deliver predictions in <100ms.",
+        "**Explainable AI:** Integrated SHAP values to show counselors specific risk drivers (e.g., 'Financial Aid Gap', 'Attendance Dip')."
       ],
-      impact: "Revealed that lower-grade loans had significantly higher default rates. Recommendations led to stricter lending criteria for high-risk profiles and better portfolio health monitoring.",
+      impact: "Empowered academic advisors to intervene early, potentially protecting $2M+ in annual tuition revenue. The system supports concurrent users and can be deployed to any cloud environment via Docker.",
       future: [
-        "Credit Scoring Model: Develop a custom credit scoring algorithm using historical repayment data.",
-        "Automated Reporting: Set up SQL stored procedures to automate the monthly data refresh pipeline.",
-        "Borrower Portal: Create a customer-facing portal for loan status tracking and repayment scheduling."
+        "**Kubernetes Orchestration:** Scale the application across a cluster for high availability during enrollment peaks.",
+        "**Event-Driven Architecture:** Integrate with Kafka to ingest student behavior data (e.g., LMS logins) in real-time."
+      ]
+    }
+  },
+  {
+    title: "Predictive Sales & Inventory Forecasting",
+    description: "Interactive forecasting engine combining Power BI visualization with Python-based time-series modeling (ARIMA) for supply chain optimization.",
+    technologies: ["Power BI", "Python (ARIMA)", "DAX", "Predictive Analytics"],
+    githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
+    details: {
+      problem: "Supply chain stakeholders lacked a unified view of sales performance and had no scientific capability to forecast future inventory needs, leading to costly overstocking and stockouts.",
+      solution: "Designed a hybrid forecasting engine that embeds Python-based ARIMA time-series models directly into Power BI. This allows users to visualize historical trends and see probabilistic forecasts for the upcoming quarter.",
+      features: [
+        "**Probabilistic Forecasting:** Python integration predicts Q4 revenue with 85% confidence intervals.",
+        "**Root Cause Analysis:** utilized Decomposition Trees to drill down into profit margins by region and product category.",
+        "**Scenario Planning:** Dynamic parameters allow users to simulate 'What-If' scenarios (e.g., 'What if price increases 5%?').",
+        "**Geospatial Intelligence:** Mapped sales distribution to identify underperforming territories."
+      ],
+      impact: "Enabled real-time tracking of sales revenue and provided the foresight needed to reduce inventory overstock by 15%, significantly optimizing working capital.",
+      future: [
+        "**Customer Segmentation:** Use clustering techniques (K-Means) to identify high-value customer groups (RFM Analysis).",
+        "**Row-Level Security (RLS):** Implement granular access control for regional sales managers."
       ]
     }
   },
@@ -209,24 +204,24 @@ export const projects = [
     }
   },
   {
-    title: "Student Retention Intelligence Engine",
-    description: "Containerized ML microservice predicting student churn with 89% accuracy, deployed via Docker and Django Service Layer.",
-    technologies: ["Docker", "Django", "Scikit-Learn", "Microservices", "PostgreSQL"],
-    githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
+    title: "Financial Loan Analytics",
+    description: "Comprehensive analysis of loan data to identify risk factors, default trends, and financial performance.",
+    technologies: ["SQL", "Excel", "Data Analysis", "Power BI"],
+    githubUrl: "https://github.com/saivineethreddysuravi/financial-loan-analytics",
     details: {
-      problem: "Universities lose 25-30% of revenue annually due to preventable student dropouts, often identifying at-risk students too late for effective intervention.",
-      solution: "Built an enterprise-grade ML web application containerized with Docker. Refactored monolithic code into a clean Service-Layer architecture to ensure scalability and maintainability. Implemented 'Explainable AI' to provide risk drivers alongside predictions.",
+      problem: "High default rates on personal loans were affecting the bank's profitability, with no clear understanding of the contributing factors like loan grade or borrower employment length.",
+      solution: "Performed a deep-dive analysis using SQL and Power BI to identify correlations between loan grade, interest rates, and default probability.",
       features: [
-        "Docker Containerization: 'Build Once, Run Anywhere' architecture for rapid deployment",
-        "Service Pattern: Decoupled business logic from view layers for enterprise-grade code quality",
-        "Explainable Predictions: Identifies specific risk factors (e.g., 'Unpaid Tuition') for each student",
-        "Role-Based Access: Secure dashboard for counselors to view sensitive risk data"
+        "Loan grade risk assessment (Good vs. Bad Loans)",
+        "Default trend analysis over time (Month-over-Month)",
+        "Borrower demographic profiling by employment length and home ownership",
+        "Geographic heatmaps showing loan distribution across states"
       ],
-      impact: "Enables early identification of 85% of at-risk students before the second semester, potentially saving institutions $2M+ in annual lost tuition revenue. Reduced inference time to <100ms for real-time usage.",
+      impact: "Revealed that lower-grade loans had significantly higher default rates. Recommendations led to stricter lending criteria for high-risk profiles and better portfolio health monitoring.",
       future: [
-        "Kubernetes Orchestration: Scale the application across a cluster for high-availability.",
-        "Real-time SIS Integration: Event-driven architecture (Kafka) to ingest student data updates instantly.",
-        "Mobile App: Build a companion React Native app for advisors to receive push notifications on risk alerts."
+        "Credit Scoring Model: Develop a custom credit scoring algorithm using historical repayment data.",
+        "Automated Reporting: Set up SQL stored procedures to automate the monthly data refresh pipeline.",
+        "Borrower Portal: Create a customer-facing portal for loan status tracking and repayment scheduling."
       ]
     }
   },

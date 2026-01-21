@@ -53,26 +53,38 @@ export default function About() {
             className="space-y-8"
           >
             <h3 className="text-2xl font-light text-white leading-relaxed">
-              I am a <span className="font-bold text-white">Data Analyst</span> with over 4 years of experience bridging the gap between technical engineering and business strategy.
+              I am a <span className="font-bold text-white">Senior Data Analyst</span> with over 6 years of experience bridging the gap between technical engineering and business strategy.
             </h3>
             
             <p className="text-white/60 text-lg leading-relaxed font-light">
-              My career is built on a foundation of discipline and precision. Whether optimizing payroll operations for global enterprises or architecting financial dashboards for banking institutions, my goal remains the same: <b>to deliver absolute clarity through data.</b>
+              My career is built on a foundation of discipline and precision. Whether optimizing payroll operations for global enterprises or architecting <span className="text-white font-medium">enterprise Snowflake data warehouses</span> for banking institutions, my goal remains the same: <b>to deliver absolute clarity and financial impact through data.</b>
             </p>
 
             <p className="text-white/60 text-lg leading-relaxed font-light">
-              I don't just query data; I build the infrastructure that makes data reliable, scalable, and actionable. My background spans finance, workforce analytics, and risk management, where I have consistently automated complex workflows to drive operational excellence.
+              I don't just query data; I build the <span className="text-white font-medium">scalable infrastructure</span> that makes data reliable, actionable, and secure. My background spans finance, workforce intelligence, and risk management, where I have consistently automated complex workflows to drive operational excellence and protect multi-million dollar revenue.
             </p>
 
-            {/* Education Micro-Card */}
-            <div className="mt-8 p-6 bg-[#111] border border-white/5 rounded-2xl flex items-center gap-4 group hover:border-[#2997ff]/30 transition-colors">
-                <div className="p-3 bg-[#2997ff]/10 rounded-full text-[#2997ff]">
-                    <FaGraduationCap size={24} />
-                </div>
-                <div>
-                    <h4 className="text-white font-bold">Master of Science, MIS</h4>
-                    <p className="text-white/50 text-sm">Christian Brothers University • <span className="text-[#2997ff]">GPA: 3.88</span></p>
-                </div>
+            {/* Education Micro-Cards */}
+            <div className="space-y-4">
+              <div className="p-6 bg-[#111] border border-white/5 rounded-2xl flex items-center gap-4 group hover:border-[#2997ff]/30 transition-colors">
+                  <div className="p-3 bg-[#2997ff]/10 rounded-full text-[#2997ff]">
+                      <FaGraduationCap size={24} />
+                  </div>
+                  <div>
+                      <h4 className="text-white font-bold">Master of Science, MIS</h4>
+                      <p className="text-white/50 text-sm">Christian Brothers University • <span className="text-[#2997ff]">GPA: 3.88</span></p>
+                  </div>
+              </div>
+
+              <div className="p-6 bg-[#111] border border-white/5 rounded-2xl flex items-center gap-4 group hover:border-[#2997ff]/30 transition-colors">
+                  <div className="p-3 bg-[#2997ff]/10 rounded-full text-[#2997ff]">
+                      <FaGraduationCap size={24} />
+                  </div>
+                  <div>
+                      <h4 className="text-white font-bold">Bachelor of Technology, CSE</h4>
+                      <p className="text-white/50 text-sm">Narasimha Reddy Engineering College</p>
+                  </div>
+              </div>
             </div>
           </motion.div>
 

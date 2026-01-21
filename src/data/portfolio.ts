@@ -108,7 +108,7 @@ export const education = [
   {
     institution: "Christian Brothers University",
     location: "Memphis, TN",
-    degree: "Master of Science, Management Information Systems",
+    degree: "Master of Science, Management Information Systems (GPA: 3.88)",
     period: "Dec 2025"
   },
   {

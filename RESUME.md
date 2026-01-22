@@ -44,7 +44,18 @@ Christian Brothers University, Memphis, TN | *Jan 2024 – Dec 2025* | **GPA: 3.
 Narasimha Reddy Engineering College, Hyderabad, IND | *Apr 2014 – Jun 2017*
 
 ## Projects
-**Business Intelligence & Reporting Projects** | *Sep 2022 – Present*
-*   Developed Power BI dashboards integrating SQL and Snowflake data to track workforce and financial KPIs.
-*   Automated data preparation using **Python and Excel**, reducing manual effort by **40–50%**.
-*   Conducted trend, cohort, and segmentation analysis to identify high-risk areas and provide actionable insights for operational improvements.
+
+**Enterprise Credit Risk & Portfolio Health Analytics** | *Credit Card Analysis*
+*   **Action:** Engineered a high-performance financial dashboard using **Advanced SQL** and **Power BI (DAX)** to analyze credit risk across thousands of accounts.
+*   **Impact:** Enabled stakeholders to identify at-risk portfolios 30% faster, directly influencing quarterly risk mitigation strategies.
+*   **Tech Stack:** SQL, Power BI, Data Modeling, DAX.
+
+**Student Retention Intelligence Engine** | *Dropout Prediction*
+*   **Action:** Developed a predictive analytics solution to identify student dropout risks, refactoring legacy code into a modular **Dockerized** service-layer architecture.
+*   **Impact:** Provided early-warning signals for student intervention, potentially improving retention rates by actionable margins.
+*   **Tech Stack:** Python, Pandas, Docker, Machine Learning.
+
+**Market Opportunity & Consumer Behavior Analysis** | *Restaurant Insights*
+*   **Action:** Conducted a comprehensive market analysis of Mexican restaurant ratings, utilizing **Python** for data processing and statistical review.
+*   **Impact:** Delivered strategic documentation identifying key consumer satisfaction drivers and under-served market segments.
+*   **Tech Stack:** Python, Data Visualization, Strategic Analysis.

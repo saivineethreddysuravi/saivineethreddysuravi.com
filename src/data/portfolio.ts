@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "saivineethreddysuravi@gmail.com",
   phone: "901-930-8006",
   location: "Charlotte, NC (Open to Relocation)",
-  summary: "Senior Data Analyst skilled in enterprise analytics and reporting. Built KPI frameworks and automated data pipelines, reducing metric disputes by 40% and saving costs. Designed Snowflake warehouses and Power BI dashboards for real-time insights. Ready to deliver impactful data solutions for business growth.",
+  summary: "Senior Data Analyst with 5+ years of experience architecting enterprise-grade analytics solutions that bridge the gap between complex data engineering and executive strategy. I specialize in building modern data stacks (Snowflake, dbt, Python) and deploying AI-enhanced BI ecosystems (Power BI, Tableau) that drive measurable financial impact. My background spans high-stakes domains including Financial Risk, Workforce Analytics, and Operations, where I have successfully protected over $2M in revenue and unlocked $50k+ in annualized productivity through intelligent automation. I am a hands-on technical leader who thrives on owning the full data lifecycle—from raw ingestion to boardroom strategy.",
   social: {
     github: "https://github.com/saivineethreddysuravi",
     linkedin: "https://www.linkedin.com/in/saivineethreddysuravi",

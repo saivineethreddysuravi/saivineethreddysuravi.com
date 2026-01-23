@@ -53,7 +53,8 @@ export default function About() {
             className="space-y-8"
           >
             <h3 className="text-2xl font-light text-white leading-relaxed">
-              I am a <span className="font-bold text-white">Senior Data Analyst</span> with over 6 years of experience bridging the gap between technical engineering and business strategy.
+                          I am a <span className="font-bold text-white">Senior Data Analyst</span> with over 5+ years of experience bridging the gap between technical engineering and business strategy. 
+              
             </h3>
             
             <p className="text-white/60 text-lg leading-relaxed font-light">

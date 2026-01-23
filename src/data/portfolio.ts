@@ -72,7 +72,10 @@ export const experience = [
       "Designed and deployed a Snowflake warehouse supporting 3M+ monthly transactions; optimized SQL to reduce dashboard latency by 35% and enable near real-time monitoring.",
       "Improved reporting consistency by 40% by centralizing analytics in Power BI and implementing star-schema models for 50+ stakeholders.",
       "Built AI-assisted automation workflows to generate data-quality checks and reporting templates, reducing manual validation by 20% monthly and saving $50K+ annually.",
-      "Owned analytics end-to-end - from data ingestion and modeling to dashboard delivery - enabling faster, data-driven decisions across product and operations."
+      "Owned analytics end-to-end - from data ingestion and modeling to dashboard delivery - enabling faster, data-driven decisions across product and operations.",
+      "**Cloud Cost Optimization:** Conducted a rigorous audit of cloud compute usage, identifying and refactoring inefficient queries that reduced monthly Snowflake credits by 25%.",
+      "**Strategic Stakeholder Management:** Acted as the primary bridge between technical teams and non-technical VPs, translating complex data limitations into clear strategic options.",
+      "**Team Mentorship:** Led bi-weekly 'Code & Coffee' sessions to upskill 4 junior analysts in Python and Advanced SQL, fostering a culture of engineering excellence."
     ]
   },
   {

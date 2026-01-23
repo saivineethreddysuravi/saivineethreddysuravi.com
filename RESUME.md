@@ -1,61 +1,62 @@
-# Sai Vineeth Reddy Suravi
-**Data Analyst | Business Intelligence Specialist**
-Memphis, TN, USA | +1 (901) 930-8006 | saivineethreddysuravi@gmail.com
-[LinkedIn](https://www.linkedin.com/in/saivineethreddysuravi) | [GitHub](https://github.com/saivineethreddysuravi) | [Portfolio](https://vineeeth.com)
+# SAI VINEETH REDDY SURAVI
+**Charlotte, NC** | **saivineethreddysuravi@gmail.com** | **901-930-8006**
+[LinkedIn](https://www.linkedin.com/in/saivineethreddysuravi/) | [GitHub](https://github.com/saivineethreddysuravi) | [Portfolio](https://vineeeth.com)
 
-## Summary
-Detail-oriented Data Analyst with 4+ years of experience delivering business intelligence and reporting solutions across finance, payroll, and workforce analytics domains. Experienced in data extraction, transformation, analysis, and visualization using SQL, Snowflake, Power BI (DAX), Python, and Excel. Strong ability to translate business requirements into scalable dashboards and automated reporting solutions that support operational and leadership decision-making. Proven collaborator with cross-functional stakeholders, ensuring data quality, governance, and actionable insights in data-driven environments.
+---
 
-## Technical Skills
-*   **Programming Languages:** Python (pandas, NumPy), SQL
-*   **Databases & Data Warehousing:** Snowflake, Enterprise Data Warehouses, SQL-based data preparation, Data Modeling (Star Schema)
-*   **Data Analysis Techniques:** Exploratory Data Analysis (EDA), Data Profiling, Trend Analysis, Cohort Analysis, Time-Series Analysis
-*   **Business Intelligence & Visualization:** Power BI (DAX, RLS, Power Query), Tableau, Executive Dashboards, KPI Reporting, Data Storytelling
-*   **Reporting & Tools:** Microsoft Excel (PivotTables, Advanced Formulas, Power Query), Reporting Automation, Confluence
+## SUMMARY
+Senior Data Analyst skilled in enterprise analytics and reporting. Built KPI frameworks and automated data pipelines, reducing metric disputes by 40% and saving costs. Designed Snowflake warehouses and Power BI dashboards for real-time insights. Ready to deliver impactful data solutions for business growth.
 
-## Professional Experience
+---
 
-**StarTech Networks Inc.** | Memphis, TN, USA
-**Data Analyst Intern** | *May 2025 – Dec 2025*
-*   **Action:** Owned end-to-end BI delivery including SQL-based ELT workflows in Snowflake and Power BI data modeling.
-*   **Impact:** Reduced report generation time by approximately **40%** and improved reporting visibility for leadership teams.
-*   **Automation:** Automated recurring Excel and Python workflows to eliminate manual reporting effort and minimize data quality issues.
-*   **Collaboration:** Partnered with operations to translate business needs into scalable BI solutions that improved company performance.
+## EXPERIENCE
 
-**TEK Leaders Pvt. Ltd.** | Hyderabad, India
-**Data Analyst** | *Jun 2020 – Jun 2022*
-*   **Action:** Analyzed payroll, HR, and financial datasets using SQL and Snowflake to support accurate workforce reporting.
-*   **Impact:** Streamlined financial reporting processes through automation and optimized SQL queries, reducing turnaround time.
-*   **Strategy:** Conducted trend and cohort-based analysis to identify workforce patterns, directly informing weekly payroll decisions.
-*   **Visualization:** Designed and maintained Power BI dashboards providing leadership with visibility into payroll and operational KPIs.
+**StarTech Networks Inc. | Senior Data Analyst**
+*Aug 2025 - Present*
+* Reduced metric disputes by 40% and improved leadership decision confidence by building a KPI governance framework across Finance, Operations, and HR.
+* Designed and deployed a Snowflake warehouse supporting 3M+ monthly transactions; optimized SQL to reduce dashboard latency by 35% and enable near real-time monitoring.
+* Improved reporting consistency by 40% by centralizing analytics in Power BI and implementing star-schema models for 50+ stakeholders.
+* Built AI-assisted automation workflows to generate data-quality checks and reporting templates, reducing manual validation by 20% monthly and saving $50K+ annually.
+* Owned analytics end-to-end - from data ingestion and modeling to dashboard delivery - enabling faster, data-driven decisions across product and operations.
 
-**Qualcomm India Pvt. Ltd.** | Hyderabad, India
-**Jr Data Analyst** | *Jan 2018 – Feb 2020*
-*   **Action:** Redesigned payroll reporting workflows by automating error checks, achieving a **20% increase** in accuracy.
-*   **Impact:** Developed Tableau dashboards that enabled leaders to quickly understand financial performance and operational trends.
-*   **Compliance:** Ensured 100% accuracy of SEC and internal compliance reporting through meticulous data reconciliation during audits.
-*   **Results:** Delivered actionable insights that increased budgeting accuracy and enabled more effective workforce planning.
+**Qualcomm (Contract via Sodexo) | Data Analyst – Finance & Analytics**
+*Jul 2018 - Nov 2023*
+* Automated global finance workflows using Python, reducing processing time by 2 analyst days/month and improving accuracy by 20%.
+* Built executive Tableau dashboards consolidating global KPIs, reducing time-to-insight by 40% and accelerating leadership decision cycles.
+* Developed SQL-based validation and reconciliation frameworks ensuring zero discrepancies across quarterly audits.
+* Built a scalable compensation reporting engine (Python + SQL) supporting 5000+ employees annually with zero compliance incidents for 3 years.
+* Reduced metric disputes by 30% by implementing data governance practices and mentoring junior analysts.
+* Analyzed KPIs and ran experiments that drove a 10% increase in key product metrics and helped leadership prioritize successful initiatives.
 
-## Education
-**Master of Science, Management Information Systems**
-Christian Brothers University, Memphis, TN | *Jan 2024 – Dec 2025* | **GPA: 3.88**
+---
 
-**Bachelor of Technology, Computer Science Engineering**
-Narasimha Reddy Engineering College, Hyderabad, IND | *Apr 2014 – Jun 2017*
+## SELECTED PROJECTS (Analytics Focus)
 
-## Projects
+**Enterprise Credit Risk Analytics**
+* Built a risk monitoring pipeline for 3M+ transactions, identifying $1.2M at-risk revenue and reducing false positives by 20% through automated validation logic.
+* Automated daily ingestion, validation, and reporting workflows using Python ETL, achieving 99.9% accuracy and eliminating manual intervention.
+* Created executive-ready dashboards to track risk trends, KPIs, and exception reporting, enabling faster leadership decision-making.
 
-**Enterprise Credit Risk & Portfolio Health Analytics** | *Credit Card Analysis*
-*   **Action:** Engineered a high-performance financial dashboard using **Advanced SQL** and **Power BI (DAX)** to analyze credit risk across thousands of accounts.
-*   **Impact:** Enabled stakeholders to identify at-risk portfolios 30% faster, directly influencing quarterly risk mitigation strategies.
-*   **Tech Stack:** SQL, Power BI, Data Modeling, DAX.
+**Student Retention Intelligence Engine**
+* Developed a retention analytics solution to identify at-risk students, contributing to $2M+ retained tuition revenue.
+* Implemented driver analysis using explainable models (SHAP) to surface key factors influencing churn and guide targeted interventions.
+* Built automated reporting to monitor retention KPIs, enabling stakeholders to track improvements and measure impact.
 
-**Student Retention Intelligence Engine** | *Dropout Prediction*
-*   **Action:** Developed a predictive analytics solution to identify student dropout risks, refactoring legacy code into a modular **Dockerized** service-layer architecture.
-*   **Impact:** Provided early-warning signals for student intervention, potentially improving retention rates by actionable margins.
-*   **Tech Stack:** Python, Pandas, Docker, Machine Learning.
+---
 
-**Market Opportunity & Consumer Behavior Analysis** | *Restaurant Insights*
-*   **Action:** Conducted a comprehensive market analysis of Mexican restaurant ratings, utilizing **Python** for data processing and statistical review.
-*   **Impact:** Delivered strategic documentation identifying key consumer satisfaction drivers and under-served market segments.
-*   **Tech Stack:** Python, Data Visualization, Strategic Analysis.
+## SKILLS
+
+* **SQL & Data Engineering:** Advanced SQL, Snowflake, Star Schema Design, ETL/ELT Pipelines, SQL Optimization, Data Governance
+* **Analytics & Experimentation:** A/B Testing, Experiment Design, Lift Analysis, KPI Frameworks, Cohort Analysis, Funnel Analysis, Hypothesis Testing
+* **Tools & Programming:** Python (Pandas, NumPy), Power BI (DAX, Power Query), Tableau, Excel (Power Query), Git/GitHub, Jupyter Notebooks
+* **Automation & AI Support:** Automation with Python, Data cleaning automation, Data validation automation, Analytics automation (reporting workflows)
+
+---
+
+## EDUCATION
+
+**Christian Brothers University** | MS, Computer Information Systems (GPA: 3.88)
+*Jan 2024 - Dec 2025*
+
+**Narasimha Reddy Engineering College** | B.Tech, Computer Science
+*Apr 2014 - May 2018*

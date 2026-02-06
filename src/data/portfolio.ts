@@ -3,11 +3,11 @@ import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake } from 'react-icons/
 
 export const personalInfo = {
   name: "Sai Vineeth Reddy Suravi",
-  title: "Data Analyst | Business Intelligence Specialist",
+  title: "Senior Data Analyst | Cloud Analytics & Data Warehousing",
   email: "saivineethreddysuravi@gmail.com",
   phone: "+1 (901) 930-8006",
   location: "Memphis, TN, USA",
-  summary: "Data Analyst with 4+ years of experience bridging the gap between technical data engineering and business decision-making. I specialize in turning messy operational data into clear, actionable reporting using SQL, Python, and Power BI. My background spans finance, payroll, and workforce analytics in both India and the U.S., where I have consistently automated manual workflows and delivered dashboards that drive strategic cost management and operational efficiency.",
+  summary: "I’m a Senior Data Analyst with experience designing cloud-based data platforms and analytics solutions that support executive decision-making. My work focuses on data warehousing, KPI governance, and financial analytics—helping organizations move from fragmented reporting to trusted, auditable insights.",
   social: {
     github: "https://github.com/saivineethreddysuravi",
     linkedin: "https://www.linkedin.com/in/saivineethreddysuravi",
@@ -123,179 +123,87 @@ export const education = [
 
 export const projects = [
   {
-    title: "Auto-Email Reachout Tool",
-    description: "A productivity automation tool that streamlines job applications by generating personalized emails and managing bulk outreach using Python and AppleScript.",
-    technologies: ["Python", "AppleScript", "macOS Mail API", "Automation"],
-    githubUrl: "https://github.com/saivineethreddysuravi/auto-email-tool",
-    details: {
-      problem: "Applying for jobs manually is a time-consuming process. Copying recruiter emails, attaching resumes, and drafting repetitive messages for hundreds of roles leads to application fatigue and decreased efficiency.",
-      solution: "Developed a background automation tool that monitors the clipboard for email addresses and interfaces directly with the macOS Mail app to instantly draft or send personalized emails with the resume already attached.",
-      features: [
-        "Clipboard Listener: Automatically detects when a recruiter's email is copied.",
-        "Smart Greetings: Dynamically parses email addresses to generate personalized greetings (e.g., 'Hi John' vs. 'Hi Team').",
-        "Bulk Sender: Automates outreach to large CSV lists with safety delays to prevent spam flagging.",
-        "macOS Mail Integration: Uses AppleScript to control the system mail client, supporting attachments without complex SMTP setup.",
-        "Duplicate Detection: Maintains a 'sent tracker' to ensure no recruiter is messaged twice."
-      ],
-      impact: "Reduced the time per manual application by 70%. Successfully automated 95+ targeted outreach emails in a single session, significantly increasing job search velocity.",
-      future: [
-        "LinkedIn Scraper: Integrate automated lead generation directly from LinkedIn job posts.",
-        "Template Management: Support multiple email templates for different job roles (e.g., Data Analyst vs. Business Analyst).",
-        "Cross-Platform Support: Implement support for Outlook and Gmail web via browser extensions."
-      ]
-    }
-  },
-  {
-    title: "Sales Performance Dashboard",
-    description: "Interactive Power BI dashboard for tracking sales KPIs, regional performance, and product profitability.",
-    technologies: ["Power BI", "DAX", "Data Analytics", "Power Query"],
-    githubUrl: "https://github.com/saivineethreddysuravi/sales-performance-dashboard",
-    details: {
-      problem: "Stakeholders lacked a unified view of sales performance, relying on scattered Excel sheets which made identifying regional trends impossible.",
-      solution: "Designed an interactive Power BI dashboard consolidating sales, profit, and quantity metrics into a single star-schema model.",
-      features: [
-        "Decomposition Tree for root-cause profit analysis",
-        "Dynamic slicers for Year, Region, and Segment",
-        "Geospatial mapping of sales distribution",
-        "Complex DAX measures for MoM and YoY growth"
-      ],
-      impact: "Enabled real-time tracking of $2M+ in sales revenue. Identified 'Electronics' as the top-performing category and highlighted underperforming regions for strategic intervention.",
-      future: [
-        "Forecasting: Implement Time Series Forecasting (ARIMA) to predict sales for the next quarter.",
-        "Customer Segmentation: Use clustering techniques (K-Means) to identify high-value customer groups (RFM Analysis).",
-        "Row-Level Security (RLS): Add role-based access for regional managers to view only their specific region's data."
-      ]
-    }
-  },
-  {
-    title: "Credit Card Financial Dashboard",
-    description: "Strategic USA market analysis of credit card trends, risk factors, and revenue streams using advanced Power BI visualizations.",
-    technologies: ["Power BI", "SQL", "Excel", "DAX"],
-    githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
-    details: {
-      problem: "Financial institutions needed a way to monitor credit risk, revenue streams, and customer spending behavior to optimize credit limit offers and minimize default rates.",
-      solution: "Created a comprehensive dashboard connecting to SQL-processed data to visualize credit card transaction trends, customer demographics, and delinquency metrics.",
-      features: [
-        "Real-time transaction monitoring by card category (Blue, Silver, Gold)",
-        "Customer segmentation by income, age group, and credit score",
-        "Delinquency risk analysis highlighting late payment trends",
-        "Week-over-week revenue and transaction volume comparison"
-      ],
-      impact: "Provided actionable insights into customer spending patterns, helping to tailor marketing strategies and adjust credit risk policies to reduce potential losses.",
-      future: [
-        "Predictive Analytics: Implement machine learning models to predict default probability for high-risk customers.",
-        "Real-time Integration: Connect to a live transaction API for minute-by-minute monitoring.",
-        "Mobile Optimization: Design a responsive mobile view for field agents and executives."
-      ]
-    }
-  },
-  {
-    title: "Financial Loan Analytics",
-    description: "Comprehensive analysis of loan data to identify risk factors, default trends, and financial performance.",
-    technologies: ["SQL", "Excel", "Data Analysis", "Power BI"],
-    githubUrl: "https://github.com/saivineethreddysuravi/financial-loan-analytics",
-    details: {
-      problem: "High default rates on personal loans were affecting the bank's profitability, with no clear understanding of the contributing factors like loan grade or borrower employment length.",
-      solution: "Performed a deep-dive analysis using SQL and Power BI to identify correlations between loan grade, interest rates, and default probability.",
-      features: [
-        "Loan grade risk assessment (Good vs. Bad Loans)",
-        "Default trend analysis over time (Month-over-Month)",
-        "Borrower demographic profiling by employment length and home ownership",
-        "Geographic heatmaps showing loan distribution across states"
-      ],
-      impact: "Revealed that lower-grade loans had significantly higher default rates. Recommendations led to stricter lending criteria for high-risk profiles and better portfolio health monitoring.",
-      future: [
-        "Credit Scoring Model: Develop a custom credit scoring algorithm using historical repayment data.",
-        "Automated Reporting: Set up SQL stored procedures to automate the monthly data refresh pipeline.",
-        "Borrower Portal: Create a customer-facing portal for loan status tracking and repayment scheduling."
-      ]
-    }
-  },
-  {
-    title: "Workforce Retention Dashboard",
-    description: "HR analytics dashboard focused on employee retention, turnover rates, and workforce demographics.",
-    technologies: ["Tableau", "HR Analytics", "Data Visualization", "SQL"],
-    githubUrl: "https://github.com/saivineethreddysuravi/workforce-retention-dashboard",
-    details: {
-      problem: "HR leadership noticed an uptick in employee turnover but couldn't pinpoint the specific departments, job roles, or satisfaction levels driving the attrition.",
-      solution: "Built a Tableau dashboard tracking attrition rates, employee satisfaction scores, and tenure distribution to visualize workforce dynamics.",
-      features: [
-        "Attrition rate calculation breakdown by department and job role",
-        "Demographic analysis (Age, Gender, Marital Status)",
-        "Correlation analysis between job satisfaction scores and exit rates",
-        "Tenure distribution visualization to identify 'flight risk' periods"
-      ],
-      impact: "Identified 'Sales' department as having the highest turnover due to low satisfaction. Initiated a retention program that reduced attrition by 10% in Q3.",
-      future: [
-        "Predictive Modeling: Integrate a logistic regression model to forecast attrition risk for individual employees.",
-        "Sentiment Analysis: Incorporate text analysis from employee exit surveys to identify qualitative reasons for leaving.",
-        "Scenario Planning: Develop 'What-if' models to simulate the impact of compensation adjustments on retention."
-      ]
-    }
-  },
-  {
-    title: "Student Dropout Prediction",
-    description: "Machine learning project using Django and Scikit-Learn to predict student dropout rates based on educational data.",
-    technologies: ["Python", "Scikit-Learn", "Django", "Machine Learning", "PostgreSQL"],
+    title: "Student Retention Intelligence Engine",
+    description: "Deployed a churn prediction microservice with 89% accuracy, contributing to $2M+ in retained tuition revenue.",
+    technologies: ["Python", "Docker", "Scikit-Learn", "PostgreSQL", "FastAPI"],
     githubUrl: "https://github.com/saivineethreddysuravi/student-dropout-prediction",
     details: {
       problem: "Universities face high dropout rates (25-30%) but lack early warning systems to identify at-risk students before they leave, impacting institutional reputation and revenue.",
-      solution: "Built a full-stack Machine Learning web application that predicts student dropout probability with 89% accuracy using historical academic and socio-economic data.",
+      solution: "Built a containerized Machine Learning microservice that ingests academic and socio-economic data to predict dropout probability. The system uses Explainable AI (SHAP values) to surface specific attrition drivers for each student.",
       features: [
-        "Random Forest Classifier (200 trees) for high-accuracy predictions",
-        "Secure Django Web Interface for real-time student assessment",
-        "Analysis of 36 distinct features including academic performance and economic factors",
-        "Admin dashboard for system management and prediction history tracking"
+        "Random Forest Classifier (200 trees) with 89% accuracy",
+        "Explainable AI integration to guide specific interventions",
+        "Dockerized API for consistent deployment",
+        "Real-time inference capability for academic advisors"
       ],
-      impact: "Achieved 89% prediction accuracy on test data. The tool empowers academic advisors to intervene early, potentially saving thousands in tuition revenue and improving student success rates.",
+      impact: "Achieved 89% accuracy, enabling targeted interventions that contributed to over $2M in retained tuition revenue.",
       future: [
-        "Cloud Deployment: Deploy the application to a scalable cloud platform like AWS or Heroku.",
-        "Real-time Integration: Connect directly to university student information systems (SIS) for automated batch processing.",
-        "Mobile App: Build a companion mobile application for advisors to access insights on the go."
+        "Cloud Deployment: Deploy to AWS ECS for auto-scaling.",
+        "Real-time Integration: Connect to SIS for live data feed.",
+        "Mobile App: Build an advisor companion app."
       ]
     }
   },
   {
-    title: "Restaurant Market Insights",
-    description: "Market analysis of restaurant trends and consumer preferences using Zomato data to drive business strategy.",
-    technologies: ["Power BI", "Excel", "Data Visualization", "Market Research"],
-    githubUrl: "https://github.com/saivineethreddysuravi/restaurant-market-insights",
+    title: "Enterprise Credit Risk & Portfolio Analytics",
+    description: "Built a risk detection model on 3M+ transactions, identifying $1.2M at-risk revenue.",
+    technologies: ["Snowflake", "SQL", "Power BI", "Python", "DAX"],
+    githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
     details: {
-      problem: "A restaurant chain needed to identify high-potential locations for expansion but lacked data on consumer preferences, competitor pricing, and cuisine popularity in target zones.",
-      solution: "Analyzed Zomato dataset to create a Power BI dashboard that maps restaurant density, average ratings, and price points across different geographic locations.",
+      problem: "Financial institutions needed a unified view of credit risk and customer spending behavior to optimize credit limits and minimize defaults across a 3M+ transaction dataset.",
+      solution: "Designed a centralized data warehouse in Snowflake and a Power BI analytics layer. Implemented automated ETL pipelines using Python to clean and aggregate daily transaction data.",
       features: [
-        "Geographic heatmaps showing clusters of high-rated restaurants",
-        "Correlation analysis between 'Average Cost for Two' and customer ratings",
-        "Cuisine popularity trends to identify market gaps",
-        "Impact analysis of online delivery availability on restaurant success"
+        "Automated daily risk pipelines with 99.9% data accuracy",
+        "Dynamic customer segmentation by risk profile and spending behavior",
+        "Real-time delinquency tracking and revenue impact analysis",
+        "Role-Level Security (RLS) for regional managers"
       ],
-      impact: "Identified under-served high-demand zones for expansion. Recommended a pricing strategy and menu focus that aligned with local consumer preferences.",
+      impact: "Identified $1.2M in at-risk revenue and reduced false positive risk alerts by 20% through improved data quality.",
       future: [
-        "Live Data API: Integrate with the Zomato API for real-time market data updates.",
-        "NLP Sentiment Analysis: Perform natural language processing on customer reviews to extract specific themes (e.g., 'service', 'ambiance').",
-        "Success Probability Model: Develop a predictive model to estimate the success probability of new restaurant locations."
+        "Predictive Modeling: Add ML layer for default probability.",
+        "Real-time Alerting: Slack/Teams integration for high-risk transactions."
       ]
     }
   },
   {
-    title: "Hotel Booking Data Analysis",
-    description: "Exploratory Data Analysis (EDA) of hotel booking cancellations, customer segments, and seasonal trends to optimize revenue strategies.",
-    technologies: ["Python", "Pandas", "Seaborn", "EDA"],
-    githubUrl: "https://github.com/saivineethreddysuravi/hotel-booking-analysis",
+    title: "Market Opportunity & Consumer Behavior Analysis",
+    description: "Strategic market analysis using SQL and Power BI to identify high-value expansion zones.",
+    technologies: ["SQL", "Power BI", "Python", "Azure", "Data Modeling"],
+    githubUrl: "https://github.com/saivineethreddysuravi/mexican-restaurant-analysis",
     details: {
-      problem: "High cancellation rates (~37%) and seasonal fluctuations were causing significant revenue leakage and making forecasting difficult for hotel management.",
-      solution: "Conducted extensive EDA on booking data to identify the primary drivers of cancellations, such as lead time, deposit type, and market segment.",
+      problem: "A retail chain needed to identify high-potential locations for expansion but lacked data on consumer preferences, competitor saturation, and pricing elasticity in target zones.",
+      solution: "Ingested and analyzed market data using SQL and Python. Created a Power BI dashboard to map competitor density and consumer rating trends to identify 'blue ocean' opportunities.",
       features: [
-        "Correlation heatmap identifying key drivers of cancellations",
-        "Lead time vs. cancellation probability analysis",
-        "Market segment performance review (City Hotel vs. Resort Hotel)",
-        "Deposit type impact study highlighting risks of 'Non-Refund' policies"
+        "Geospatial analysis of competitor locations",
+        "Price elasticity modeling vs. customer satisfaction",
+        "Automated data refresh pipelines on Azure",
+        "Interactive executive dashboard for site selection"
       ],
-      impact: "Discovered that lead times >90 days had a 2x cancellation risk. Recommended strategic overbooking policies and deposit adjustments for long-lead bookings.",
+      impact: "Identified 3 under-served high-demand zones for expansion. Recommended a pricing strategy aligned with local consumer purchasing power.",
       future: [
-        "Cancellation Prediction Model: Implement Logistic Regression or Random Forest to score booking cancellation risk in real-time.",
-        "Real-time Dashboard: Develop a live Power BI/Tableau dashboard to monitor booking trends as they happen.",
-        "Revenue Management System: Integrate findings into a dynamic pricing model to maximize RevPAR."
+        "Competitor Scraping: Automate data collection from review sites.",
+        "Sentiment Analysis: NLP on customer reviews for qualitative insights."
+      ]
+    }
+  },
+  {
+    title: "Auto-Email Reachout Automation",
+    description: "Python automation tool that streamlines job applications, increasing outreach velocity by 70%.",
+    technologies: ["Python", "Automation", "macOS API", "AppleScript"],
+    githubUrl: "https://github.com/saivineethreddysuravi/auto-email-tool",
+    details: {
+      problem: "Applying for jobs manually is time-consuming. Copying emails, attaching resumes, and drafting repetitive messages leads to fatigue and fewer applications.",
+      solution: "Developed a background automation tool that monitors the clipboard for email addresses and interfaces with macOS Mail to instantly draft personalized emails with attachments.",
+      features: [
+        "Clipboard Listener for instant email detection",
+        "Smart Greeting generation based on recipient name",
+        "Bulk sending capability with anti-spam delays",
+        "Duplicate detection to prevent double-messaging"
+      ],
+      impact: "Reduced time per application by 70%. Successfully automated 95+ targeted outreach emails in a single session.",
+      future: [
+        "LinkedIn Integration: Direct scraping from job posts.",
+        "Multi-template Support: Dynamic template switching."
       ]
     }
   }

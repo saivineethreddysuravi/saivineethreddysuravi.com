@@ -53,15 +53,11 @@ export default function About() {
             className="space-y-8"
           >
             <h3 className="text-2xl font-light text-white leading-relaxed">
-              I am a <span className="font-bold text-white">Data Analyst</span> with over 4 years of experience bridging the gap between technical engineering and business strategy.
+              I’m a <span className="font-bold text-white">Senior Data Analyst</span> with experience designing cloud-based data platforms and analytics solutions that support executive decision-making.
             </h3>
             
             <p className="text-white/60 text-lg leading-relaxed font-light">
-              My career is built on a foundation of discipline and precision. Whether optimizing payroll operations for global enterprises or architecting financial dashboards for banking institutions, my goal remains the same: <b>to deliver absolute clarity through data.</b>
-            </p>
-
-            <p className="text-white/60 text-lg leading-relaxed font-light">
-              I don't just query data; I build the infrastructure that makes data reliable, scalable, and actionable. My background spans finance, workforce analytics, and risk management, where I have consistently automated complex workflows to drive operational excellence.
+              My work focuses on data warehousing, KPI governance, and financial analytics—helping organizations move from fragmented reporting to trusted, auditable insights.
             </p>
 
             {/* Education Micro-Card */}

@@ -45,12 +45,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-6 leading-[0.9]"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-6 leading-[1.1]"
         >
-          Data Intelligence.
+          Senior Data Analyst specializing in
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
-            Engineered.
+            cloud analytics, data warehousing, and executive reporting
           </span>
         </motion.h1>
 
@@ -59,11 +59,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl text-lg md:text-xl text-white/60 font-light leading-relaxed mb-10"
+          className="max-w-3xl text-lg md:text-xl text-white/60 font-light leading-relaxed mb-10"
         >
-          Hi, I'm <span className="text-white font-medium">{personalInfo.name}</span>. 
-          <br className="hidden md:block" />
-          A <span className="text-[#2997ff]">Data Analyst</span> turning complex datasets into strategic decisions.
+          Building trusted analytics across finance, workforce, and operations using AWS, Azure, GCP, SQL, and Python.
         </motion.p>
 
         {/* Action Buttons */}

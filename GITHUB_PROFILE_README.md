@@ -1,9 +1,9 @@
 # Hi, I'm Sai Vineeth Reddy Suravi 👋
 
 **Data Analyst | Business Intelligence Specialist**
-*Specializing in Financial, Payroll, and Workforce Analytics*
+*Specializing in Workforce Analytics*
 
-I bridge the gap between complex data engineering and strategic business decisions. With 4+ years of experience across India and the U.S., I transform messy operational data into high-impact BI solutions that leadership actually uses.
+I bridge the gap between complex data engineering and strategic business decisions. With 6+ years of experience across India and the U.S., I transform messy operational data into high-impact BI solutions that leadership actually uses.
 
 ---
 

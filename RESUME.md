@@ -1,50 +1,73 @@
-# Sai Vineeth Reddy Suravi
-**Data Analyst | Business Intelligence Specialist**
-Memphis, TN, USA | +1 (901) 930-8006 | saivineethreddysuravi@gmail.com
-[LinkedIn](https://www.linkedin.com/in/saivineethreddysuravi) | [GitHub](https://github.com/saivineethreddysuravi) | [Portfolio](https://vineeeth.com)
+# SAI VINEETH REDDY SURAVI
+**Senior Data Analyst | ETL Engineering & Data Governance**
+Charlotte, NC | 901-930-8006 | saivineethreddysuravi@gmail.com
+[LinkedIn](https://www.linkedin.com/in/saivineethreddysuravi) | [GitHub](https://github.com/saivineethreddysuravi) | [Portfolio](https://saivineethreddysuravi.com)
 
-## Summary
-Detail-oriented Data Analyst with 4+ years of experience delivering business intelligence and reporting solutions across finance, payroll, and workforce analytics domains. Experienced in data extraction, transformation, analysis, and visualization using SQL, Snowflake, Power BI (DAX), Python, and Excel. Strong ability to translate business requirements into scalable dashboards and automated reporting solutions that support operational and leadership decision-making. Proven collaborator with cross-functional stakeholders, ensuring data quality, governance, and actionable insights in data-driven environments.
+## PROFESSIONAL SUMMARY
+Senior Data Analyst with 6+ years of experience delivering end-to-end data analytics, ETL pipelines, data governance, and business intelligence solutions across healthcare, telecom, and insurance domains. Proven track record of building scalable data pipelines, high-impact KPI dashboards, and data validation frameworks that improve operational efficiency and support executive decision-making. Strong expertise in SQL development, data quality validation, reconciliation, and performance optimization across Snowflake, SQL Server, and Oracle environments. Experienced in designing ETL workflows using Azure Data Factory, Databricks, and PySpark, enabling large-scale data processing and reporting automation. Hands-on experience in data governance, metadata management, and data lineage tracking using Collibra, ensuring compliance, data integrity, and audit readiness. Adept at translating complex business requirements into actionable insights, reporting solutions, and automated workflows in Agile environments.
 
-## Technical Skills
-*   **Programming Languages:** Python (pandas, NumPy), SQL
-*   **Databases & Data Warehousing:** Snowflake, Enterprise Data Warehouses, SQL-based data preparation, Data Modeling (Star Schema)
-*   **Data Analysis Techniques:** Exploratory Data Analysis (EDA), Data Profiling, Trend Analysis, Cohort Analysis, Time-Series Analysis
-*   **Business Intelligence & Visualization:** Power BI (DAX, RLS, Power Query), Tableau, Executive Dashboards, KPI Reporting, Data Storytelling
-*   **Reporting & Tools:** Microsoft Excel (PivotTables, Advanced Formulas, Power Query), Reporting Automation, Confluence
+## TECHNICAL SKILLS
+*   **DATA ENGINEERING & ETL:** Azure Data Factory, SSIS, Databricks, PySpark
+*   **DATA WAREHOUSING:** Snowflake, SQL Server, Oracle
+*   **BI & DATA VISUALIZATION:** Power BI (PL-300), Tableau, SSRS
+*   **PROGRAMMING & ANALYTICS:** SQL, Python, PySpark
+*   **BIG DATA TECHNOLOGIES:** Apache Spark, Hadoop, Parquet, Delta Lake
+*   **CLOUD PLATFORMS:** AWS (S3, EC2), Azure Data Services
+*   **DATA GOVERNANCE:** Collibra, Data Lineage, Data Quality, Metadata Management, Data Validation, Reconciliation
+*   **TOOLS:** JIRA, GitHub, SharePoint, MS Office Suite
 
-## Professional Experience
+## CERTIFICATIONS
+*   Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+*   Microsoft Certified: Azure Data Fundamentals (DP-900)
+*   IBM: Data Analyst Professional Certificate
 
-**StarTech Networks Inc.** | Memphis, TN, USA
-**Data Analyst Intern** | *May 2025 – Dec 2025*
-*   **Action:** Owned end-to-end BI delivery including SQL-based ELT workflows in Snowflake and Power BI data modeling.
-*   **Impact:** Reduced report generation time by approximately **40%** and improved reporting visibility for leadership teams.
-*   **Automation:** Automated recurring Excel and Python workflows to eliminate manual reporting effort and minimize data quality issues.
-*   **Collaboration:** Partnered with operations to translate business needs into scalable BI solutions that improved company performance.
+## PROFESSIONAL EXPERIENCE
 
-**TEK Leaders Pvt. Ltd.** | Hyderabad, India
-**Data Analyst** | *Jun 2020 – Jun 2022*
-*   **Action:** Analyzed payroll, HR, and financial datasets using SQL and Snowflake to support accurate workforce reporting.
-*   **Impact:** Streamlined financial reporting processes through automation and optimized SQL queries, reducing turnaround time.
-*   **Strategy:** Conducted trend and cohort-based analysis to identify workforce patterns, directly informing weekly payroll decisions.
-*   **Visualization:** Designed and maintained Power BI dashboards providing leadership with visibility into payroll and operational KPIs.
+**Startech Networks** | Memphis, TN
+**Senior Data Analyst & BI Specialist** | *Jul 2025 – Feb 2026*
+*   Designed and delivered enterprise KPI dashboards (Power BI, Tableau), consolidating multi-source data into centralized reporting, improving decision-making efficiency by 35%.
+*   Built and optimized ETL pipelines using Azure Data Factory and Databricks, reducing manual data processing efforts by 40%.
+*   Developed complex SQL queries, stored procedures, and views, improving reporting performance and reducing dashboard refresh times by 30%.
+*   Engineered large-scale data transformations using PySpark, enabling efficient processing of high-volume datasets for downstream analytics.
+*   Conducted exploratory data analysis (EDA) to identify trends and anomalies, enabling proactive business decisions and reducing operational risks.
+*   Implemented data quality validation frameworks (SQL, SAS), improving data reliability to 99%+ accuracy.
+*   Performed source-to-target data validation and reconciliation across Oracle, SQL Server, DB2, and Snowflake, ensuring data integrity during migrations.
+*   Established data governance processes using Collibra, documenting data lineage, metadata, and business rules to support compliance and audit readiness.
+*   Developed real-time monitoring dashboards in Azure Data Explorer (KQL) that improved system performance tracking and enabled teams to resolve issues 30% faster.
+*   Optimized Snowflake performance through query tuning and warehouse scaling, reducing execution time by 25%.
 
-**Qualcomm India Pvt. Ltd.** | Hyderabad, India
-**Jr Data Analyst** | *Jan 2018 – Feb 2020*
-*   **Action:** Redesigned payroll reporting workflows by automating error checks, achieving a **20% increase** in accuracy.
-*   **Impact:** Developed Tableau dashboards that enabled leaders to quickly understand financial performance and operational trends.
-*   **Compliance:** Ensured 100% accuracy of SEC and internal compliance reporting through meticulous data reconciliation during audits.
-*   **Results:** Delivered actionable insights that increased budgeting accuracy and enabled more effective workforce planning.
+**Tek Leaders** | Hyderabad, India
+**Data Analyst** | *Feb 2020 – Sep 2023*
+*   Gathered business requirements and developed data models, ETL workflows, and Tableau dashboards, improving reporting turnaround time by 30%.
+*   Migrated legacy reporting systems (Oracle Discoverer) to Tableau, modernizing analytics infrastructure and improving accessibility.
+*   Developed and deployed predictive models (regression, clustering, time-series) that improved quarterly forecasting accuracy by 20%.
+*   Analyzed large insurance and telecom datasets using SQL, identifying fraud patterns and operational inefficiencies.
+*   Automated data cleansing and preprocessing pipelines (Python, SQL), reducing manual effort by 35%.
+*   Implemented Collibra-based metadata and governance workflows, improving data transparency and reliability.
+*   Conducted data validation and reconciliation checks, improving reporting accuracy across integrated systems.
+*   Automated recurring workflows using SQL and UNIX scripting, improving operational efficiency.
 
-## Education
-**Master of Science, Management Information Systems**
-Christian Brothers University, Memphis, TN | *Jan 2024 – Dec 2025* | **GPA: 3.88**
+**Qualcomm** | Hyderabad, India
+**SQL Developer** | *Jan 2018 – Feb 2020*
+*   Designed and developed database objects including tables, indexes, views, stored procedures, and triggers that reduced report generation time by 30%.
+*   Built and optimized complex SQL queries, reducing report generation time by 40%.
+*   Developed OLAP cubes using SSAS for multidimensional reporting and analysis, reducing report generation time by 60%.
+*   Automated ETL and reporting workflows using SQL scripts, reducing manual effort and improving consistency.
+*   Monitored database performance using SQL Profiler, identified and resolved bottlenecks, and ensured stability.
+*   Supported data migration and system upgrades on AWS EC2 by accurately validating and reconciling data across environments.
 
-**Bachelor of Technology, Computer Science Engineering**
-Narasimha Reddy Engineering College, Hyderabad, IND | *Apr 2014 – Jun 2017*
+## EDUCATION
+**Christian Brothers University**, Memphis, TN
+**Master of Science, Computer Information Systems** | *GPA: 3.88*
 
-## Projects
-**Business Intelligence & Reporting Projects** | *Sep 2022 – Present*
-*   Developed Power BI dashboards integrating SQL and Snowflake data to track workforce and financial KPIs.
-*   Automated data preparation using **Python and Excel**, reducing manual effort by **40–50%**.
-*   Conducted trend, cohort, and segmentation analysis to identify high-risk areas and provide actionable insights for operational improvements.
+**Jawaharlal Nehru Technological University**, Hyderabad, India
+**Bachelor of Technology, Computer Science** | *GPA: 3.60*
+
+## PROJECTS
+**Enterprise Credit Risk & Portfolio Health Analytics**
+*   Built a high-scale analytics solution on Snowflake processing 3M+ records, identifying $1.2M in at-risk revenue.
+*   Developed automated validation pipelines (SQL + Python) achieving 99.9% reporting accuracy.
+
+**Student Retention Analytics**
+*   Developed a predictive churn model using Python, improving retention strategy effectiveness.
+*   Delivered dashboards identifying key attrition drivers, enabling targeted business actions.

@@ -1,13 +1,13 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable, FaShieldAlt, FaSearchPlus, FaCogs, FaUsers } from 'react-icons/fa';
-import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake, SiDatabricks, SiGooglecloud } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable, FaShieldAlt, FaSearchPlus, FaCogs, FaUsers, FaCloud, FaCheckCircle } from 'react-icons/fa';
+import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake, SiDatabricks, SiGooglecloud, SiMicrosoftazure, SiApachespark, SiJupyter } from 'react-icons/si';
 
 export const personalInfo = {
   name: "Sai Vineeth Reddy Suravi",
-  title: "Senior Data Analyst | Cloud Analytics & Data Governance",
+  title: "Senior Data Analyst | ETL Engineering & Data Governance",
   email: "saivineethreddysuravi@gmail.com",
   phone: "+1 (901) 930-8006",
   location: "Charlotte, NC, USA",
-  summary: "Experienced Senior Data Analyst specializing in analyzing structured and unstructured data from multiple sources to generate actionable insights and support informed business decisions. Proven ability to collaborate with stakeholders and translate complex datasets into clear, business-focused insights with a focus on SQL optimization, Python ETL, and data governance.",
+  summary: "Senior Data Analyst with 6+ years of experience delivering end-to-end data analytics, ETL pipelines, and data governance solutions across healthcare, telecom, and insurance domains. Expert in SQL optimization, Snowflake, and Azure Data Services (ADF, Databricks), with a proven track record of building scalable data validation frameworks and high-impact KPI dashboards that drive executive decision-making.",
   social: {
     github: "https://github.com/saivineethreddysuravi",
     linkedin: "https://www.linkedin.com/in/saivineethreddysuravi",
@@ -16,83 +16,94 @@ export const personalInfo = {
 
 export const skills = [
   {
-    category: "Data Analytics & Engineering",
+    category: "Data Engineering & ETL",
     items: [
-      { name: "SQL Optimization", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
-      { name: "Python (Pandas, NumPy)", icon: FaPython, link: "https://github.com/saivineethreddysuravi/student-dropout-prediction" },
-      { name: "ETL Pipelines", icon: FaCogs, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Cloud Warehouses", icon: SiSnowflake, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
+      { name: "Azure Data Factory", icon: SiMicrosoftazure, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Databricks & PySpark", icon: SiDatabricks, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Snowflake & SQL Server", icon: SiSnowflake, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
+      { name: "ETL Pipeline Automation", icon: FaCogs, link: "https://github.com/saivineethreddysuravi" },
     ]
   },
   {
-    category: "Data Governance & Risk",
+    category: "Data Governance & Quality",
     items: [
-      { name: "Risk Frameworks", icon: FaShieldAlt, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Data Quality Controls", icon: FaSearchPlus, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
-      { name: "Lineage Validation", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Collibra & Lineage", icon: FaShieldAlt, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Data Validation (SQL/SAS)", icon: FaCheckCircle, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
+      { name: "Metadata Management", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi" },
       { name: "Audit & Compliance", icon: FaShieldAlt, link: "https://github.com/saivineethreddysuravi" },
     ]
   },
   {
-    category: "Reporting & BI",
+    category: "BI & Data Visualization",
     items: [
-      { name: "Power BI Semantic Models", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/mexican-restaurant-analysis" },
-      { name: "KPI Standardization", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Data Reconciliation", icon: FaDatabase, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
-      { name: "Executive Dashboards", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/mexican-restaurant-analysis" },
+      { name: "Power BI (DAX/PL-300)", icon: FaChartBar, link: "https://github.com/saivineethreddysuravi/mexican-restaurant-analysis" },
+      { name: "Tableau & SSRS", icon: SiTableau, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Executive Reporting", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi" },
+      { name: "KQL & Real-time Dashboards", icon: FaSearchPlus, link: "https://github.com/saivineethreddysuravi" },
     ]
   },
   {
-    category: "Financial & Operational Analytics",
+    category: "Analytics & Big Data",
     items: [
-      { name: "Forecasting", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Workforce Reporting", icon: FaUsers, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Process Standardization", icon: FaCogs, link: "https://github.com/saivineethreddysuravi" },
-      { name: "Anomaly Detection", icon: FaSearchPlus, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Python (Pandas/NumPy)", icon: FaPython, link: "https://github.com/saivineethreddysuravi/student-dropout-prediction" },
+      { name: "Apache Spark", icon: SiApachespark, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Predictive Modeling", icon: FaChartLine, link: "https://github.com/saivineethreddysuravi/student-dropout-prediction" },
+      { name: "AWS (S3/EC2)", icon: FaCloud, link: "https://github.com/saivineethreddysuravi" },
     ]
   }
 ];
 
 export const experience = [
   {
-    company: "StarTech Networks Inc.",
-    role: "Senior Data Analyst",
+    company: "Startech Networks",
+    role: "Senior Data Analyst & BI Specialist",
     location: "Memphis, TN, USA",
-    period: "Aug 2025 - Present",
+    period: "Jul 2025 - Feb 2026",
     description: [
-      "**Risk Framework:** Developed an enterprise-wide, report-level data risk framework that enables all reporting teams to consistently assess data completeness, transformation accuracy, refresh timeliness, dependency risks, and business impact.",
-      "**Scoring Model:** Designed and implemented an exposure-based scoring model leveraging control maturity, lineage depth, and dependency indicators to accurately classify reporting assets by risk tier, enabling more effective risk management and strategic decision-making.",
-      "**Data Controls:** Implemented validation, reconciliation, and checkpoint controls within Snowflake and Redshift, reducing reporting defects and increasing trust in downstream analytics.",
-      "**Agile Leadership:** Led control testing sprints using Agile methods and JIRA, validating logic effectiveness and refining scoring thresholds, which improved model accuracy and reduced false-positive alerts by 15%, leading to faster issue resolution.",
-      "**Warehouse Engineering:** Engineered a centralized cloud warehouse replacing fragmented spreadsheets, enabling consistent governed reporting across business units.",
-      "**Governance:** Redesigned KPI governance logic within Power BI semantic models, reducing executive metric disputes by 40%.",
-      "**Documentation:** Authored audit-aligned documentation, validation protocols, lineage maps, and remediation workflows that improved audit readiness and reduced issue resolution time."
+      "**BI Strategy:** Designed and delivered enterprise KPI dashboards (Power BI, Tableau), consolidating multi-source data into centralized reporting, improving decision-making efficiency by 35%.",
+      "**ETL Engineering:** Built and optimized ETL pipelines using Azure Data Factory and Databricks, reducing manual data processing efforts by 40%.",
+      "**SQL Performance:** Developed complex SQL queries, stored procedures, and views, reducing dashboard refresh times by 30% through query tuning and Snowflake warehouse scaling.",
+      "**Big Data:** Engineered large-scale data transformations using PySpark, enabling efficient processing of high-volume datasets for downstream analytics.",
+      "**Data Quality:** Implemented validation frameworks (SQL, SAS) and performed source-to-target reconciliation across Oracle, SQL Server, and Snowflake, ensuring 99.9% accuracy.",
+      "**Governance:** Established data governance processes using Collibra, documenting data lineage, metadata, and business rules to support compliance and audit readiness.",
+      "**Real-time Analytics:** Developed monitoring dashboards in Azure Data Explorer (KQL) that enabled teams to resolve performance issues 30% faster."
     ]
   },
   {
-    company: "Qualcomm (via Sodexo)",
-    role: "Data Analyst, Finance & Analytics",
+    company: "Tek Leaders",
+    role: "Data Analyst",
     location: "Hyderabad, India",
-    period: "Jul 2018 - Nov 2023",
+    period: "Feb 2020 - Sep 2023",
     description: [
-      "**Analytics:** Delivered financial and workforce analytics that increased forecasting and budgeting accuracy and supported better decision-making.",
-      "**Reconciliation:** Built reconciliation frameworks and financial reporting controls that improved audit readiness and compliance, resulting in faster and more accurate financial statements.",
-      "**Anomaly Detection:** Defined anomaly detection thresholds to spot variances before month-end close, which improved financial accuracy, enabled faster issue resolution, and reduced last-minute adjustments.",
-      "**Automation:** Automated reporting workflows using Python and SQL, reducing processing time by 50%.",
-      "**Issue Tracking:** Worked with finance and audit leaders to create clear issue-tracking and remediation documentation in SharePoint, leading to faster resolution times and easier audit reviews.",
-      "**Root Cause Analysis:** Performed root cause analysis on transformation logic to find control failures and lineage gaps, leading to fixes that improved data quality and process reliability.",
-      "**Standardization:** Standardized KPIs and governance documentation, reducing reporting discrepancies by 20%.",
-      "**Mentorship:** Mentored analysts on governance-aligned analytics and control-oriented data engineering, resulting in improved data quality and a 20% increase in reporting consistency across the team."
+      "**Modernization:** Migrated legacy reporting systems (Oracle Discoverer) to Tableau, modernizing analytics infrastructure and improving accessibility.",
+      "**Predictive Analytics:** Developed and deployed predictive models (regression, clustering, time-series) that improved quarterly forecasting accuracy by 20%.",
+      "**EDA & Python:** Performed exploratory data analysis using Python (Pandas, NumPy), uncovering trends that improved pricing and operational strategies.",
+      "**Automation:** Automated data cleansing and preprocessing pipelines (Python, SQL), reducing manual effort by 35% and improving data preparation speed.",
+      "**Governance:** Implemented Collibra-based metadata and governance workflows, ensuring data transparency and source-to-target mapping consistency.",
+      "**Fraud Detection:** Analyzed large insurance and telecom datasets using SQL, identifying fraud patterns and operational inefficiencies."
+    ]
+  },
+  {
+    company: "Qualcomm",
+    role: "SQL Developer",
+    location: "Hyderabad, India",
+    period: "Jan 2018 - Feb 2020",
+    description: [
+      "**Database Engineering:** Designed and developed tables, indexes, views, and stored procedures that reduced report generation time by 30%.",
+      "**Query Optimization:** Built and optimized complex SQL queries and indexing strategies, improving database performance by 40%.",
+      "**OLAP Modeling:** Developed OLAP cubes using SSAS for multidimensional analysis, reducing finance team report generation time by 60%.",
+      "**Cloud Migration:** Supported data migration and system upgrades on AWS EC2 by validating and reconciling data across environments with zero data loss.",
+      "**Automation:** Automated ETL and reporting workflows using SQL and UNIX scripts, improving consistency and reducing manual intervention."
     ]
   }
 ];
 
 export const achievements = [
-  "Reduced executive metric disputes by **40%** through redesigned KPI governance logic.",
-  "Improved model accuracy and reduced false-positive alerts by **15%** via optimized scoring thresholds.",
-  "Automated financial reporting workflows using Python and SQL, reducing processing time by **50%**.",
-  "Built a high-scale risk detection engine processing **3M+ Snowflake transactions**, identifying **$1.2M at-risk revenue**.",
-  "Maintained a **3.88 GPA** during Master of Science in Computer Information Systems."
+  "Reduced report generation time by **60%** for finance teams using SSAS OLAP modeling.",
+  "Improved decision-making efficiency by **35%** through centralized enterprise KPI dashboards.",
+  "Automated ETL pipelines via Azure Data Factory and Databricks, reducing manual effort by **40%**.",
+  "Identified **$1.2M at-risk revenue** by processing **3M+ Snowflake transactions** with 99.9% accuracy.",
+  "Certified: **Power BI Data Analyst Associate (PL-300)** & **Azure Data Fundamentals (DP-900)**."
 ];
 
 export const education = [
@@ -103,9 +114,9 @@ export const education = [
     period: "Jan 2024 - Dec 2025"
   },
   {
-    institution: "Narasimha Reddy Engineering College",
+    institution: "Jawaharlal Nehru Technological University",
     location: "Hyderabad, India",
-    degree: "Bachelor of Technology, Computer Science Engineering",
+    degree: "Bachelor of Technology, Computer Science (GPA: 3.60)",
     period: "Apr 2014 - May 2018"
   }
 ];
@@ -114,7 +125,7 @@ export const projects = [
   {
     title: "Enterprise Credit Risk & Portfolio Health Analytics",
     description: "Built a high-scale risk detection engine processing 3M+ Snowflake transactions, identifying $1.2M at-risk revenue while reducing false positives by 20%.",
-    technologies: ["Snowflake", "SQL", "Python", "Power BI", "Data Modeling"],
+    technologies: ["Snowflake", "SQL", "Python", "Power BI", "Data Governance"],
     githubUrl: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard",
     details: {
       problem: "Financial institutions needed a unified view of credit risk and customer spending behavior to optimize credit limits and minimize defaults across a 3M+ transaction dataset.",
@@ -122,7 +133,7 @@ export const projects = [
       features: [
         "Automated daily data quality pipelines with 99.9% reporting accuracy",
         "Dynamic customer segmentation by risk profile and spending behavior",
-        "Real-time delinquency tracking and revenue impact analysis",
+        "PII Masking and Row-Level Security for sensitive financial data",
         "Exposure-based scoring model for risk classification"
       ],
       impact: "Identified $1.2M in at-risk revenue and reduced false positive risk alerts by 20% through improved data quality.",

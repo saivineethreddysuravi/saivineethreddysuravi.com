@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable, FaShieldAlt, FaSearchPlus, FaCogs, FaUsers, FaCloud, FaCheckCircle } from 'react-icons/fa';
-import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake, SiDatabricks, SiGooglecloud, SiMicrosoftazure, SiApachespark, SiJupyter } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDatabase, FaChartBar, FaPython, FaFileExcel, FaChartLine, FaTable, FaShieldAlt, FaSearchPlus, FaCogs, FaUsers, FaCloud, FaCheckCircle, FaMicrosoft } from 'react-icons/fa';
+import { SiTableau, SiPandas, SiNumpy, SiMysql, SiSnowflake, SiDatabricks, SiGooglecloud, SiApachespark, SiJupyter } from 'react-icons/si';
 
 export const personalInfo = {
   name: "Sai Vineeth Reddy Suravi",
@@ -18,7 +18,7 @@ export const skills = [
   {
     category: "Data Engineering & ETL",
     items: [
-      { name: "Azure Data Factory", icon: SiMicrosoftazure, link: "https://github.com/saivineethreddysuravi" },
+      { name: "Azure Data Factory", icon: FaMicrosoft, link: "https://github.com/saivineethreddysuravi" },
       { name: "Databricks & PySpark", icon: SiDatabricks, link: "https://github.com/saivineethreddysuravi" },
       { name: "Snowflake & SQL Server", icon: SiSnowflake, link: "https://github.com/saivineethreddysuravi/credit-card-financial-dashboard" },
       { name: "ETL Pipeline Automation", icon: FaCogs, link: "https://github.com/saivineethreddysuravi" },

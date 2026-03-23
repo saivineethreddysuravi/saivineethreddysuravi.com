@@ -23,10 +23,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-black relative overflow-hidden">
+    <section id="about" className="py-32 bg-[#050505] relative overflow-hidden border-t border-white/5">
       
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.02]" />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         
@@ -37,13 +37,13 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16 md:mb-24"
         >
-          <h2 className="text-5xl font-bold text-white mb-6 tracking-tight">
-            About <span className="text-[#2997ff]">Me.</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/60 to-white/20">Me</span>
           </h2>
-          <div className="h-1 w-20 bg-[#2997ff] rounded-full" />
+          <div className="h-px w-24 bg-gradient-to-r from-white/40 to-transparent" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Column: Narrative */}
           <motion.div
@@ -52,44 +52,46 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-2xl font-light text-white leading-relaxed">
-              I’m a <span className="font-bold text-white">Senior Data Analyst</span> with experience designing cloud-based data platforms and analytics solutions that support executive decision-making.
+            <h3 className="text-3xl md:text-4xl font-light text-white leading-[1.3] tracking-tight">
+              I’m a <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">Senior Data Analyst</span> engineering cloud-based platforms that support executive decision-making.
             </h3>
             
-            <p className="text-white/60 text-lg leading-relaxed font-light">
-              My work focuses on data warehousing, KPI governance, and financial analytics—helping organizations move from fragmented reporting to trusted, auditable insights.
+            <p className="text-white/50 text-lg leading-relaxed font-light">
+              My work focuses on data warehousing, KPI governance, and financial analytics—helping organizations move from fragmented reporting to trusted, auditable insights at enterprise scale.
             </p>
 
             {/* Education Micro-Card */}
-            <div className="mt-8 p-6 bg-[#111] border border-white/5 rounded-2xl flex items-center gap-4 group hover:border-[#2997ff]/30 transition-colors">
-                <div className="p-3 bg-[#2997ff]/10 rounded-full text-[#2997ff]">
-                    <FaGraduationCap size={24} />
+            <div className="mt-10 p-6 bg-white/[0.02] border border-white/5 rounded-3xl flex items-center gap-5 group hover:bg-white/[0.04] transition-colors">
+                <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/5 text-white/50 group-hover:scale-110 group-hover:text-white transition-all duration-300">
+                    <FaGraduationCap size={20} />
                 </div>
                 <div>
-                    <h4 className="text-white font-bold">Master of Science, MIS</h4>
-                    <p className="text-white/50 text-sm">Christian Brothers University • <span className="text-[#2997ff]">GPA: 3.88</span></p>
+                    <h4 className="text-white font-medium tracking-wide">Master of Science, MIS</h4>
+                    <p className="text-white/40 text-sm mt-1">Christian Brothers University • <span className="text-white/80 font-medium">GPA: 3.88</span></p>
                 </div>
             </div>
           </motion.div>
 
           {/* Right Column: Principles Grid */}
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-4">
             {principles.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-8 bg-[#0f0f11] border border-white/5 rounded-2xl hover:border-[#2997ff]/40 hover:bg-[#15151a] transition-all duration-300 group"
+                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  className="p-8 bg-white/[0.01] border border-white/5 rounded-3xl hover:bg-white/[0.03] hover:border-white/10 transition-all duration-500 group flex gap-6 items-start"
                 >
-                    <div className="mb-4 text-white/20 group-hover:text-[#2997ff] transition-colors">
-                        <item.icon size={32} />
+                    <div className="mt-1 text-white/30 group-hover:text-white transition-colors duration-500">
+                        <item.icon size={24} />
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                    <p className="text-white/60 font-light leading-relaxed text-sm">
-                        {item.desc}
-                    </p>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 tracking-wide">{item.title}</h4>
+                      <p className="text-white/50 font-light leading-relaxed text-sm">
+                          {item.desc}
+                      </p>
+                    </div>
                 </motion.div>
             ))}
           </div>

@@ -9,7 +9,6 @@ import { personalInfo } from "@/data/portfolio";
 const navLinks = [
   { name: "About", to: "about" },
   { name: "Experience", to: "experience" },
-  { name: "Achievements", to: "achievements" },
   { name: "Skills", to: "skills" },
   { name: "Projects", to: "projects" },
 ];
@@ -20,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -29,27 +28,33 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || isOpen ? "glass py-3" : "bg-transparent py-5"
-        }`}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none"
       >
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center gap-8">
+        {/* Floating Dock */}
+        <div 
+          className={`pointer-events-auto flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 w-full max-w-4xl ${
+            scrolled ? "bg-black/60 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" : "bg-transparent border border-transparent"
+          }`}
+        >
+          <div className="flex items-center gap-4">
              <ScrollLink
               to="hero"
               smooth={true}
               duration={800}
-              className="text-2xl font-bold text-white tracking-tight cursor-pointer z-50 flex items-center gap-2"
+              className="font-bold text-white tracking-tight cursor-pointer flex items-center gap-2 group"
             >
-              <span className="font-semibold text-lg">{personalInfo.name}</span>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#2997ff] to-[#9d00ff] flex items-center justify-center text-sm group-hover:scale-105 transition-transform">
+                V
+              </div>
+              <span className="hidden sm:block font-medium tracking-wide text-sm">{personalInfo.name}</span>
             </ScrollLink>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2 bg-white/5 rounded-full px-2 py-1 border border-white/5">
             {navLinks.map((link) => (
               <ScrollLink
                 key={link.name}
@@ -57,35 +62,28 @@ export default function Navbar() {
                 smooth={true}
                 duration={800}
                 offset={-100}
-                className="px-4 py-2 text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer tracking-wide"
+                className="px-4 py-1.5 text-xs font-medium text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all cursor-pointer tracking-wide"
               >
                 {link.name}
               </ScrollLink>
             ))}
-        <div className="flex items-center gap-3 ml-4">
-             <a
-                href="/resume/Sai_Vineeth_Reddy_Suravi_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden md:inline-flex px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white transition-colors"
-             >
-                Resume
-             </a>
+          </div>
+
+          <div className="hidden md:flex items-center gap-3">
              <a
                 href={personalInfo.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex px-4 py-1.5 bg-white text-black hover:bg-slate-200 text-xs font-semibold rounded-full transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-white text-black hover:bg-slate-200 text-xs font-semibold rounded-full transition-all active:scale-95"
              >
-                Hire Me
+                Let's Connect
              </a>
-        </div>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white focus:outline-none z-50"
+            className="md:hidden text-white/80 hover:text-white focus:outline-none p-2"
           >
             {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
@@ -96,35 +94,44 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex items-center justify-center md:hidden"
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            className="fixed inset-0 z-40 bg-black/90 flex flex-col items-center justify-center"
           >
-            <div className="flex flex-col items-center space-y-8">
-              {navLinks.map((link) => (
-                <ScrollLink
+            <div className="flex flex-col items-center space-y-6 w-full px-8">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
                   key={link.name}
-                  to={link.to}
-                  smooth={true}
-                  duration={800}
-                  offset={-100}
-                  onClick={() => setIsOpen(false)}
-                  className="text-2xl font-bold text-slate-300 hover:text-white cursor-pointer"
+                  className="w-full"
                 >
-                  {link.name}
-                </ScrollLink>
+                  <ScrollLink
+                    to={link.to}
+                    smooth={true}
+                    duration={800}
+                    offset={-100}
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full text-center py-4 text-3xl font-light text-white/70 hover:text-white border-b border-white/5 cursor-pointer"
+                  >
+                    {link.name}
+                  </ScrollLink>
+                </motion.div>
               ))}
-              <ScrollLink
-                  to="contact"
-                  smooth={true}
-                  duration={800}
-                  offset={-100}
-                  onClick={() => setIsOpen(false)}
-                  className="px-8 py-3 text-lg font-bold text-black bg-white rounded-full shadow-lg"
-                >
-                  Contact Me
-              </ScrollLink>
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                href={personalInfo.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="mt-8 px-8 py-4 w-full text-center text-lg font-medium text-black bg-white rounded-full active:scale-95 transition-transform"
+              >
+                Let's Connect
+              </motion.a>
             </div>
           </motion.div>
         )}

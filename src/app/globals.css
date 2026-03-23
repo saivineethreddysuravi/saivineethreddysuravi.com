@@ -16,11 +16,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #000000;
+    background-color: #050505;
   }
   
   body {
-    @apply bg-black text-white antialiased;
+    @apply bg-[#050505] text-white antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

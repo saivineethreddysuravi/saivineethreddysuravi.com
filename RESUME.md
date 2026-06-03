@@ -63,11 +63,19 @@ Senior Data Analyst with 6+ years of experience delivering end-to-end data analy
 **Jawaharlal Nehru Technological University**, Hyderabad, India
 **Bachelor of Technology, Computer Science** | *GPA: 3.60*
 
-## PROJECTS
-**Enterprise Credit Risk & Portfolio Health Analytics**
-*   Built a high-scale analytics solution on Snowflake processing 3M+ records, identifying $1.2M in at-risk revenue.
-*   Developed automated validation pipelines (SQL + Python) achieving 99.9% reporting accuracy.
+## SELECTED PROJECTS
 
-**Student Retention Analytics**
-*   Developed a predictive churn model using Python, improving retention strategy effectiveness.
-*   Delivered dashboards identifying key attrition drivers, enabling targeted business actions.
+**Enterprise Credit Risk & Portfolio Health Analytics ($1.2M Risk Mitigation)**
+*   **Problem:** High default rates and untracked credit risk segments were leading to unpredictable revenue fluctuations.
+*   **Analysis:** Built a high-scale analytics solution on Snowflake (3M+ records) with dbt-style SQL models. Analyzed transaction patterns to identify high-risk segments and portfolio health trends.
+*   **Impact:** Identified **$1.2M in at-risk revenue**; reduced false-positive risk detections by **20%** and achieved 99.9% reporting accuracy via automated Python ETL pipelines.
+
+**Student Retention Intelligence Engine ($2M+ Revenue Retention)**
+*   **Problem:** Increasing student attrition was driving significant tuition revenue loss and impacting institutional performance metrics.
+*   **Analysis:** Developed an Explainable AI (SHAP) predictive churn model in Python. Analyzed cohort behavior across 30+ features (GPA, engagement, financial aid) to identify primary attrition drivers.
+*   **Impact:** Contributed to **$2M+ in retained tuition revenue** by enabling proactive administrative interventions based on an **89% prediction accuracy** rate.
+
+**Market Opportunity & Marketing Funnel Optimization (12% ROI Lift)**
+*   **Problem:** Regional marketing spend was misallocated due to a lack of visibility into **Customer Acquisition Cost (CAC)** and funnel drop-off points.
+*   **Analysis:** Engineered a Marketing Funnel & ROI engine tracking customers from Impression to Repeat Visit. Quantified funnel leakage (19.1% loyalty signup rate) and regional CAC disparities ($4.00 vs $12.50).
+*   **Impact:** Recommended a 30% budget reallocation toward high-performing "Anchor" locations, projecting a **12% lift in regional ROI** and a **$400K annual revenue lift** through retention optimization.

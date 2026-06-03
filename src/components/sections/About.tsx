@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { FaDatabase, FaChartLine, FaCogs, FaGraduationCap } from "react-icons/fa";
+import { personalInfo, education } from "@/data/portfolio";
 
 export default function About() {
+  const msDegree = education.find(edu => edu.degree.includes("Master"));
   const principles = [
     {
       icon: FaDatabase,
@@ -57,19 +59,26 @@ export default function About() {
             </h3>
             
             <p className="text-white/50 text-lg leading-relaxed font-light">
-              My work focuses on data warehousing, KPI governance, and financial analytics—helping organizations move from fragmented reporting to trusted, auditable insights at enterprise scale.
+              {personalInfo.summary.split(/(\*\*.*?\*\*)/g).map((part, idx) => {
+                if (part.startsWith("**") && part.endsWith("**")) {
+                  return <strong key={idx} className="text-white font-medium">{part.replace(/\*\*/g, "")}</strong>;
+                }
+                return part;
+              })}
             </p>
 
             {/* Education Micro-Card */}
-            <div className="mt-10 p-6 bg-white/[0.02] border border-white/5 rounded-3xl flex items-center gap-5 group hover:bg-white/[0.04] transition-colors">
-                <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/5 text-white/50 group-hover:scale-110 group-hover:text-white transition-all duration-300">
-                    <FaGraduationCap size={20} />
-                </div>
-                <div>
-                    <h4 className="text-white font-medium tracking-wide">Master of Science, MIS</h4>
-                    <p className="text-white/40 text-sm mt-1">Christian Brothers University • <span className="text-white/80 font-medium">GPA: 3.88</span></p>
-                </div>
-            </div>
+            {msDegree && (
+              <div className="mt-10 p-6 bg-white/[0.02] border border-white/5 rounded-3xl flex items-center gap-5 group hover:bg-white/[0.04] transition-colors">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/5 text-white/50 group-hover:scale-110 group-hover:text-white transition-all duration-300">
+                      <FaGraduationCap size={20} />
+                  </div>
+                  <div>
+                      <h4 className="text-white font-medium tracking-wide">{msDegree.degree.split(" (")[0]}</h4>
+                      <p className="text-white/40 text-sm mt-1">{msDegree.institution} • <span className="text-white/80 font-medium">{msDegree.degree.split(" (")[1]?.replace(")", "") || msDegree.period}</span></p>
+                  </div>
+              </div>
+            )}
           </motion.div>
 
           {/* Right Column: Principles Grid */}

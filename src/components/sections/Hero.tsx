@@ -85,6 +85,15 @@ export default function Hero() {
           </button>
 
           <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-white/[0.05] text-white hover:bg-white/10 transition-all backdrop-blur-md flex items-center justify-center gap-2 text-sm tracking-wide font-medium"
+          >
+            Download Resume
+          </a>
+
+          <a
             href={personalInfo.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"

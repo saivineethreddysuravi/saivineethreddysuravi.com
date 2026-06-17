@@ -1,26 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaDatabase, FaChartLine, FaCogs, FaGraduationCap } from "react-icons/fa";
+import { FaShieldAlt, FaCheckCircle, FaProjectDiagram, FaGraduationCap } from "react-icons/fa";
 import { personalInfo, education } from "@/data/portfolio";
 
 export default function About() {
   const msDegree = education.find(edu => edu.degree.includes("Master"));
   const principles = [
     {
-      icon: FaDatabase,
-      title: "Data Engineering",
-      desc: "Architecting robust ETL pipelines and Snowflake warehouses that ensure data integrity and accessibility."
+      icon: FaShieldAlt,
+      title: "Data Governance",
+      desc: "Implementing Collibra Data Catalog, Business Glossary, Lineage, and Stewardship workflows across regulated data environments."
     },
     {
-      icon: FaChartLine,
-      title: "Strategic Analytics",
-      desc: "Translating complex datasets into intuitive Power BI dashboards that drive high-level executive decision-making."
+      icon: FaCheckCircle,
+      title: "Data Quality",
+      desc: "Authoring CDQ rules for completeness, accuracy, timeliness, and consistency — enforced inside Azure Data Factory and Databricks pipelines."
     },
     {
-      icon: FaCogs,
-      title: "Process Automation",
-      desc: "Replacing manual Excel workflows with automated Python & SQL scripts to reduce error and save hundreds of hours."
+      icon: FaProjectDiagram,
+      title: "SOX & Reconciliation",
+      desc: "Cross-system reconciliation across Snowflake, Oracle, SQL Server, and DB2 to deliver clean SOX 404 audits and trustworthy financial reporting."
     }
   ];
 
@@ -55,7 +55,7 @@ export default function About() {
             className="space-y-8"
           >
             <h3 className="text-3xl md:text-4xl font-light text-white leading-[1.3] tracking-tight">
-              I’m a <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">Senior Data Analyst</span> engineering cloud-based platforms that support executive decision-making.
+              I’m a <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">Senior Data Governance &amp; Quality Analyst</span> designing Collibra frameworks and SOX-compliant data ecosystems that regulators trust.
             </h3>
             
             <p className="text-white/50 text-lg leading-relaxed font-light">

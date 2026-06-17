@@ -51,10 +51,10 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-[-0.04em] text-white mb-8 leading-[1.05] max-w-5xl"
         >
-          Senior Data Analyst building
+          Senior Data Governance &amp; Quality Analyst
           <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/40">
-            {" "}high-impact enterprise solutions
+            {" "}building governance that regulators trust.
           </span>
         </motion.h1>
 
@@ -65,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl text-lg md:text-2xl text-white/50 font-light leading-relaxed mb-12"
         >
-          Specializing in cloud architecture, ETL engineering, and strategic BI reporting to drive revenue and operational efficiency.
+          6+ years designing enterprise Collibra frameworks, SOX-compliant data ecosystems, and cross-system reconciliation pipelines across financial services, telecom, and insurance.
         </motion.p>
 
         {/* Action Buttons */}
